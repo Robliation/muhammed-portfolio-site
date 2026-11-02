@@ -153,6 +153,26 @@ def save(slug, data, kind):
     return slug + "." + ext, len(data)
 
 
+def dims(path):
+    """Intrinsic size so the browser reserves space and nothing shifts on load."""
+    try:
+        if path.lower().endswith(".svg"):
+            s = open(path, encoding="utf-8", errors="ignore").read(4000)
+            vb = re.search(r'viewBox="([-\d.]+)\s+([-\d.]+)\s+([-\d.]+)\s+([-\d.]+)"', s)
+            if vb:
+                return int(round(float(vb.group(3)))), int(round(float(vb.group(4))))
+            w = re.search(r'\bwidth="([\d.]+)"', s)
+            h = re.search(r'\bheight="([\d.]+)"', s)
+            if w and h:
+                return int(float(w.group(1))), int(float(h.group(1)))
+            return None, None
+        from PIL import Image
+        with Image.open(path) as im:
+            return im.size
+    except Exception:
+        return None, None
+
+
 def main():
     os.makedirs(OUT, exist_ok=True)
     manifest, report = {}, []
@@ -163,7 +183,8 @@ def main():
             kind = looks_like_logo(data, url)
             if kind:
                 fn, size = save(slug, data, kind)
-                got = {"file": fn, "kind": "official", "bytes": size, "src": url}
+                w, h = dims(os.path.join(OUT, fn))
+                got = {"file": fn, "kind": "official", "bytes": size, "w": w, "h": h, "src": url}
                 break
         if not got:
             got = {"file": None, "kind": "wordmark", "src": ""}

@@ -239,12 +239,14 @@
 
   /* ------------------------------------------------------------------ brand marks */
   /* Official logo when we have one; otherwise a set typographic tile — never a blurry accept. */
+  function logoImg(B, localName, cls) {
+    var d = (B.w && B.h) ? ' width="' + num(B.w) + '" height="' + num(B.h) + '"' : "";
+    return '<img class="logo-img' + (cls ? " " + cls : "") + '" src="assets/brands/' + B.file + '"' + d +
+      ' alt="' + esc(localName) + '" loading="lazy" decoding="async">';
+  }
   function mark(name, localName, cls) {
     var B = LOGOS[name];
-    if (B && B.file) {
-      return '<img class="logo-img' + (cls ? " " + cls : "") + '" src="assets/brands/' + B.file +
-        '" alt="' + esc(localName || name) + '" loading="lazy" decoding="async">';
-    }
+    if (B && B.file) return logoImg(B, localName || name, cls);
     return '<span class="logo-wm' + (cls ? " " + cls : "") + '" aria-hidden="true">' + esc(localName || name) + "</span>";
   }
 
@@ -252,10 +254,7 @@
      shows a lettermark instead of repeating the same word twice. */
   function lettermark(name, localName) {
     var B = LOGOS[name];
-    if (B && B.file) {
-      return '<img class="logo-img" src="assets/brands/' + B.file + '" alt="' + esc(localName || name) +
-        '" loading="lazy" decoding="async">';
-    }
+    if (B && B.file) return logoImg(B, localName || name, "");
     return '<span class="logo-mono" aria-hidden="true">' + esc(String(localName || name).trim().charAt(0)) + "</span>";
   }
 
