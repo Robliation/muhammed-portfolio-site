@@ -1,0 +1,86 @@
+# Muhammad Al-Masri — محمد المصري
+
+> Graphic designer in Mecca, Saudi Arabia, specialising in Arabic social media advertising design. 63 advertising designs delivered for 36 brands across restaurants, food, dairy, beverages, retail and tourism. Available for a full-time role, freelance projects and remote work.
+
+Language coverage: Arabic (native, primary) and English. The site is Arabic-first with `dir="rtl"` and an instant English toggle at `https://robliation.github.io/muhammed-portfolio-site/?lang=en`.
+
+## Identity
+
+- Name: Muhammad Al-Masri (Arabic: محمد المصري)
+- Role: Graphic Designer & Social Advertising Designer — مصمم جرافيك & إعلانات السوشيال ميديا
+- Location: Mecca, Saudi Arabia
+- Email: muhammedwork7623@gmail.com
+- Availability: open to full-time employment, freelance ad design, and remote work
+- Behance: https://www.behance.net/M_Designer_Original
+
+## Tools and years of practice
+
+- Adobe Photoshop — 3+ years: product and food compositing, colour correction, retouching, print and web output
+- Adobe Illustrator — 2+ years: vector marks, identity systems, layout grids
+- CapCut — 2+ years: professional advertising video editing and montage, vertical cuts, timing to music, animated type
+- Nano Banana 2 and Nano Banana Pro (Google) — 2 years: generative raw imagery, then hand-retouched to publishable quality
+- ImageFX, Whisk AI, UpScayl — raw generation and quality upscaling
+
+## Capabilities
+
+Social media advertising design · Arabic typography · product and food compositing · visual identity and social systems · advertising video editing and montage · AI-assisted image production · Ramadan and Eid campaign design · multi-format campaign delivery (square, portrait, landscape)
+
+## Sectors covered
+
+Restaurants and food · FMCG and grocery · Drinks and juices · Retail and lifestyle · Tourism and places · Ramadan and Eid · Brand and social systems · Concept and experimental
+
+## Experience
+
+- 2022–present — Freelance graphic designer producing Arabic advertising campaigns for Saudi brands
+- 2021–2024 — Visual identity and content systems for a personal brand project
+- 2025–present — Published portfolio on Behance, more than 60 advertising designs released
+
+## Pages
+
+- [Portfolio home](https://robliation.github.io/muhammed-portfolio-site/): all 63 designs in one filterable grid, each opening as a full-size proof with its original pixel dimensions and every campaign format.
+- [Résumé / CV](https://robliation.github.io/muhammed-portfolio-site/cv.html): full CV in Arabic and English; prints as a single-column, ATS-readable PDF.
+- [Full brand and work list](https://robliation.github.io/muhammed-portfolio-site/llms-full.txt): every brand with its design count and every work title.
+
+## Brands designed for
+
+- Almarai (المراعي) — 12
+- Jarir Bookstore (مكتبة جرير) — 4
+- Al Baik (البيك) — 3
+- Tazaj (الطازج) — 3
+- Aseer Time (عصير تايم) — 2
+- Dubai (دبي) — 2
+- Jahez (جاهز) — 2
+- Just Samboosa (جست سمبوسة) — 2
+- Kinza (كينزا) — 2
+- Sadia (ساديا) — 2
+- Shawarmer (شاورمر) — 2
+- Al Adnan (العدنان) — 1
+- Al Musafir (المسافر) — 1
+- Al Romansia (الرومانسية) — 1
+- Al Ulali (العلالي) — 1
+- Al Yawm (اليوم) — 1
+- Bajah (باجة) — 1
+- Berain (بيرين) — 1
+- Burger Mish (برجر مش) — 1
+- Centrepoint (سنتربوينت) — 1
+- Country Corn Flakes (كونتري) — 1
+- Falafel Burak (فلافل بوراك) — 1
+- Ful Al-Wazir (فول الوزير) — 1
+- Hungerstation (هنقرستيشن) — 1
+- Indomie (إندومي) — 1
+- Kayal (خيال) — 1
+- Marami (مرامي) — 1
+- Mazaaq (مذاق) — 1
+- National Poultry (دواجن الوطنية) — 1
+- Pizza Offers (عروض بيتزا) — 1
+- Qiddiya (القدية) — 1
+- Saudia Cheese (السعودية) — 1
+- Sultan Al-Samak (سلطان السمك) — 1
+- Takohat (تاكوهت) — 1
+- The Cake House (بيت الكيك) — 1
+- Vimto (فيمتو) — 1
+
+## Notes
+
+- Brand names and logos identify the design work only; they remain the property of their owners.
+- Structured data on the home page uses schema.org `Person` and `FAQPage`.

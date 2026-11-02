@@ -3,8 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>السيرة المختصرة — محمد، مصمم جرافيك | M Designer</title>
-<meta name="description" content="سيرة مختصرة قابلة للطباعة لمحمد، مصمم جرافيك في مكة المكرمة — إعلان السوشيال ميديا بالعربي، 68 تصميمًا لـ38 علامة.">
+<title>السيرة المختصرة — محمد المصري، مصمم جرافيك وإعلانات السوشيال ميديا | مكة المكرمة</title>
+<meta name="description" content="سيرة محمد المصري، مصمم جرافيك في مكة المكرمة متخصص في تصميم إعلانات السوشيال ميديا بالعربي — 63 تصميمًا لأكثر من 35 علامة تجارية. قابلة للتصدير PDF بصيغة ATS مع نسخة إنجليزية.">
+<meta name="author" content="Muhammad Al-Masri">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://robliation.github.io/muhammed-portfolio-site/cv.html">
 <link rel="icon" href="assets/brand/favicon.png" sizes="32x32">
@@ -13,19 +14,20 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800;900&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Zain:wght@400;700;800;900&display=swap">
 <link rel="stylesheet" href="assets/css/site.css">
 <style>
-  .cv-wrap { max-width: 940px; margin-inline: auto; padding: clamp(20px,4vw,44px) var(--gut) 0; }
+  .cv-wrap { max-width: 980px; margin-inline: auto; padding: clamp(20px,4vw,44px) var(--gut) 0; }
   .cv-top { display: flex; justify-content: space-between; align-items: flex-start; gap: var(--s5);
             padding-block: var(--s6) var(--s5); border-block-end: 2px solid var(--ink); flex-wrap: wrap; }
   .cv-top img { height: 58px; width: auto; }
   .cv-name { font-family: var(--f-display-ar); font-weight: 900; font-size: clamp(1.7rem,4vw,2.5rem); line-height: 1.15; }
-  [dir="ltr"] .cv-name { font-family: var(--f-display-lat); }
+  [dir="ltr"] .cv-name { font-family: var(--f-display-lat); letter-spacing: -0.025em; }
   .cv-role { color: var(--blue); font-weight: 700; font-size: var(--t-small); margin-block-start: 2px; }
   .cv-meta { font-size: var(--t-small); color: var(--ink-3); margin-block-start: var(--s3); display: flex; gap: var(--s3); flex-wrap: wrap; }
-  .cv-meta a { color: var(--ink-2); border-bottom: 1px solid var(--rule); }
+  .cv-meta a { color: var(--ink-2); border-bottom: 1px solid var(--rule); word-break: break-all; }
   .cv-meta a:hover { color: var(--blue); border-color: var(--blue); }
   .cv-sec { padding-block: var(--s6) 0; }
   .cv-sec > h2 { font-family: var(--f-display-ar); font-size: var(--t-h2); font-weight: 800; margin-block-end: var(--s4); }
   [dir="ltr"] .cv-sec > h2 { font-family: var(--f-display-lat); letter-spacing: -0.02em; }
+  .cv-sec > p { color: var(--ink-2); }
   .cv-num { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--rule);
             border: 1px solid var(--rule); border-radius: var(--r2); overflow: hidden; margin-block-start: var(--s5); }
   .cv-num div { background: var(--paper-2); padding: var(--s4); text-align: center; }
@@ -36,17 +38,47 @@
   .cv-list li b { color: var(--ink); font-weight: 700; }
   .cv-cols { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s6); }
   .cv-brands { display: flex; flex-wrap: wrap; gap: var(--s2); }
-  .print-btn { position: fixed; inset-block-end: var(--s5); inset-inline-end: var(--s5); z-index: 120; }
-  .jump { display: flex; gap: var(--s3); justify-content: center; padding-block: var(--s4); }
+  .print-btns { position: fixed; inset-block-end: var(--s5); inset-inline-end: var(--s5); z-index: 120;
+                display: flex; flex-direction: column; gap: var(--s2); }
+  .jump { display: flex; gap: var(--s3); justify-content: center; padding-block: var(--s6); }
   .page-break { border: 0; border-block-start: 1px dashed var(--rule); margin-block: var(--s8); }
+  .cv-role-line { display: flex; justify-content: space-between; gap: var(--s4); flex-wrap: wrap; align-items: baseline; }
+  .cv-role-line .per { font-size: var(--t-micro); color: var(--ink-3); font-weight: 600; }
+  .cv-block + .cv-block { margin-block-start: var(--s5); padding-block-start: var(--s5); border-block-start: 1px solid var(--rule-2); }
+  .cv-block h3 { font-size: var(--t-body); font-weight: 700; }
+  .cv-para { font-size: var(--t-small); color: var(--ink-2); line-height: 1.8; }
   @media (max-width: 720px) { .cv-cols { grid-template-columns: 1fr; } .cv-num { grid-template-columns: repeat(2,1fr); } }
+
+  /* ---------- printing ----------
+     Plain print gives the English single-column résumé because ATS parsers read Latin
+     text far more reliably; the Arabic button switches the same page to the Arabic block. */
+  @page { size: A4; margin: 14mm; }
   @media print {
+    html { scroll-behavior: auto; }
+    body { background: #fff; font-size: 10.5pt; line-height: 1.5; }
+    .nav, .foot, .no-print, .print-btns, .jump, .page-break, .board, .ticker { display: none !important; }
     .cv-wrap { max-width: none; padding: 0; }
-    .cv-sec { padding-block: 14px 0; break-inside: avoid; }
-    .cv-top { padding-block: 0 12px; }
-    body { font-size: 10.5pt; line-height: 1.5; }
-    .print-btn, .jump, .page-break { display: none !important; }
-    a { border: 0 !important; }
+    .cv-sec { padding-block: 12pt 0; break-inside: avoid; }
+    .cv-top { padding-block: 0 10pt; }
+    .cv-num { display: none !important; }
+    .cv-brands { gap: 0; }
+    .cv-brands .tag { border: 0; background: none; padding: 0; font-size: 10pt; color: #000; }
+    .cv-brands .tag + .tag::before { content: " · "; color: #555; }
+    .cv-list li { border-block-end: 0; padding-block: 3pt; }
+    a { color: #000; border: 0 !important; text-decoration: none; }
+    #ar { display: none !important; }
+    body.print-ar #ar { display: block !important; }
+    body.print-ar #en, body.print-ar .cv-wrap > #en { display: none !important; }
+    /* the ATS path must be one clean column of selectable text */
+    #en, #en * { font-family: Arial, Helvetica, "Liberation Sans", sans-serif !important; letter-spacing: normal !important; }
+    #en { color: #000; }
+    #en .cv-sec > h2 { font-size: 12pt; font-weight: bold; text-transform: uppercase; letter-spacing: 0.04em !important;
+                      border-block-end: 1px solid #000; padding-block-end: 3pt; margin-block-end: 8pt; }
+    #en .cv-name { font-size: 20pt; }
+    #en .cv-role, #en .cv-meta, #en .cv-list li, #en .cv-para, #en .cv-block h3 { font-size: 10.5pt; }
+    #en .cv-cols { grid-template-columns: 1fr; gap: 10pt; }
+    #en img { display: none !important; }
+    #en .cv-top { border-block-end: 2px solid #000; }
   }
 </style>
 </head>
@@ -60,7 +92,8 @@
     </a>
     <nav class="nav-links" aria-label="Main">
       <a href="index.html#work">الأعمال</a>
-      <a href="index.html#about">نبذة</a>
+      <a href="index.html#craft">الحرفة</a>
+      <a href="index.html#tools">الأدوات</a>
       <a href="index.html#brands">العلامات</a>
       <a href="index.html#contact">تواصل</a>
     </nav>
@@ -68,104 +101,134 @@
   </div>
 </header>
 
-<main class="cv-wrap" id="ar">
+<main class="cv-wrap">
 
-  <div class="cv-top">
-    <div>
-      <img src="assets/brand/m-lockup-ink.png" width="1400" height="1279" alt="M Designer" decoding="async">
-      <p class="cv-name">محمد</p>
-      <p class="cv-role">مصمم جرافيك — إعلان السوشيال ميديا</p>
-      <p class="cv-meta">
-        <span>مكة المكرمة، السعودية</span>
-        <span>سنتان خبرة</span>
-        <a href="https://www.behance.net/M_Designer_Original" target="_blank" rel="noopener">behance.net/M_Designer_Original</a>
-        <a href="https://github.com/Robliation" target="_blank" rel="noopener">github.com/Robliation</a>
-        <a href="index.html">robliation.github.io/muhammed-portfolio-site</a>
-      </p>
+  <div id="ar" lang="ar" dir="rtl">
+    <div class="cv-top">
+      <div>
+        <img src="assets/brand/m-lockup-ink.png" width="1400" height="1279" alt="M Designer" decoding="async">
+        <p class="cv-name">محمد المصري</p>
+        <p class="cv-role">مصمم جرافيك &amp; إعلانات السوشيال ميديا</p>
+        <p class="cv-meta">
+          <span>مكة المكرمة، السعودية</span>
+          <a href="mailto:muhammedwork7623@gmail.com">muhammedwork7623@gmail.com</a>
+          <a href="index.html">robliation.github.io/muhammed-portfolio-site</a>
+          <a href="https://www.behance.net/M_Designer_Original" target="_blank" rel="noopener">behance.net/M_Designer_Original</a>
+        </p>
+      </div>
+      <div style="text-align:end">
+        <p class="mono-label">الحالة</p>
+        <p style="font-weight:700;font-size:var(--t-small)">متاح لوظيفة بدوام كامل<br>أو مشاريع مستقلة أو عمل عن بعد</p>
+      </div>
     </div>
-    <div style="text-align:end">
-      <p class="mono-label">الحالة</p>
-      <p style="font-weight:700;font-size:var(--t-small)">متاح لوظيفة بدوام كامل<br>أو مشاريع مستقلة</p>
-    </div>
+
+    <section class="cv-sec">
+      <h2>نبذة</h2>
+      <p>مصمم جرافيك في مكة المكرمة، تخصصي تصميم إعلانات السوشيال ميديا بالعربي للعلامات التجارية. أبني البوست الذي يوقف الشخص أثناء التمرير: جملة عربية تُقرأ في ثانية، منتج يبدو شهياً، وتكوين يحمل الفكرة كاملة. أعمل على Adobe Photoshop بأكثر من 3 سنوات ممارسة احترافية، وAdobe Illustrator بأكثر من سنتين، وأسلّم مونتاج الفيديو الإعلاني بـCapCut، وأنتج الصور الخام بالذكاء الاصطناعي عبر نماذج Google (Nano Banana 2 وNano Banana Pro) ثم أعالجها يدويًا حتى تكون قابلة للنشر. أنتجت 63 تصميمًا إعلانيًا لأكثر من 35 علامة تجارية في المطاعم والأغذية والمشروبات والتجزئة والسياحة، وكل حملة تُسلَّم بالمقاسات المربعة والطولية والعرضية.</p>
+      <div class="cv-num">
+        <div><b>63</b><span>تصميمًا</span></div>
+        <div><b>36</b><span>علامة تجارية</span></div>
+        <div><b>8</b><span>مجالات</span></div>
+        <div><b>5</b><span>سنوات مسار</span></div>
+      </div>
+    </section>
+
+    <section class="cv-sec">
+      <h2>المهارات الأساسية</h2>
+      <ul class="cv-list">
+        <li><b>تصميم إعلانات السوشيال ميديا</b> — صياغة البوست من الفكرة إلى التسليم النهائي بكل المقاسات: منشورات ثابتة، بنرات حملات، وغلافات.</li>
+        <li><b>التايبوغرافي العربي</b> — توزيع الجملة العربية على الكادر، وموازنة الوزن والحجم والمسافة مع الصورة، والخط الذي يُقرأ قبل أن يُشرح.</li>
+        <li><b>تكوين ودمج المنتجات والأطعمة</b> — قصّ دقيق، ظلال وإضاءة مقنعة، وتوحيد لون المنتج مع الخلفية حتى يبدو طبيعيًا داخل الإعلان.</li>
+        <li><b>الهوية البصرية وأنظمة السوشيال</b> — إطار موحّد لسلسلة بوستات ومقالات، وأيقونات، وتخطيط شبكي متكرر.</li>
+        <li><b>مونتاج وتعديل الفيديو الإعلاني</b> — عمل احترافي عبر CapCut: قصّ عمودي للسوشيال، توقيت على الموسيقى، نصوص متحركة، وتجهيز الريلز والستوري.</li>
+        <li><b>إنتاج الصور بالذكاء الاصطناعي</b> — صور خام سريعة عبر نماذج Google ثم معالجة يدوية: تنقية الحواف، تصحيح الإضاءة، ورفع الدقة قبل النشر.</li>
+        <li><b>تصميم مواسم الحملات</b> — رمضان والأعياد ومواسم العروض بلغتها البصرية الخاصة، مع تسليم الحملة كاملة بكل المقاسات.</li>
+      </ul>
+    </section>
+
+    <section class="cv-sec">
+      <h2>الخبرة</h2>
+      <div class="cv-block">
+        <div class="cv-role-line"><h3>مصمم جرافيك مستقل — إعلانات السوشيال ميديا</h3><span class="per">2022 — حتى الآن</span></div>
+        <p class="cv-para">إنتاج تصاميم إعلانية بالعربي لعلامات في المطاعم والأغذية والمشروبات والتجزئة والسياحة. بناء أسلوب إعلاني موحّد لكل حملة، وتسليم كل تصميم بالمقاسات المربعة والطولية والعرضية. العمل يشمل البحث عن مرجع المنتج، والقصّ والتركيب، والتايبوغرافي العربي، والمراجعة النهائية الجاهزة للنشر.</p>
+      </div>
+      <div class="cv-block">
+        <div class="cv-role-line"><h3>أنظمة هوية ومحتوى — مشروع شخصي</h3><span class="per">2021 — 2024</span></div>
+        <p class="cv-para">بناء هوية بصرية كاملة ونظام محتوى: إطار زخرفي موحّد، نسخ مربعة وطولية وعرضية لكل منشور ومقال، وتجارب مطوّلة على الخط العربي والتايبوغرافي. هذه المرحلة أسّست الدقة في التسليم المتكرر والالتزام بالنظام البصري.</p>
+      </div>
+      <div class="cv-block">
+        <div class="cv-role-line"><h3>النشر المهني على بيهاينس</h3><span class="per">فبراير 2025 — حتى الآن</span></div>
+        <p class="cv-para">نشر الأعمال بانتظام على Behance وبناء معرض أعمال منسّق بمشاريع ومقاسات متعددة لكل حملة، مع أكثر من 60 إعلانًا منشورًا لعلامات سعودية.</p>
+      </div>
+    </section>
+
+    <section class="cv-sec cv-cols">
+      <div>
+        <h2>الأدوات</h2>
+        <div class="cv-brands">
+          <span class="tag">Adobe Photoshop — 3+ سنوات</span>
+          <span class="tag">Adobe Illustrator — 2+ سنتان</span>
+          <span class="tag">CapCut — 2+ سنتان</span>
+          <span class="tag">Nano Banana 2 (Google)</span>
+          <span class="tag">Nano Banana Pro (Google)</span>
+          <span class="tag">ImageFX</span>
+          <span class="tag">Whisk AI</span>
+          <span class="tag">UpScayl</span>
+        </div>
+      </div>
+      <div>
+        <h2>المجالات واللغات</h2>
+        <div class="cv-brands">
+          <span class="tag">التصميم الجرافيكي</span><span class="tag">الإعلان الرقمي</span>
+          <span class="tag">إعلانات المطاعم والأغذية</span><span class="tag">هوية بصرية</span>
+          <span class="tag">مونتاج فيديو</span><span class="tag">التصوير</span>
+          <span class="tag hot">العربية — لغة أم</span><span class="tag">الإنجليزية</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="cv-sec">
+      <h2>مسار التعلّم 2021 — 2026</h2>
+      <div class="tl">
+        <div class="tl-row"><span class="yr">2021</span><div class="bd"><p class="t">البداية — أساسيات Photoshop</p><p class="d">تعلّم من الصفر: الطبقات، التحديد والقصّ، تصحيح الألوان، ودمج الصور. تدريب طويل على تجهيز الصور وتنظيف حوافها.</p></div></div>
+        <div class="tl-row"><span class="yr">2022</span><div class="bd"><p class="t">Photoshop بعمق — وأول هوية بصرية</p><p class="d">تركيب منتجات الطعام، ظلال وإضاءة مقنعة، وأول هوية كاملة. بداية تعلّم Adobe Illustrator: المتجهات والشعارات والتخطيط الشبكي.</p></div></div>
+        <div class="tl-row"><span class="yr">2023</span><div class="bd"><p class="t">أنظمة محتوى وسوشيال بالعربي</p><p class="d">إطار زخرفي موحّد، نسخ مربعة وطولية وعرضية لكل محتوى، وتجارب جدية على التايبوغرافي العربي والخط.</p></div></div>
+        <div class="tl-row"><span class="yr">2024</span><div class="bd"><p class="t">احتراف Illustrator + مونتاج CapCut</p><p class="d">تثبيت Illustrator على الشعارات والأنظمة، وإضافة مهارة مونتاج الفيديو الإعلاني: قصّ عمودي، توقيت على الموسيقى، ونصوص متحركة.</p></div></div>
+        <div class="tl-row"><span class="yr">2025</span><div class="bd"><p class="t">إعلانات العلامات السعودية</p><p class="d">النشر المنتظم على بيهاينس وأكثر من 60 إعلانًا للمراعي والبيك والطازج وجاهز وجرير وكينزا والقدية ودبي وغيرها.</p></div></div>
+        <div class="tl-row"><span class="yr">2026</span><div class="bd"><p class="t">الذكاء الاصطناعي التوليدي — واليوم</p><p class="d">سنتان على نماذج Google للصور (Nano Banana 2 وNano Banana Pro) مع معالجة يدوية، وتوسيع الأعمال على علامات جديدة وتسليم كل حملة بكل المقاسات.</p></div></div>
+      </div>
+    </section>
+
+    <section class="cv-sec">
+      <h2>العلامات التجارية في الأعمال</h2>
+      <p class="cv-para" style="margin-block-end:var(--s4)">أكثر من 35 علامة تجارية في السعودية والخليج. الرقم بجانب كل اسم يمثّل عدد التصاميم المنفّذة له.</p>
+      <div class="index-grid">
+        <div class="index-cell"><span class="nm">المراعي</span><span class="ct">12</span></div>
+        <div class="index-cell"><span class="nm">مكتبة جرير</span><span class="ct">4</span></div>
+        <div class="index-cell"><span class="nm">البيك</span><span class="ct">3</span></div>
+        <div class="index-cell"><span class="nm">الطازج</span><span class="ct">3</span></div>
+        <div class="index-cell"><span class="nm">جاهز</span><span class="ct">2</span></div>
+        <div class="index-cell"><span class="nm">شاورمر</span><span class="ct">2</span></div>
+        <div class="index-cell"><span class="nm">جست سمبوسة</span><span class="ct">2</span></div>
+        <div class="index-cell"><span class="nm">ساديا</span><span class="ct">2</span></div>
+        <div class="index-cell"><span class="nm">كينزا</span><span class="ct">2</span></div>
+        <div class="index-cell"><span class="nm">عصير تايم</span><span class="ct">2</span></div>
+        <div class="index-cell"><span class="nm">دبي</span><span class="ct">2</span></div>
+        <div class="index-cell"><span class="nm">فيمتو</span><span class="ct">1</span></div>
+        <div class="index-cell"><span class="nm">القدية</span><span class="ct">1</span></div>
+        <div class="index-cell"><span class="nm">دواجن الوطنية</span><span class="ct">1</span></div>
+        <div class="index-cell"><span class="nm">هنقرستيشن</span><span class="ct">1</span></div>
+        <div class="index-cell"><span class="nm">سنتربوينت</span><span class="ct">1</span></div>
+      </div>
+      <p class="cv-para" style="margin-block-start:var(--s4)">و16 علامة أخرى: بيت الكيك، تاكوهت، سلطان السمك، السعودية للأجبان، مذاق، مرامي، خيال، إندومي، فلافل بوراك، فول الوزير، كونتري، بيرين، باجة، برجر مش، اليوم، العلالي، الرومانسية، والمسافر.</p>
+    </section>
+
+    <section class="cv-sec" style="padding-block-end:var(--s8)">
+      <h2>التواصل</h2>
+      <p class="cv-para">البريد: <a href="mailto:muhammedwork7623@gmail.com" style="color:var(--blue);font-weight:700">muhammedwork7623@gmail.com</a> — الرد خلال يوم عمل.
+      البورتفوليو الكامل بكل التصاميم ومقاساتها على <a href="index.html" style="color:var(--blue);font-weight:700">robliation.github.io/muhammed-portfolio-site</a>، والأعمال المنشورة على <a href="https://www.behance.net/M_Designer_Original" target="_blank" rel="noopener" style="color:var(--blue);font-weight:700">Behance</a>.</p>
+    </section>
   </div>
-
-  <section class="cv-sec">
-    <h2>نبذة</h2>
-    <p style="color:var(--ink-2)">مصمم جرافيك متخصص في الإعلان الرقمي بالعربي. أشتغل على البوست الذي يوقف الشخص أثناء التمرير: جملة عربية قوية، منتج يبدو شهيًا، وتكوين يُقرأ في الثانية الأولى. أجهّز كل حملة بالمقاسات المربعة والطولية والعرضية، وأعمل أساسًا على Adobe Photoshop وIllustrator مع أدوات توليد الصور بالذكاء الاصطناعي ثم معالجتها يدويًا حتى تكون قابلة للنشر.</p>
-    <div class="cv-num">
-      <div><b>68</b><span>تصميمًا</span></div>
-      <div><b>38</b><span>علامة</span></div>
-      <div><b>8</b><span>مجالات</span></div>
-      <div><b>12</b><span>مشروعًا على بيهاينس</span></div>
-    </div>
-  </section>
-
-  <section class="cv-sec">
-    <h2>المهارات</h2>
-    <ul class="cv-list">
-      <li><b>تصميم إعلانات السوشيال ميديا</b> — صياغة البوست من الفكرة إلى التسليم بالمقاسات كلها.</li>
-      <li><b>التايبوغرافي العربي</b> — توزيع الجملة العربية على المساحة، وموازنة الوزن والحجم مع الصورة.</li>
-      <li><b>تكوين ودمج المنتجات والأطعمة</b> — إظهار المنتج بشكل شهٍ ومقنع داخل الكادر.</li>
-      <li><b>الهوية البصرية وأنظمة السوشيال</b> — إطار موحّد لسلسلة بوستات ومقالات.</li>
-      <li><b>صور خام بالذكاء الاصطناعي</b> — إنتاج الصور الأولية بسرعة عبر ImageFX وWhisk AI.</li>
-      <li><b>المعالجة ورفع الجودة</b> — تنقية التفاصيل ورفع الدقة قبل النشر.</li>
-    </ul>
-  </section>
-
-  <section class="cv-sec cv-cols">
-    <div>
-      <h2>الأدوات</h2>
-      <div class="cv-brands">
-        <span class="tag">Adobe Photoshop</span><span class="tag">Adobe Illustrator</span>
-        <span class="tag">ImageFX</span><span class="tag">Whisk AI</span><span class="tag">UpScayl</span>
-      </div>
-    </div>
-    <div>
-      <h2>المجالات واللغات</h2>
-      <div class="cv-brands">
-        <span class="tag">التصميم الجرافيكي</span><span class="tag">الإعلان</span><span class="tag">التصوير</span>
-        <span class="tag hot">العربية — لغة أم</span><span class="tag">الإنجليزية</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="cv-sec">
-    <h2>المسار</h2>
-    <div class="tl">
-      <div class="tl-row"><span class="yr">2024</span><div class="bd"><p class="t">أنظمة هوية ومحتوى — موقع رقيتي</p><p class="d">سلسلة بوستات ومقالات لهوية شخصية: إطار زخرفي إسلامي، نسخ بالمربع والطولي والعرضي، وتجارب على الخط العربي.</p></div></div>
-      <div class="tl-row"><span class="yr">فبراير 2025</span><div class="bd"><p class="t">النشر المنتظم على بيهاينس</p><p class="d">انضممت إلى بيهاينس وبنيت أسلوب الإعلان العربي المربع/الطولي/العرضي، مع نشر مستمر للأعمال.</p></div></div>
-      <div class="tl-row"><span class="yr">2025</span><div class="bd"><p class="t">إعلانات العلامات السعودية</p><p class="d">أكثر من 60 إعلانًا للمراعي والبيك والطازج وجاهز وجرير وكينزا والقدية ودبي وغيرها.</p></div></div>
-      <div class="tl-row"><span class="yr">2026</span><div class="bd"><p class="t">اليوم</p><p class="d">توسيع الأعمال على علامات جديدة وتجهيز كل حملة بكل المقاسات.</p></div></div>
-    </div>
-  </section>
-
-  <section class="cv-sec">
-    <h2>العلامات في الأعمال</h2>
-    <p style="color:var(--ink-3);font-size:var(--t-small);margin-block-end:var(--s4)">أعمال مفاهيمية (Spec) لعلامات قائمة، أُنتجت كتدريب على السوق السعودي. الرقم بجانب كل اسم يمثّل عدد التصاميم المنفّذة له.</p>
-    <div class="index-grid" style="margin-block-start:var(--s2)">
-      <div class="index-cell"><span class="nm">المراعي</span><span class="ct">12</span></div>
-      <div class="index-cell"><span class="nm">رقيتي</span><span class="ct">5</span></div>
-      <div class="index-cell"><span class="nm">مكتبة جرير</span><span class="ct">4</span></div>
-      <div class="index-cell"><span class="nm">البيك</span><span class="ct">3</span></div>
-      <div class="index-cell"><span class="nm">الطازج</span><span class="ct">3</span></div>
-      <div class="index-cell"><span class="nm">شاورمر</span><span class="ct">2</span></div>
-      <div class="index-cell"><span class="nm">جاهز</span><span class="ct">2</span></div>
-      <div class="index-cell"><span class="nm">جست سمبوسة</span><span class="ct">2</span></div>
-      <div class="index-cell"><span class="nm">ساديا</span><span class="ct">2</span></div>
-      <div class="index-cell"><span class="nm">كينزا</span><span class="ct">2</span></div>
-      <div class="index-cell"><span class="nm">عصير تايم</span><span class="ct">2</span></div>
-      <div class="index-cell"><span class="nm">دبي</span><span class="ct">2</span></div>
-      <div class="index-cell"><span class="nm">القدية</span><span class="ct">1</span></div>
-      <div class="index-cell"><span class="nm">دواجن الوطنية</span><span class="ct">1</span></div>
-      <div class="index-cell"><span class="nm">فلافل بوراك</span><span class="ct">1</span></div>
-      <div class="index-cell"><span class="nm">هنقرستيشن</span><span class="ct">1</span></div>
-      <div class="index-cell"><span class="nm">المسافر</span><span class="ct">1</span></div>
-      <div class="index-cell"><span class="nm">السعودية للأجبان</span><span class="ct">1</span></div>
-      <div class="index-cell"><span class="nm">فيمتو</span><span class="ct">1</span></div>
-      <div class="index-cell"><span class="nm">سنتربوينت</span><span class="ct">1</span></div>
-    </div>
-    <p class="fine" style="font-size:var(--t-micro);color:var(--ink-3);margin-block-start:var(--s4)">و18 علامة أخرى — عرض بوجز، خيال، مذاق، العلالي، إندومي، مرامي، كونتري، بيرين، باجة، سلطان السمك، فول الوزير، اليوم، العدنان، الرومانسية، بيت الكيك، تاكوهت، وعروض بيتزا.</p>
-  </section>
 
   <hr class="page-break">
   <div class="jump no-print">
@@ -175,107 +238,120 @@
   <div id="en" dir="ltr" lang="en">
     <div class="cv-top">
       <div>
-        <p class="cv-name">Muhammed</p>
-        <p class="cv-role">Graphic Designer — Social Advertising</p>
+        <p class="cv-name">Muhammad Al-Masri</p>
+        <p class="cv-role">Graphic Designer &amp; Social Advertising Designer</p>
         <p class="cv-meta">
           <span>Mecca, Saudi Arabia</span>
-          <span>2 years experience</span>
-          <a href="https://www.behance.net/M_Designer_Original" target="_blank" rel="noopener">behance.net/M_Designer_Original</a>
-          <a href="https://github.com/Robliation" target="_blank" rel="noopener">github.com/Robliation</a>
+          <a href="mailto:muhammedwork7623@gmail.com">muhammedwork7623@gmail.com</a>
           <a href="index.html">robliation.github.io/muhammed-portfolio-site</a>
+          <a href="https://www.behance.net/M_Designer_Original" target="_blank" rel="noopener">behance.net/M_Designer_Original</a>
         </p>
       </div>
-      <div style="text-align:start">
+      <div style="text-align:end">
         <p class="mono-label">Status</p>
-        <p style="font-weight:700;font-size:var(--t-small)">Open to a full-time role<br>and freelance projects</p>
+        <p style="font-weight:700;font-size:var(--t-small)">Open to a full-time role,<br>freelance projects and remote work</p>
       </div>
     </div>
 
     <section class="cv-sec">
-      <h2>Profile</h2>
-      <p style="color:var(--ink-2)">Graphic designer specialising in Arabic digital advertising. I build the post that stops someone mid-scroll: a hard-hitting Arabic line, a product that looks appetising, and a composition that reads in the first second. Every campaign ships square, portrait and landscape. I work primarily in Adobe Photoshop and Illustrator, with AI image generation for raw imagery that I then retouch by hand until it is publishable.</p>
-      <div class="cv-num">
-        <div><b>68</b><span>designs</span></div>
-        <div><b>38</b><span>brands</span></div>
-        <div><b>8</b><span>sectors</span></div>
-        <div><b>12</b><span>Behance projects</span></div>
-      </div>
+      <h2>Summary</h2>
+      <p>Graphic designer in Mecca, Saudi Arabia, specialising in Arabic social media advertising for brands. I build the post that stops someone mid-scroll: an Arabic line that reads in one second, a product that looks appetising, and a composition that carries the whole idea. 3+ years of professional Adobe Photoshop practice, 2+ years in Adobe Illustrator, advertising video edited in CapCut, and two years producing raw imagery with Google's generative models (Nano Banana 2, Nano Banana Pro) before hand-retouching it for publication. Delivered 63 advertising designs for more than 35 brands across restaurants, food, dairy, beverages, retail and tourism, with every campaign shipped square, portrait and landscape.</p>
     </section>
 
     <section class="cv-sec">
-      <h2>Capabilities</h2>
+      <h2>Core Skills</h2>
       <ul class="cv-list">
-        <li><b>Social ad design</b> — from the idea to full-format delivery.</li>
-        <li><b>Arabic typography</b> — setting the Arabic line in space, balancing weight and size against the image.</li>
-        <li><b>Product &amp; food compositing</b> — making the hero product look convincing and appetising inside the frame.</li>
-        <li><b>Visual identity &amp; social systems</b> — one consistent framework across a post series.</li>
-        <li><b>AI-assisted stock imagery</b> — fast raw generation with ImageFX and Whisk AI.</li>
-        <li><b>Retouching &amp; upscaling</b> — cleaning detail and raising resolution before publishing.</li>
+        <li>Social media advertising design — brief to final delivery in every format: static posts, campaign banners and covers.</li>
+        <li>Arabic typography — setting the Arabic line in the frame, balancing weight, size and negative space against the image.</li>
+        <li>Product and food compositing — precise cut-outs, believable shadow and light, and colour matching so the product sits naturally in the ad.</li>
+        <li>Visual identity and social systems — one consistent framework across a post series, iconography and repeatable grid layouts.</li>
+        <li>Advertising video editing and montage in CapCut — vertical cuts for social, timing to music, animated type, reels and stories delivery.</li>
+        <li>AI-assisted image production — fast raw generation with Google models, then hand retouching, edge cleanup and upscaling before publishing.</li>
+        <li>Seasonal campaign design — Ramadan, Eid and offer seasons built in each season's own visual language.</li>
+        <li>Multi-format delivery — square, portrait and landscape versions of every campaign, export-ready for each platform.</li>
       </ul>
     </section>
 
-    <section class="cv-sec cv-cols">
-      <div>
-        <h2>Tools</h2>
-        <div class="cv-brands">
-          <span class="tag">Adobe Photoshop</span><span class="tag">Adobe Illustrator</span>
-          <span class="tag">ImageFX</span><span class="tag">Whisk AI</span><span class="tag">UpScayl</span>
-        </div>
+    <section class="cv-sec">
+      <h2>Professional Experience</h2>
+      <div class="cv-block">
+        <div class="cv-role-line"><h3>Freelance Graphic Designer — Social Advertising</h3><span class="per">2022 — Present</span></div>
+        <p class="cv-para">Produce Arabic advertising design for Saudi brands in restaurants, food, dairy, beverages, retail and tourism. Build one visual system per campaign and deliver every design square, portrait and landscape. Day-to-day work covers product reference and cut-out, compositing and lighting, Arabic headline setting, colour matching, and final quality control before publication.</p>
       </div>
-      <div>
-        <h2>Fields &amp; languages</h2>
-        <div class="cv-brands">
-          <span class="tag">Graphic design</span><span class="tag">Advertising</span><span class="tag">Photography</span>
-          <span class="tag hot">Arabic — native</span><span class="tag">English</span>
-        </div>
+      <div class="cv-block">
+        <div class="cv-role-line"><h3>Visual Identity and Content Systems — Personal Brand Project</h3><span class="per">2021 — 2024</span></div>
+        <p class="cv-para">Built a complete identity and content system: one decorative frame across the series, square, portrait and landscape variants for every post and article, and extended experiments in Arabic type. This stage established the discipline of repeatable, on-system delivery.</p>
+      </div>
+      <div class="cv-block">
+        <div class="cv-role-line"><h3>Published Portfolio — Behance</h3><span class="per">February 2025 — Present</span></div>
+        <p class="cv-para">Consistent professional publishing on Behance with organised projects and multiple formats per campaign; more than 60 advertising designs released for Saudi brands.</p>
       </div>
     </section>
 
     <section class="cv-sec">
-      <h2>Path</h2>
-      <div class="tl" dir="ltr">
-        <div class="tl-row"><span class="yr">2024</span><div class="bd"><p class="t">Identity and content systems — MyRoqia</p><p class="d">A post series and editorial covers for a personal brand: an Islamic decorative frame, square/portrait/landscape versions, and Arabic type experiments.</p></div></div>
-        <div class="tl-row"><span class="yr">Feb 2025</span><div class="bd"><p class="t">Consistent publishing on Behance</p><p class="d">Joined Behance and built the square/portrait/landscape Arabic ad format with regular releases.</p></div></div>
-        <div class="tl-row"><span class="yr">2025</span><div class="bd"><p class="t">Saudi brand advertising</p><p class="d">Over 60 ads for Almarai, Al Baik, Tazaj, Jahez, Jarir, Kinza, Qiddiya and Dubai.</p></div></div>
-        <div class="tl-row"><span class="yr">2026</span><div class="bd"><p class="t">Now</p><p class="d">Adding new brands and shipping every campaign in all formats.</p></div></div>
-      </div>
+      <h2>Tools and Software</h2>
+      <ul class="cv-list">
+        <li>Adobe Photoshop — 3+ years (compositing, colour correction, retouching, print and web output)</li>
+        <li>Adobe Illustrator — 2+ years (vector marks, identity systems, layout grids)</li>
+        <li>CapCut — 2+ years (professional advertising video editing and montage)</li>
+        <li>Nano Banana 2 and Nano Banana Pro by Google — 2 years (generative raw imagery)</li>
+        <li>ImageFX, Whisk AI and UpScayl — raw generation and quality upscaling</li>
+      </ul>
     </section>
 
     <section class="cv-sec">
-      <h2>Brands in the work</h2>
-      <p style="color:var(--ink-3);font-size:var(--t-small);margin-block-end:var(--s4)">Concept (spec) advertisements for existing brands, produced as training for the Saudi market. The number beside each brand is the count of designs delivered for it.</p>
-      <div class="index-grid" dir="ltr">
-        <div class="index-cell"><span class="nm">Almarai</span><span class="ct">12</span></div>
-        <div class="index-cell"><span class="nm">MyRoqia</span><span class="ct">5</span></div>
-        <div class="index-cell"><span class="nm">Jarir Bookstore</span><span class="ct">4</span></div>
-        <div class="index-cell"><span class="nm">Al Baik</span><span class="ct">3</span></div>
-        <div class="index-cell"><span class="nm">Tazaj</span><span class="ct">3</span></div>
-        <div class="index-cell"><span class="nm">Shawarmer</span><span class="ct">2</span></div>
-        <div class="index-cell"><span class="nm">Jahez</span><span class="ct">2</span></div>
-        <div class="index-cell"><span class="nm">Just Samboosa</span><span class="ct">2</span></div>
-        <div class="index-cell"><span class="nm">Sadia</span><span class="ct">2</span></div>
-        <div class="index-cell"><span class="nm">Kinza</span><span class="ct">2</span></div>
-        <div class="index-cell"><span class="nm">Aseer Time</span><span class="ct">2</span></div>
-        <div class="index-cell"><span class="nm">Dubai</span><span class="ct">2</span></div>
-        <div class="index-cell"><span class="nm">Qiddiya</span><span class="ct">1</span></div>
-        <div class="index-cell"><span class="nm">National Poultry</span><span class="ct">1</span></div>
-        <div class="index-cell"><span class="nm">Falafel Burak</span><span class="ct">1</span></div>
-        <div class="index-cell"><span class="nm">Hungerstation</span><span class="ct">1</span></div>
-        <div class="index-cell"><span class="nm">Al Musafir</span><span class="ct">1</span></div>
-        <div class="index-cell"><span class="nm">Saudia Cheese</span><span class="ct">1</span></div>
-        <div class="index-cell"><span class="nm">Vimto</span><span class="ct">1</span></div>
-        <div class="index-cell"><span class="nm">Centrepoint</span><span class="ct">1</span></div>
-      </div>
-      <p class="fine" style="font-size:var(--t-micro);color:var(--ink-3);margin-block-start:var(--s4)">Plus 18 more brands — Burger Mish, Kayal, Mazaaq, Al Ulali, Indomie, Marami, Country Corn Flakes, Berain, Bajah, Sultan Al-Samak, Ful Al-Wazir, Al Yawm, Al Adnan, Al Romansia, The Cake House, Takohat and Pizza Offers.</p>
+      <h2>Learning and Development</h2>
+      <ul class="cv-list">
+        <li>2021 — Adobe Photoshop fundamentals: layers, selection and cut-outs, colour correction, compositing.</li>
+        <li>2022 — Advanced Photoshop for food and product work; first complete visual identity; Adobe Illustrator started.</li>
+        <li>2023 — Arabic typography and content systems; multi-format post and article frameworks.</li>
+        <li>2024 — Illustrator to a professional level; added CapCut video editing and motion type for social.</li>
+        <li>2025 — Saudi brand advertising at scale; systematic publishing on Behance.</li>
+        <li>2026 — Generative AI image production with Google models, integrated into a hand-retouched workflow.</li>
+      </ul>
+    </section>
+
+    <section class="cv-sec">
+      <h2>Selected Brands</h2>
+      <p class="cv-para">Almarai (12), Jarir Bookstore (4), Al Baik (3), Tazaj (3), Jahez (2), Shawarmer (2), Just Samboosa (2), Sadia (2), Kinza (2), Aseer Time (2), Dubai (2), Hungerstation, Qiddiya, National Poultry, Centrepoint, Vimto, Indomie, Saudia Cheese, The Cake House, Takohat, Sultan Al-Samak, Mazaaq, Marami, Kayal, Falafel Burak, Ful Al-Wazir, Country Corn Flakes, Berain, Bajah, Burger Mish, Al Yawm, Al Ulali, Al Romansia, Al Musafir and Al Adnan — 36 brands in total.</p>
+    </section>
+
+    <section class="cv-sec">
+      <h2>Sectors</h2>
+      <p class="cv-para">Restaurants and food · FMCG and grocery · Drinks and juices · Retail and lifestyle · Tourism and places · Ramadan and Eid · Brand and social systems · Concept and experimental.</p>
+    </section>
+
+    <section class="cv-sec">
+      <h2>Languages</h2>
+      <p class="cv-para">Arabic — native · English — professional working proficiency.</p>
     </section>
 
     <section class="cv-sec" style="padding-block-end:var(--s8)">
-      <h2>Full portfolio</h2>
-      <p style="color:var(--ink-2);font-size:var(--t-small)">Every design is shown full size with its specifications at <a href="index.html" style="color:var(--blue);font-weight:700">robliation.github.io/muhammed-portfolio-site</a>, and the published projects are on <a href="https://www.behance.net/M_Designer_Original" target="_blank" rel="noopener" style="color:var(--blue);font-weight:700">Behance</a>.</p>
+      <h2>Portfolio and Contact</h2>
+      <p class="cv-para">Email: muhammedwork7623@gmail.com — reply within one working day. The full portfolio, with every design shown at full size and its original pixel dimensions, is at robliation.github.io/muhammed-portfolio-site, and published projects are on Behance at behance.net/M_Designer_Original.</p>
     </section>
   </div>
 </main>
 
-<button class="btn print-btn no-print" type="button" onclick="window.print()">طباعة / حفظ PDF</button>
+<div class="print-btns no-print">
+  <button class="btn print-btn" type="button" data-print="en">Print Résumé (ATS / English)</button>
+  <button class="btn btn-ghost print-btn" type="button" data-print="ar">طباعة / حفظ السيرة بالعربية</button>
+</div>
+
+<script>
+(function () {
+  function go(which) {
+    document.body.classList.toggle("print-ar", which === "ar");
+    document.body.classList.toggle("print-en", which === "en");
+    window.print();
+  }
+  Array.prototype.forEach.call(document.querySelectorAll("[data-print]"), function (b) {
+    b.addEventListener("click", function () { go(b.getAttribute("data-print")); });
+  });
+  window.addEventListener("afterprint", function () {
+    document.body.classList.remove("print-ar", "print-en");
+  });
+})();
+</script>
 </body>
 </html>
