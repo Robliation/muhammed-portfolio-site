@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://robliation.github.io/muhammed-portfolio-site/sitemap.xml
