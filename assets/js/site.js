@@ -238,10 +238,11 @@
   function num(n) { return String(n); }
 
   /* ------------------------------------------------------------------ brand marks */
-  /* Official logo when we have one; otherwise a set typographic tile — never a blurry accept. */
+  /* Every client has its real mark. A tile only falls back to type if the asset is missing. */
   function logoImg(B, localName, cls) {
     var d = (B.w && B.h) ? ' width="' + num(B.w) + '" height="' + num(B.h) + '"' : "";
-    return '<img class="logo-img' + (cls ? " " + cls : "") + '" src="assets/brands/' + B.file + '"' + d +
+    var c = (cls ? cls + " " : "") + (B.lift ? "lift" : "");
+    return '<img class="logo-img' + (c ? " " + c.trim() : "") + '" src="assets/brands/' + B.file + '"' + d +
       ' alt="' + esc(localName) + '" loading="lazy" decoding="async">';
   }
   function mark(name, localName, cls) {
@@ -406,8 +407,8 @@
 
   function toolGrid() {
     document.getElementById("tool-grid").innerHTML = TOOLS.map(function (x) {
-      return '<article class="tool-card rv">' + badge(x.badge) +
-        '<div class="tool-body"><div class="tool-top"><h3>' + esc(x.name) + "</h3>" +
+      return '<article class="tool-card rv">' +
+        '<div class="tool-body"><div class="tool-top">' + badge(x.badge) + "<h3>" + esc(x.name) + "</h3>" +
         '<span class="tool-yrs">' + esc(t("tools." + x.key + ".y")) + "</span></div>" +
         "<p>" + esc(t("tools." + x.key + ".d")) + "</p></div></article>";
     }).join("");

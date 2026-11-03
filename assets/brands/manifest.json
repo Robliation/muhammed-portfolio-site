@@ -2,211 +2,325 @@
  "Al Baik": {
   "file": "albaik.png",
   "kind": "official",
-  "bytes": 28243,
-  "src": "https://www.albaik.com/assets/logo_en-4bbf33854ea7afd49a4f426871af04b642becbab3bd4487267047144d176b80c.png",
-  "w": 500,
-  "h": 281
+  "src": "web",
+  "w": 284,
+  "h": 128,
+  "lift": false,
+  "bytes": 17065
  },
  "Almarai": {
   "file": "almarai.svg",
   "kind": "official",
-  "bytes": 11578,
-  "src": "https://almmedia.almarai.com/assets/images/almarai.svg",
-  "w": 72,
-  "h": 43
+  "src": "web",
+  "w": 284,
+  "h": 128,
+  "lift": true,
+  "bytes": 11559
  },
  "Jarir Bookstore": {
   "file": "jarir.svg",
   "kind": "official",
-  "bytes": 4070,
-  "src": "https://www.jarir.com/assets/images/logo/jarir.svg",
-  "w": 118,
-  "h": 24
+  "src": "web",
+  "w": 284,
+  "h": 128,
+  "lift": false,
+  "bytes": 4084
  },
  "Hungerstation": {
   "file": "hungerstation.svg",
   "kind": "official",
-  "bytes": 5850,
-  "src": "https://hungerstation.com/_next/static/media/hungerstation-logo-shadow.1vx_waus0h43y.svg",
-  "w": 497,
-  "h": 254
- },
- "Vimto": {
-  "file": "vimto.svg",
-  "kind": "official",
-  "bytes": 106762,
-  "src": "https://www.vimto.com/wp-content/themes/vimto-international/assets/images/logo.svg",
-  "w": 146,
-  "h": 147
- },
- "Indomie": {
-  "file": "indomie.png",
-  "kind": "official",
-  "bytes": 9669,
-  "src": "https://indomie.com/img/icon/logo-indomie.png",
-  "w": 370,
-  "h": 244
- },
- "Shawarmer": {
-  "file": "shawarmer.jpg",
-  "kind": "official",
-  "bytes": 41142,
-  "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Shawarmer%20logo.jpg",
-  "w": 609,
-  "h": 599
- },
- "Saudia Cheese": {
-  "file": null,
-  "kind": "wordmark",
-  "src": ""
- },
- "Jahez": {
-  "file": null,
-  "kind": "wordmark",
-  "src": ""
- },
- "Tazaj": {
-  "file": null,
-  "kind": "wordmark",
-  "src": ""
- },
- "Qiddiya": {
-  "file": "qiddiya.png",
-  "kind": "official",
-  "bytes": 6594,
-  "src": "https://qiddiya.com/etc.clientlibs/qiddiya-corporate/clientlibs/clientlib-site/resources/metadata/favicons/android/android-icon-192x192.png",
-  "w": 192,
-  "h": 192
+  "src": "web",
+  "w": 284,
+  "h": 128,
+  "lift": true,
+  "bytes": 5846
  },
  "Dubai": {
   "file": "dubai.svg",
   "kind": "official",
-  "bytes": 46715,
-  "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Government%20of%20Dubai%20logo.svg",
-  "w": 3150,
-  "h": 1140
+  "src": "web",
+  "w": 284,
+  "h": 128,
+  "lift": false,
+  "bytes": 46706
  },
- "Centrepoint": {
-  "file": null,
-  "kind": "wordmark",
-  "src": ""
+ "Indomie": {
+  "file": "indomie.png",
+  "kind": "official",
+  "src": "web",
+  "w": 284,
+  "h": 128,
+  "lift": false,
+  "bytes": 15952
  },
- "Kinza": {
-  "file": null,
-  "kind": "wordmark",
-  "src": ""
+ "Shawarmer": {
+  "file": "shawarmer.png",
+  "kind": "official",
+  "src": "web",
+  "w": 284,
+  "h": 128,
+  "lift": false,
+  "bytes": 10758
  },
- "National Poultry": {
-  "file": null,
-  "kind": "wordmark",
-  "src": ""
+ "Qiddiya": {
+  "file": "qiddiya.svg",
+  "kind": "official",
+  "src": "asset",
+  "w": 284,
+  "h": 128,
+  "lift": false,
+  "bytes": 7405
+ },
+ "Tazaj": {
+  "file": "tazaj.png",
+  "kind": "official",
+  "src": "asset",
+  "w": 284,
+  "h": 128,
+  "lift": false,
+  "bytes": 28093
+ },
+ "Marami": {
+  "file": "marami.png",
+  "kind": "official",
+  "src": "asset",
+  "w": 284,
+  "h": 128,
+  "lift": false,
+  "bytes": 17276
  },
  "Al Ulali": {
-  "file": null,
-  "kind": "wordmark",
-  "src": ""
+  "file": "al-ulali.png",
+  "kind": "official",
+  "src": "asset",
+  "w": 284,
+  "h": 128,
+  "lift": false,
+  "bytes": 29328
  },
  "Sadia": {
-  "file": null,
-  "kind": "wordmark",
-  "src": ""
- },
- "Berain": {
-  "file": null,
-  "kind": "wordmark",
-  "src": ""
+  "file": "sadia.png",
+  "kind": "official",
+  "src": "asset",
+  "w": 284,
+  "h": 128,
+  "lift": false,
+  "bytes": 13879
  },
  "Aseer Time": {
   "file": "aseer-time.png",
   "kind": "official",
-  "bytes": 20933,
-  "src": "https://aseertime.com/wp-content/uploads/2025/06/cropped-Aseer-Time-Logo-e1757107144511.png",
-  "w": 648,
-  "h": 430
- },
- "Marami": {
-  "file": null,
-  "kind": "wordmark",
-  "src": ""
- },
- "Country Corn Flakes": {
-  "file": null,
-  "kind": "wordmark",
-  "src": ""
- },
- "Al Yawm": {
-  "file": null,
-  "kind": "wordmark",
-  "src": ""
- },
- "Al Adnan": {
-  "file": null,
-  "kind": "wordmark",
-  "src": ""
- },
- "Al Musafir": {
-  "file": null,
-  "kind": "wordmark",
-  "src": ""
- },
- "Al Romansia": {
-  "file": null,
-  "kind": "wordmark",
-  "src": ""
- },
- "Bajah": {
-  "file": null,
-  "kind": "wordmark",
-  "src": ""
+  "src": "asset",
+  "w": 284,
+  "h": 128,
+  "lift": false,
+  "bytes": 18752
  },
  "Burger Mish": {
-  "file": null,
-  "kind": "wordmark",
-  "src": ""
- },
- "Falafel Burak": {
-  "file": null,
-  "kind": "wordmark",
-  "src": ""
- },
- "Ful Al-Wazir": {
-  "file": null,
-  "kind": "wordmark",
-  "src": ""
+  "file": "burger-mish.png",
+  "kind": "official",
+  "src": "asset",
+  "w": 284,
+  "h": 128,
+  "lift": false,
+  "bytes": 19181
  },
  "Just Samboosa": {
-  "file": null,
-  "kind": "wordmark",
-  "src": ""
+  "file": "just-samboosa.png",
+  "kind": "official",
+  "src": "asset",
+  "w": 284,
+  "h": 128,
+  "lift": false,
+  "bytes": 18681
  },
  "Kayal": {
-  "file": null,
-  "kind": "wordmark",
-  "src": ""
+  "file": "kayal.png",
+  "kind": "official",
+  "src": "asset",
+  "w": 284,
+  "h": 128,
+  "lift": false,
+  "bytes": 15450
  },
- "Mazaaq": {
-  "file": null,
-  "kind": "wordmark",
-  "src": ""
- },
- "Pizza Offers": {
-  "file": null,
-  "kind": "wordmark",
-  "src": ""
+ "Ful Al-Wazir": {
+  "file": "ful-wazir.png",
+  "kind": "official",
+  "src": "asset",
+  "w": 284,
+  "h": 128,
+  "lift": false,
+  "bytes": 18112
  },
  "Sultan Al-Samak": {
-  "file": null,
-  "kind": "wordmark",
-  "src": ""
- },
- "Takohat": {
-  "file": null,
-  "kind": "wordmark",
-  "src": ""
+  "file": "sultan-fish.png",
+  "kind": "official",
+  "src": "asset",
+  "w": 284,
+  "h": 128,
+  "lift": false,
+  "bytes": 16426
  },
  "The Cake House": {
-  "file": null,
-  "kind": "wordmark",
-  "src": ""
+  "file": "cake-house.png",
+  "kind": "official",
+  "src": "asset",
+  "w": 284,
+  "h": 128,
+  "lift": false,
+  "bytes": 18772
+ },
+ "Al Adnan": {
+  "file": "al-adnan.png",
+  "kind": "official",
+  "src": "artwork",
+  "w": 284,
+  "h": 128,
+  "lift": false,
+  "bytes": 21900
+ },
+ "Al Musafir": {
+  "file": "al-musafir.png",
+  "kind": "official",
+  "src": "artwork",
+  "w": 284,
+  "h": 128,
+  "lift": false,
+  "bytes": 14235
+ },
+ "Al Romansia": {
+  "file": "al-romansia.png",
+  "kind": "official",
+  "src": "artwork",
+  "w": 284,
+  "h": 128,
+  "lift": false,
+  "bytes": 20898
+ },
+ "Al Yawm": {
+  "file": "al-yawm.png",
+  "kind": "official",
+  "src": "artwork",
+  "w": 284,
+  "h": 128,
+  "lift": false,
+  "bytes": 32772
+ },
+ "Bajah": {
+  "file": "bajah.png",
+  "kind": "official",
+  "src": "artwork",
+  "w": 284,
+  "h": 128,
+  "lift": false,
+  "bytes": 22095
+ },
+ "Berain": {
+  "file": "berain.png",
+  "kind": "official",
+  "src": "artwork",
+  "w": 284,
+  "h": 128,
+  "lift": false,
+  "bytes": 31805
+ },
+ "Centrepoint": {
+  "file": "centrepoint.png",
+  "kind": "official",
+  "src": "artwork",
+  "w": 284,
+  "h": 128,
+  "lift": false,
+  "bytes": 14718
+ },
+ "Country Corn Flakes": {
+  "file": "country.png",
+  "kind": "official",
+  "src": "artwork",
+  "w": 284,
+  "h": 128,
+  "lift": false,
+  "bytes": 36315
+ },
+ "Falafel Burak": {
+  "file": "falafel-burak.png",
+  "kind": "official",
+  "src": "artwork",
+  "w": 284,
+  "h": 128,
+  "lift": false,
+  "bytes": 20000
+ },
+ "Jahez": {
+  "file": "jahez.png",
+  "kind": "official",
+  "src": "artwork",
+  "w": 284,
+  "h": 128,
+  "lift": false,
+  "bytes": 20855
+ },
+ "Kinza": {
+  "file": "kinza.png",
+  "kind": "official",
+  "src": "artwork",
+  "w": 284,
+  "h": 128,
+  "lift": false,
+  "bytes": 23925
+ },
+ "Mazaaq": {
+  "file": "mazaaq.png",
+  "kind": "official",
+  "src": "artwork",
+  "w": 284,
+  "h": 128,
+  "lift": false,
+  "bytes": 23902
+ },
+ "National Poultry": {
+  "file": "national-poultry.png",
+  "kind": "official",
+  "src": "artwork",
+  "w": 284,
+  "h": 128,
+  "lift": false,
+  "bytes": 27685
+ },
+ "Pizza Offers": {
+  "file": "pizza-offers.png",
+  "kind": "official",
+  "src": "artwork",
+  "w": 284,
+  "h": 128,
+  "lift": false,
+  "bytes": 35571
+ },
+ "Saudia Cheese": {
+  "file": "saudia.png",
+  "kind": "official",
+  "src": "artwork",
+  "w": 284,
+  "h": 128,
+  "lift": false,
+  "bytes": 36502
+ },
+ "Takohat": {
+  "file": "takohat.png",
+  "kind": "official",
+  "src": "artwork",
+  "w": 284,
+  "h": 128,
+  "lift": false,
+  "bytes": 36843
+ },
+ "Vimto": {
+  "file": "vimto.png",
+  "kind": "official",
+  "src": "artwork",
+  "w": 284,
+  "h": 128,
+  "lift": false,
+  "bytes": 18975
  }
 }
