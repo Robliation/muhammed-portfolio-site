@@ -1,6 +1,6 @@
 # Muhammad Al-Masri — محمد المصري
 
-> Graphic designer in Mecca, Saudi Arabia, specialising in Arabic social media advertising design. 63 advertising designs delivered for 36 brands across restaurants, food, dairy, beverages, retail and tourism. Available for a full-time role, freelance projects and remote work.
+> Graphic designer in Mecca, Saudi Arabia, specialising in Arabic social media advertising design. 64 advertising designs delivered for 36 brands across restaurants, food, dairy, beverages, retail and tourism. Available for a full-time role, freelance projects and remote work.
 
 Language coverage: Arabic (native, primary) and English. The site is Arabic-first with `dir="rtl"` and an instant English toggle at `https://robliation.github.io/muhammed-portfolio-site/?lang=en`.
 
@@ -37,7 +37,7 @@ Restaurants and food · FMCG and grocery · Drinks and juices · Retail and life
 
 ## Pages
 
-- [Portfolio home](https://robliation.github.io/muhammed-portfolio-site/): all 63 designs in one filterable grid, each opening as a full-size proof with its original pixel dimensions and every campaign format.
+- [Portfolio home](https://robliation.github.io/muhammed-portfolio-site/): all 64 designs in one filterable grid, each opening as a full-size proof with its original pixel dimensions and every campaign format.
 - [Résumé / CV](https://robliation.github.io/muhammed-portfolio-site/cv.html): full CV in Arabic and English; prints as a single-column, ATS-readable PDF.
 - [Full brand and work list](https://robliation.github.io/muhammed-portfolio-site/llms-full.txt): every brand with its design count and every work title.
 
@@ -51,6 +51,7 @@ Restaurants and food · FMCG and grocery · Drinks and juices · Retail and life
 - Dubai (دبي) — 2
 - Jahez (جاهز) — 2
 - Just Samboosa (جست سمبوسة) — 2
+- Kayal (خيال) — 2
 - Kinza (كينزا) — 2
 - Sadia (ساديا) — 2
 - Shawarmer (شاورمر) — 2
@@ -68,7 +69,6 @@ Restaurants and food · FMCG and grocery · Drinks and juices · Retail and life
 - Ful Al-Wazir (فول الوزير) — 1
 - Hungerstation (هنقرستيشن) — 1
 - Indomie (إندومي) — 1
-- Kayal (خيال) — 1
 - Marami (مرامي) — 1
 - Mazaaq (مذاق) — 1
 - National Poultry (دواجن الوطنية) — 1
@@ -112,6 +112,7 @@ Restaurants and food · FMCG and grocery · Drinks and juices · Retail and life
 - Burger Mish — The best burger in the world / برجر مش — أفضل برجر في العالم | 2025 | square | original 4096×4096 | https://robliation.github.io/muhammed-portfolio-site/#work/burger-mish-best-in-world
 - The Cake House — Cake that makes your day / بيت الكيك — كيك يصنع يومك | 2025 | square | original 4096×4096 | https://robliation.github.io/muhammed-portfolio-site/#work/the-cake-house-makes-your-day
 - Kayal — Kunafa beyond imagination / خيال — كنافة فوق الخيال | 2025 | square | original 4096×4096 | https://robliation.github.io/muhammed-portfolio-site/#work/kayal-kunafa
+- Kayal — Length makes the difference / خيال — الطول يفرق | 2026 | square | original 2048×2048 | https://robliation.github.io/muhammed-portfolio-site/#work/kayal-al-tawool
 - Sultan Al-Samak — Crispy fish / سلطان السمك — سمك مقرمش | 2025 | square | original 4096×4096 | https://robliation.github.io/muhammed-portfolio-site/#work/sultan-fish-crispy
 - Ful Al-Wazir — Our ful is exceptional / فول الوزير — فول حقنا متميز | 2025 | square | original 4096×4096 | https://robliation.github.io/muhammed-portfolio-site/#work/ful-wazir-exceptional
 - Al Romansia — The ideal restaurant / الرومانسية — مطعم المثالي | 2025 | landscape | original 5632×3072 | https://robliation.github.io/muhammed-portfolio-site/#work/romansia-ideal-restaurant

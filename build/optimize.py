@@ -5,6 +5,7 @@ from PIL import Image, ImageOps
 
 SRC = r"C:\Users\M Deisgner\Pictures\Pictures Photoshop\Designs"
 LOGO_SRC = r"C:\Users\M Deisgner\Pictures\Pictures illustrator\Wallpapers & Profiles"
+ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
 OUT = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.getcwd(), "site")
 FULL_LONG, THUMB_LONG = 1720, 720
 FULL_Q, THUMB_Q = 82, 78
@@ -28,7 +29,10 @@ def emit(im, base, long_edge, q, wq):
 
 
 def load(name):
-    im = Image.open(os.path.join(SRC, name))
+    # A source name carrying a slash is a workspace-relative design handed over as a
+    # finished file; anything else is a file in the Designs library.
+    root = ROOT if "/" in name else SRC
+    im = Image.open(os.path.join(root, name))
     im = ImageOps.exif_transpose(im)
     im.format = None  # drop source format so nothing leaks into output
     return im

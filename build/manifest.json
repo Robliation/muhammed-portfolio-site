@@ -589,6 +589,30 @@
    "year": 2025
   },
   {
+   "id": "kayal-al-tawool",
+   "brand_en": "Kayal",
+   "brand_ar": "خيال",
+   "tagline_ar": "الطول يفرق",
+   "tagline_en": "Length makes the difference",
+   "cat": "food",
+   "images": [
+    {
+     "file": "sources/khayal-al-tawool.png",
+     "w": 2048,
+     "h": 2048,
+     "ratio": 1.0,
+     "bytes": 5476726,
+     "year": 2026,
+     "date": "2026-11-03",
+     "orient": "square"
+    }
+   ],
+   "primary": "sources/khayal-al-tawool.png",
+   "behance": null,
+   "behance_id": null,
+   "year": 2026
+  },
+  {
    "id": "sultan-fish-crispy",
    "brand_en": "Sultan Al-Samak",
    "brand_ar": "سلطان السمك",

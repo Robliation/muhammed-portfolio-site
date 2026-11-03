@@ -16,6 +16,18 @@ Marks whose colour is too dark for the ink tile get their value raised and their
 saturation eased, in small steps, until they clear a 3.6:1 contrast ratio — hue
 is kept, so the brand still reads as itself.
 
+Cutting the marks is the part that decides whether the wall looks professional.
+A soft key (distance from an estimated background, ramped into alpha) leaves a
+15-29% haze of half-transparent background behind: on the dark ink tile it hides,
+anywhere else it is obvious. So every source without real alpha goes through a
+hard matte instead — a plane fitted to the crop's own border ring scores each
+pixel on hue shift and brightness gain (the two things a shadow never has),
+Otsu turns that into a binary mask, closing repairs it, flood fill drops debris,
+and only then does one pixel of feather soften the rim. The mark's colour is
+spread under the transparent area afterwards, because a browser blending a
+downscaled PNG reads whatever RGB sits under alpha=0 — near-black from a
+photograph would grey out thin strokes that are otherwise solid.
+
     python brand_logos.py
 
 Output: ../assets/brands/<slug>.<ext> + manifest.json consumed by build_data.py.
@@ -67,28 +79,39 @@ BRANDS = [
     ("ful-wazir",        "Ful Al-Wazir",        "asset",   "شعار مطعم فول الوزير.png"),
     ("sultan-fish",      "Sultan Al-Samak",     "asset",   "شعار سلطان السمك_upscayl_4x_upscayl-standard-4x.png"),
     ("cake-house",       "The Cake House",      "asset",   "شعار مطعم بيت الكيك_upscayl_4x_upscayl-standard-4x.png"),
-    ("al-adnan",         "Al Adnan",            "artwork", ("تصميم لمطعم العدنان (دوالي).jpg", (0.900, 0.000, 0.998, 0.115))),
-    ("al-musafir",       "Al Musafir",          "artwork", ("تصميم لشركة المسافر (أستمتع بأكلك في أي مكان).jpg", (0.850, 0.895, 0.999, 0.998))),
-    ("al-romansia",      "Al Romansia",         "artwork", ("تصميم لمطعم الرومانسية (مطعم المـــــــثـــــــالـــــــــــي).jpg", (0.895, 0.000, 0.998, 0.105))),
-    ("al-yawm",          "Al Yawm",             "artwork", ("تصميم لشركة اليوم (تمشي مع اليوم).jpg", (0.402, 0.250, 0.558, 0.375))),
-    ("bajah",            "Bajah",               "artwork", ("تصميم لشركة باجة (قهوة تمتع يومك).jpg", (0.865, 0.000, 0.992, 0.085))),
-    ("berain",           "Berain",              "artwork", ("تصميم لشركة بيرين (ماء ثلج).jpg", (0.855, 0.010, 0.985, 0.115))),
-    ("centrepoint",      "Centrepoint",         "artwork", ("تصميم لشركة سنتربوينت (شنطة سفرك في أمـــــــــــــــان).jpg", (0.852, 0.000, 0.996, 0.062))),
-    ("country",          "Country Corn Flakes", "artwork", ("تصميم لشركة كونتري كورن فليكس (بروتين ينفع مع كورن فليكس).jpg", (0.838, 0.008, 0.986, 0.135))),
-    ("falafel-burak",    "Falafel Burak",       "artwork", ("تصميم لشركة فلافل بوراك (عندنا فلافل صح) بالعرض.jpg", (0.872, 0.000, 0.996, 0.125))),
-    ("jahez",            "Jahez",               "artwork", ("تصميم لشركة جاهز.jpg", (0.402, 0.000, 0.568, 0.085))),
-    ("kinza",            "Kinza",               "artwork", ("تصميم لشركة كينزا (مشروب ينسيك العطش).jpg", (0.852, 0.000, 0.988, 0.085))),
-    ("mazaaq",           "Mazaaq",              "artwork", ("تصميم لشركة مذاق بالعرض.png", (0.852, 0.000, 0.988, 0.085))),
-    ("national-poultry", "National Poultry",    "artwork", ("تصميم لشركة دواجن الوطنية (مندي طيب مع دواجن الوطنية) بالعرض.jpg", (0.872, 0.000, 0.996, 0.062))),
-    ("pizza-offers",     "Pizza Offers",        "artwork", ("تصميم لشركة عروض بيتزا بالعرض.png", (0.850, 0.000, 0.996, 0.115))),
-    ("saudia",           "Saudia Cheese",       "artwork", ("تصميم لشركة السعودية (جبنة الملوك).jpg", (0.872, 0.000, 0.996, 0.125))),
-    ("takohat",          "Takohat",             "artwork", ("تصميم لشركة تاكوهت (الأكلة تخليك توكل أصعابك).jpg", (0.004, 0.000, 0.215, 0.105))),
-    ("vimto",            "Vimto",               "artwork", ("تصميم لشركة فيمتو (رمضان كريم).jpg", (0.852, 0.000, 0.992, 0.085))),
+    ("al-adnan",         "Al Adnan",            "artwork", ("تصميم لمطعم العدنان (دوالي).jpg", (0.895, 0.000, 0.999, 0.130))),
+    ("al-musafir",       "Al Musafir",          "artwork", ("تصميم لشركة المسافر (أستمتع بأكلك في أي مكان).jpg", (0.845, 0.905, 0.978, 0.958))),
+    ("al-romansia",      "Al Romansia",         "artwork", ("تصميم لمطعم الرومانسية (مطعم المـــــــثـــــــالـــــــــــي).jpg", (0.890, 0.000, 0.999, 0.115))),
+    ("al-yawm",          "Al Yawm",             "artwork", ("تصميم لشركة اليوم (تمشي مع اليوم).jpg", (0.4185, 0.2570, 0.5881, 0.3540))),
+    ("bajah",            "Bajah",               "artwork", ("تصميم لشركة باجة (قهوة تمتع يومك).jpg", (0.860, 0.000, 0.994, 0.095))),
+    ("berain",           "Berain",              "artwork", ("تصميم لشركة بيرين (ماء ثلج).jpg", (0.850, 0.005, 0.988, 0.125))),
+    ("centrepoint",      "Centrepoint",         "artwork", ("تصميم لشركة سنتربوينت (شنطة سفرك في أمـــــــــــــــان).jpg", (0.872, 0.020, 0.985, 0.092))),
+    ("country",          "Country Corn Flakes", "artwork", ("تصميم لشركة كونتري كورن فليكس (بروتين ينفع مع كورن فليكس).jpg", (0.834, 0.006, 0.990, 0.142))),
+    ("falafel-burak",    "Falafel Burak",       "artwork", ("تصميم لشركة فلافل بوراك (عندنا فلافل صح) بالعرض.jpg", (0.868, 0.000, 0.998, 0.135))),
+    ("jahez",            "Jahez",               "artwork", ("تصميم لشركة جاهز.jpg", (0.398, 0.000, 0.572, 0.095))),
+    ("kinza",            "Kinza",               "artwork", ("تصميم لشركة كينزا (مشروب ينسيك العطش).jpg", (0.848, 0.000, 0.992, 0.095))),
+    ("mazaaq",           "Mazaaq",              "artwork", ("تصميم لشركة مذاق بالعرض.png", (0.898, 0.008, 0.992, 0.100))),
+    ("national-poultry", "National Poultry",    "artwork", ("تصميم لشركة دواجن الوطنية (مندي طيب مع دواجن الوطنية) بالعرض.jpg", (0.9512, 0.0115, 0.9943, 0.0585))),
+    ("pizza-offers",     "Pizza Offers",        "artwork", ("تصميم لشركة عروض بيتزا بالعرض.png", (0.845, 0.000, 0.998, 0.128))),
+    ("saudia",           "Saudia Cheese",       "artwork", ("تصميم لشركة السعودية (جبنة الملوك).jpg", (0.868, 0.000, 0.998, 0.135))),
+    ("takohat",          "Takohat",             "artwork", ("تصميم لشركة تاكوهت (الأكلة تخليك توكل أصعابك).jpg", (0.028, 0.015, 0.185, 0.145))),
+    ("vimto",            "Vimto",               "artwork", ("تصميم لشركة فيمتو (رمضان كريم).jpg", (0.868, 0.005, 0.992, 0.085))),
 ]
 
 # Marks that read as a silhouette on the ink tile get a value lift in CSS instead
 # of a raster re-encode (they stay vector).
 SVG_LIFT = {"almarai", "hungerstation"}
+
+# Al Ulali's library file is a packaging lockup: the red oval plus a gold tartan
+# ribbon running up behind it. The ribbon is dressing, not the mark, and it touches
+# the oval, so no connected-component filter can separate them. Crop to the oval.
+PRE_CROP = {"al-ulali": (0.0, 0.345, 1.0, 0.875)}
+
+# National Poultry's mark is only 233px wide in the source artwork, so its gold
+# AL WATANIA POULTRY tagline is a few pixels tall and scores just under Otsu's
+# split — the I was being erased. A ceiling on the threshold keeps the letters
+# without admitting the pure-black field around them.
+THR_CEIL = {"national-poultry": 40}
 
 
 # ---------------------------------------------------------------- keying helpers
@@ -100,58 +123,186 @@ def has_alpha(im):
     return lo < 250
 
 
-def maxdiff(rgb, bg):
-    """Per-pixel distance keyed on the widest channel gap — a gold mark on cream
-    differs almost entirely in blue, which luma would average away."""
-    d = ImageChops.difference(rgb, bg)
-    r, g, b = d.split()
-    return ImageChops.lighter(ImageChops.lighter(r, g), b)
+def solve3(m, v):
+    """Gaussian elimination with partial pivoting on a 3x3 normal-equation system."""
+    a = [row[:] + [v[i]] for i, row in enumerate(m)]
+    for i in range(3):
+        p = max(range(i, 3), key=lambda r: abs(a[r][i]))
+        a[i], a[p] = a[p], a[i]
+        if abs(a[i][i]) < 1e-9:
+            return [v[0] / 3.0] * 3
+        for r in range(3):
+            if r != i:
+                f = a[r][i] / a[i][i]
+                for c in range(i, 4):
+                    a[r][c] -= f * a[i][c]
+    return [a[i][3] / a[i][i] for i in range(3)]
 
 
-def key_flat_bg(im, want="white"):
-    """Turn a solid white/black background transparent, keeping the mark."""
-    rgb = im.convert("RGB")
-    edge = []
+def plane_bg(rgb, band=6, step=2):
+    """Least-squares plane fitted to the crop's border ring.
+
+    Coordinates are centred and scaled to about [-0.5, 0.5] first: with raw pixel
+    indices the normal matrix spans 1e3 to 1e9, the solve loses that much
+    precision, and the resulting "background" is noise that hollows out every
+    wide stroke it was supposed to sit under.
+    """
     w, h = rgb.size
-    step = max(1, w // 60)
-    for x in range(0, w, step):
-        edge.append(rgb.getpixel((x, 0)))
-        edge.append(rgb.getpixel((x, h - 1)))
-    step = max(1, h // 60)
+    r0, g0, b0 = rgb.split()
+    px = (r0.load(), g0.load(), b0.load())
+    pts = []
     for y in range(0, h, step):
-        edge.append(rgb.getpixel((0, y)))
-        edge.append(rgb.getpixel((w - 1, y)))
-    ref = tuple(sum(c[i] for c in edge) // len(edge) for i in range(3))
-    bg = Image.new("RGB", rgb.size, ref)
-    d = maxdiff(rgb, bg)
-    lo, hi = (34, 120) if want == "white" else (30, 110)
-    alpha = d.point(lambda p: 0 if p < lo else (255 if p > hi else int((p - lo) * 255 / (hi - lo))))
-    alpha = alpha.filter(ImageFilter.MinFilter(3)).filter(ImageFilter.GaussianBlur(0.5))
-    out = rgb.convert("RGBA")
+        for x in range(0, w, step):
+            if x < band or y < band or x >= w - band or y >= h - band:
+                pts.append((x, y))
+    if not pts:
+        pts = [(0, 0), (w - 1, 0), (0, h - 1)]
+    acc = [[0.0, 0.0, 0.0] for _ in range(3)]
+    nu = nv = nuv = nu2 = nv2 = 0.0
+    for x, y in pts:
+        u = (x - w / 2.0) / w
+        v = (y - h / 2.0) / h
+        for i in range(3):
+            p = px[i][x, y]
+            acc[i][0] += p
+            acc[i][1] += p * u
+            acc[i][2] += p * v
+        nu += u; nv += v; nuv += u * v; nu2 += u * u; nv2 += v * v
+    n = float(len(pts))
+    s = [[n, nu, nv], [nu, nu2, nuv], [nv, nuv, nv2]]
+    coef = [solve3(s, acc[i]) for i in range(3)]
+    out = Image.new("RGB", (64, 64))
+    op = out.load()
+    for j in range(64):
+        v = ((j + 0.5) * h / 64.0 - h / 2.0) / h
+        for k in range(64):
+            u = ((k + 0.5) * w / 64.0 - w / 2.0) / w
+            op[k, j] = tuple(max(0, min(255, int(c[0] + c[1] * u + c[2] * v))) for c in coef)
+    return out.resize((w, h), Image.BILINEAR)
+
+
+def score_map(rgb, bg, shadow_allow=70):
+    """Evidence per pixel that it belongs to a mark rather than to the background
+    it sits on or to a shadow that mark casts.
+
+    Two things a real mark has and a drop shadow does not: a hue/saturation shift
+    (chroma, which a shadow preserves) and a brightness *gain* (a shadow is a
+    darkening). A genuinely dark mark on a light field still scores, once it
+    darkens by more than the shadow_allow allowance.
+    """
+    r, g, b = rgb.split()
+    br, bg_, bb = bg.split()
+    c_rg = ImageChops.difference(ImageChops.difference(r, g), ImageChops.difference(br, bg_))
+    c_rb = ImageChops.difference(ImageChops.difference(r, b), ImageChops.difference(br, bb))
+    c_gb = ImageChops.difference(ImageChops.difference(g, b), ImageChops.difference(bg_, bb))
+    chroma = ImageChops.lighter(ImageChops.lighter(c_rg, c_rb), c_gb)
+    lp, lb = rgb.convert("L"), bg.convert("L")
+    gain = ImageChops.subtract(lp, lb)
+    loss = ImageChops.subtract(lb, lp).point(lambda p: max(0, p - shadow_allow))
+    return ImageChops.lighter(ImageChops.lighter(chroma, gain), loss)
+
+
+def otsu(hist):
+    total = sum(hist)
+    sum_all = float(sum(i * hist[i] for i in range(256)))
+    best, bthr, w_b, sum_b = -1.0, 128, 0, 0.0
+    for t in range(256):
+        w_b += hist[t]
+        if w_b == 0:
+            continue
+        w_f = total - w_b
+        if w_f == 0:
+            break
+        sum_b += t * hist[t]
+        var = w_b * w_f * (sum_b / w_b - (sum_all - sum_b) / w_f) ** 2
+        if var > best:
+            best, bthr = var, t
+    return bthr
+
+
+def components(mask, min_area):
+    """Drop debris. Runs flood fill on a 4x-reduced grid.
+
+    The relative bar is deliberately tiny. Aseer Time's roundel is one enormous blob
+    ringed by letters, and the "I" in TIME is a bare 1,200 pixels next to it — at any
+    percentage worth naming, the filter would file a real glyph under rubbish. Arabic
+    dots and thin strokes are the same story: they are small because the mark is thin,
+    not because they are noise, so min_area carries the cleanup and the ratio only
+    catches fragments that are genuinely negligible."""
+    w, h = mask.size
+    sc = 4
+    rw, rh = (w + sc - 1) // sc, (h + sc - 1) // sc
+    small = mask.resize((rw, rh), Image.BILINEAR).point(lambda p: 255 if p > 90 else 0)
+    px = small.load()
+    seen = [[False] * rw for _ in range(rh)]
+    lab = [[0] * rw for _ in range(rh)]
+    nid, areas = 0, []
+    for y in range(rh):
+        for x in range(rw):
+            if px[x, y] != 255 or seen[y][x]:
+                continue
+            nid += 1
+            stack, area = [(x, y)], 0
+            seen[y][x] = True
+            while stack:
+                cx, cy = stack.pop()
+                area += 1
+                lab[cy][cx] = nid
+                for nx, ny in ((cx-1, cy), (cx+1, cy), (cx, cy-1), (cx, cy+1)):
+                    if 0 <= nx < rw and 0 <= ny < rh and not seen[ny][nx] and px[nx, ny] == 255:
+                        seen[ny][nx] = True
+                        stack.append((nx, ny))
+            areas.append(area)
+    if not areas:
+        return mask
+    biggest = max(areas)
+    keep = set(i + 1 for i, a in enumerate(areas)
+               if a * sc * sc >= min_area and a >= biggest * 0.002)
+    if not keep:
+        keep = {areas.index(biggest) + 1}
+    out = Image.new("L", (rw, rh), 0)
+    op = out.load()
+    for y in range(rh):
+        for x in range(rw):
+            if lab[y][x] in keep:
+                op[x, y] = 255
+    return out.resize((w, h), Image.BILINEAR).point(lambda p: 255 if p > 100 else 0)
+
+
+def spread(rgb, alpha, iters=10, rad=3.0):
+    """Push the mark's own colour out under the transparent area.
+
+    A cutout keeps whatever RGB sat under its alpha=0 pixels, which for a mark
+    lifted off a photograph is near-black. Browsers blend that black in when they
+    scale the PNG down, so thin strokes turn grey in the tile even though every
+    one of their own pixels is solid. After this, downscaling blends mark with
+    mark.
+    """
+    cur = rgb
+    for _ in range(iters):
+        cur = Image.composite(cur, cur.filter(ImageFilter.GaussianBlur(rad)), alpha)
+    return cur
+
+
+def hard_cut(rgb, floor=52, min_area=260, thr_ceil=None):
+    """Return an RGBA mark: interior fully opaque, exterior fully transparent,
+    one anti-aliased pixel between. No haze, no shadow, no background."""
+    bg = plane_bg(rgb)
+    s = score_map(rgb, bg)
+    thr = max(otsu(s.histogram()), floor)
+    if thr_ceil is not None:
+        thr = min(thr, thr_ceil)
+    mask = s.point(lambda p: 255 if p >= thr else 0)
+    # closing, never opening: an opening severs thin calligraphy, and Arabic
+    # wordmarks are nothing but thin calligraphy.
+    mask = mask.filter(ImageFilter.MaxFilter(3)).filter(ImageFilter.MinFilter(3))
+    mask = components(mask, min_area)
+    if mask.getbbox() is None:
+        return rgb.convert("RGBA")
+    alpha = mask.filter(ImageFilter.GaussianBlur(0.7))
+    alpha = alpha.point(lambda p: 0 if p < 30 else (255 if p > 128 else int(p * 255 / 128)))
+    out = spread(rgb, alpha).convert("RGBA")
     out.putalpha(alpha)
-    return out
-
-
-def key_local_bg(im):
-    """Lift a mark off a gradient or photographic corner by local background distance."""
-    w, h = im.size
-    small = im.resize((max(1, w // 16), max(1, h // 16))).filter(ImageFilter.GaussianBlur(2.0))
-    bg = small.resize((w, h), Image.BILINEAR)
-    d = maxdiff(im, bg)
-    t0, t1 = 26, 88
-    alpha = d.point(lambda p: 0 if p < t0 else (255 if p > t1 else int((p - t0) * 255 / (t1 - t0))))
-    alpha = alpha.filter(ImageFilter.GaussianBlur(0.6))
-    out = im.convert("RGBA")
-    out.putalpha(alpha)
-    return out
-
-
-def defringe(im, cut=96):
-    """Kill the low-alpha haze a soft matte leaves behind, then pull the edge in."""
-    a = im.getchannel("A").point(lambda p: 0 if p < cut else p)
-    a = a.filter(ImageFilter.MinFilter(3)).filter(ImageFilter.GaussianBlur(0.4))
-    out = im.copy()
-    out.putalpha(a)
     return out
 
 
@@ -188,29 +339,68 @@ def tile_contrast(im):
     return (max(m, BG_LUM) + 0.05) / (min(m, BG_LUM) + 0.05)
 
 
-def readable(im):
-    """Bring a mark up to the ink tile without throwing its hue away.
+MIN_LUM = 0.116          # the darkest a mark's own pixel may be: 3:1 on the ink tile
 
-    A saturated maroon sits at a low luminance that no amount of value lift fixes
-    on its own, so value climbs and saturation eases in small steps together until
-    the mark clears WCAG 1.4.11's 3:1 bar for graphics with margin over it.
+
+def floor_lum(im, target=MIN_LUM):
+    """Give every mark pixel enough light that the ink tile cannot swallow it.
+
+    Cutting faithfully is only half the job. Sadia's black S, Sultan Al-Samak's navy
+    lockup, Just Samboosa's script, Ful Al-Wazir's brown: lifted off a light source
+    exactly as the brand draws them, they are precisely the pixels a dark tile
+    erases, and a mark that reads as half a word looks like a broken image. So add
+    the missing luminance to the pixels that have too little of it and leave the
+    rest alone. Hue and the contrast *inside* the mark survive; only the floor moves.
     """
-    for _ in range(5):
-        if tile_contrast(im) >= CR_FLOOR:
-            break
-        h, s, v = im.convert("HSV").split()
-        v = v.point(lambda p: min(255, int(p * 1.18 + 6)))
-        s = s.point(lambda p: int(p * 0.86))
-        out = Image.merge("HSV", (h, s, v)).convert("RGBA")
-        out.putalpha(im.getchannel("A"))
-        im = out
-    return im
+    r, g, b, a = im.split()
+    rp, gp, bp, ap = r.load(), g.load(), b.load(), a.load()
+    for y in range(im.height):
+        for x in range(im.width):
+            if ap[x, y] < 160:
+                continue
+            lin = [_lin(rp[x, y]), _lin(gp[x, y]), _lin(bp[x, y])]
+            cur = 0.2126 * lin[0] + 0.7152 * lin[1] + 0.0722 * lin[2]
+            if cur >= target:
+                continue
+            d = target - cur
+            for i, band in enumerate((rp, gp, bp)):
+                v = min(1.0, lin[i] + d)
+                s = v * 12.92 if v <= 0.0031308 else 1.055 * (v ** (1 / 2.4)) - 0.055
+                band[x, y] = max(0, min(255, int(round(s * 255))))
+    return Image.merge("RGBA", (r, g, b, a))
+
+
+def premul_resize(im, tw, th):
+    """Scale through premultiplied alpha.
+
+    Pillow blends straight RGBA, so a thin white stroke shrunk into a tile picks
+    up the colour of the transparent pixels either side of it and turns grey —
+    which is exactly how a clean cut ends up looking hollow. Premultiply, scale,
+    then divide back out and the stroke blends only with itself.
+    """
+    tw, th = max(1, tw), max(1, th)
+    r, g, b, a = im.split()
+    na = a.resize((tw, th), Image.LANCZOS)
+    nap = na.load()
+    bands = []
+    for c in (r, g, b):
+        pm = ImageChops.multiply(c, a).resize((tw, th), Image.LANCZOS).load()
+        band = Image.new("L", (tw, th))
+        bp = band.load()
+        for y in range(th):
+            for x in range(tw):
+                al = nap[x, y]
+                bp[x, y] = 255 if al == 0 else min(255, pm[x, y] * 255 // al)
+        bands.append(band)
+    out = Image.merge("RGB", bands)
+    out.putalpha(na)
+    return out
 
 
 def cap(im, edge=760):
     if max(im.size) > edge:
         f = edge / max(im.size)
-        im = im.resize((max(1, int(im.width * f)), max(1, int(im.height * f))), Image.LANCZOS)
+        im = premul_resize(im, int(im.width * f), int(im.height * f))
     return im
 
 
@@ -229,7 +419,7 @@ def plate(im):
         f = min(PLATE_W / float(im.width), PLATE_H / float(im.height))
         mw, mh = im.width * f, im.height * f
     canvas = Image.new("RGBA", (PLATE_W, PLATE_H), (0, 0, 0, 0))
-    scaled = im.resize((max(1, int(round(mw))), max(1, int(round(mh)))), Image.LANCZOS)
+    scaled = premul_resize(im, int(round(mw)), int(round(mh)))
     canvas.paste(scaled, ((PLATE_W - scaled.width) // 2, (PLATE_H - scaled.height) // 2), scaled)
     return canvas
 
@@ -268,40 +458,42 @@ def plate_svg(raw, name):
 
 # ---------------------------------------------------------------- source loaders
 
-def from_artwork(fn, frac):
+def from_artwork(fn, frac, slug=None):
     im = Image.open(os.path.join(ART, fn)).convert("RGB")
     W, H = im.size
     crop = im.crop((int(frac[0] * W), int(frac[1] * H), int(frac[2] * W), int(frac[3] * H)))
-    if max(crop.size) < 460:
-        f = round(460 / max(crop.size)) or 2
+    if max(crop.size) < 1200:                       # thin calligraphy needs pixels to survive the matte
+        f = round(1200 / max(crop.size)) or 2
         crop = crop.resize((crop.width * f, crop.height * f), Image.LANCZOS)
-    return trim(defringe(key_local_bg(crop)))
+    return trim(hard_cut(crop, thr_ceil=THR_CEIL.get(slug)))
 
 
-def from_asset(fn):
-    p = os.path.join(LIB, fn)
-    if fn.lower().endswith(".svg"):
+def _from_file(p, slug=None):
+    if p.lower().endswith(".svg"):
         return ("svg", open(p, "rb").read())
     im = Image.open(p)
     im.load()
+    frac = PRE_CROP.get(slug)
+    if frac:
+        W, H = im.size
+        im = im.crop((int(frac[0] * W), int(frac[1] * H), int(frac[2] * W), int(frac[3] * H)))
     if im.mode == "P":
         im = im.convert("RGBA")
-    if has_alpha(im):
+    if has_alpha(im):                               # already a real cutout — trust its own alpha
         return trim(im.convert("RGBA"))
-    return trim(defringe(key_flat_bg(im.convert("RGB"), "white")))
+    rgb = im.convert("RGB")
+    if max(rgb.size) < 1200:
+        f = round(1200 / max(rgb.size)) or 2
+        rgb = rgb.resize((rgb.width * f, rgb.height * f), Image.LANCZOS)
+    return trim(hard_cut(rgb, thr_ceil=THR_CEIL.get(slug)))
 
 
-def from_web(fn):
-    p = os.path.join(HERE, "_websrc", fn)
-    if fn.lower().endswith(".svg"):
-        return ("svg", open(p, "rb").read())
-    im = Image.open(p)
-    im.load()
-    if im.mode == "P":
-        im = im.convert("RGBA")
-    if has_alpha(im):
-        return trim(im.convert("RGBA"))
-    return trim(defringe(key_flat_bg(im.convert("RGB"), "white")))
+def from_asset(fn, slug=None):
+    return _from_file(os.path.join(LIB, fn), slug)
+
+
+def from_web(fn, slug=None):
+    return _from_file(os.path.join(HERE, "_websrc", fn), slug)
 
 
 # ---------------------------------------------------------------- main
@@ -312,11 +504,11 @@ def main():
     for slug, name, kind, ref in BRANDS:
         try:
             if kind == "artwork":
-                data = from_artwork(ref[0], ref[1])
+                data = from_artwork(ref[0], ref[1], slug)
             elif kind == "asset":
-                data = from_asset(ref)
+                data = from_asset(ref, slug)
             else:
-                data = from_web(ref)
+                data = from_web(ref, slug)
         except Exception as e:
             report.append("FAIL %-18s %s" % (slug, e))
             continue
@@ -336,7 +528,7 @@ def main():
 
         data = cap(data)
         before = tile_contrast(data)
-        data = plate(readable(trim(data)))
+        data = floor_lum(plate(trim(data)))
         after = tile_contrast(data)
         if before < CR_FLOOR:
             report.append("     %-18s contrast %.2f -> %.2f on the ink tile" % (name, before, after))

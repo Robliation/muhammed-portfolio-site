@@ -2092,5 +2092,29 @@
     "webp": 41.6
    }
   }
+ ],
+ "kayal-al-tawool": [
+  {
+   "src": "sources/khayal-al-tawool.png",
+   "full": "assets/img/kayal-al-tawool-0",
+   "thumb": "assets/img/kayal-al-tawool-0-thumb",
+   "full_w": 1720,
+   "full_h": 1720,
+   "thumb_w": 720,
+   "thumb_h": 720,
+   "orig_w": 2048,
+   "orig_h": 2048,
+   "orient": "square",
+   "year": 2026,
+   "date": "2026-11-03",
+   "kb": {
+    "jpg": 277.5,
+    "webp": 168.6
+   },
+   "kb_thumb": {
+    "jpg": 61.0,
+    "webp": 38.8
+   }
+  }
  ]
 }

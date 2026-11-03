@@ -18,7 +18,10 @@ BEHANCE_SLUG = {
     221360445: "-(-)", 221261353: "-(-)",
 }
 
-# (slug, brand_en, brand_ar, tagline_ar, tagline_en, category, source indices)
+# (slug, brand_en, brand_ar, tagline_ar, tagline_en, category, sources)
+# A source is either a 1-based index into FILES or, for artwork the owner handed
+# over as a finished file rather than dropping into the Designs library, a
+# workspace-relative path. A path carrying a slash is read that way by optimize.py.
 W = [
     ("albaik-crispy-chicken", "Al Baik", "البيك", "دجاج Crispy", "Crispy chicken, square", "food", [39]),
     ("albaik-best-with-us", "Al Baik", "البيك", "الأفضل لك عندنا", "The best for you is with us", "food", [41, 40]),
@@ -42,6 +45,8 @@ W = [
     ("burger-mish-best-in-world", "Burger Mish", "برجر مش", "أفضل برجر في العالم", "The best burger in the world", "food", [84]),
     ("the-cake-house-makes-your-day", "The Cake House", "بيت الكيك", "كيك يصنع يومك", "Cake that makes your day", "food", [85]),
     ("kayal-kunafa", "Kayal", "خيال", "كنافة فوق الخيال", "Kunafa beyond imagination", "food", [87]),
+    ("kayal-al-tawool", "Kayal", "خيال", "الطول يفرق", "Length makes the difference", "food",
+     ["sources/khayal-al-tawool.png"]),
     ("sultan-fish-crispy", "Sultan Al-Samak", "سلطان السمك", "سمك مقرمش", "Crispy fish", "food", [88]),
     ("ful-wazir-exceptional", "Ful Al-Wazir", "فول الوزير", "فول حقنا متميز", "Our ful is exceptional", "food", [89]),
     ("romansia-ideal-restaurant", "Al Romansia", "الرومانسية", "مطعم المثالي", "The ideal restaurant", "food", [78]),
@@ -108,12 +113,17 @@ CATS = {
     "concept": ("Concept & experimental", "مفاهيم تجريبية"),
 }
 
+ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
+
 works = []
 for slug, ben, bar, tar, ten, cat, idxs in W:
     imgs = []
     for n in idxs:
-        f = FILES[n - 1]
-        p = os.path.join(SRC, f)
+        if isinstance(n, str):
+            f, p = n, os.path.join(ROOT, n)
+        else:
+            f = FILES[n - 1]
+            p = os.path.join(SRC, f)
         with Image.open(p) as im:
             w, h = im.size
         mt = datetime.date.fromtimestamp(os.path.getmtime(p))
@@ -132,7 +142,7 @@ for slug, ben, bar, tar, ten, cat, idxs in W:
         "year": max(i["year"] for i in imgs),
     })
 
-used = sorted({n for _, _, _, _, _, _, idxs in W for n in idxs})
+used = sorted({n for _, _, _, _, _, _, idxs in W for n in idxs if isinstance(n, int)})
 alln = list(range(1, len(FILES) + 1))
 missing = [n for n in alln if n not in used]
 print("works:", len(works), "| source files mapped:", len(used), "of", len(alln))

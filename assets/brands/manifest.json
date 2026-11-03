@@ -6,7 +6,7 @@
   "w": 284,
   "h": 128,
   "lift": false,
-  "bytes": 17065
+  "bytes": 17135
  },
  "Almarai": {
   "file": "almarai.svg",
@@ -51,7 +51,7 @@
   "w": 284,
   "h": 128,
   "lift": false,
-  "bytes": 15952
+  "bytes": 15955
  },
  "Shawarmer": {
   "file": "shawarmer.png",
@@ -60,7 +60,7 @@
   "w": 284,
   "h": 128,
   "lift": false,
-  "bytes": 10758
+  "bytes": 11846
  },
  "Qiddiya": {
   "file": "qiddiya.svg",
@@ -78,7 +78,7 @@
   "w": 284,
   "h": 128,
   "lift": false,
-  "bytes": 28093
+  "bytes": 28091
  },
  "Marami": {
   "file": "marami.png",
@@ -87,7 +87,7 @@
   "w": 284,
   "h": 128,
   "lift": false,
-  "bytes": 17276
+  "bytes": 17810
  },
  "Al Ulali": {
   "file": "al-ulali.png",
@@ -96,7 +96,7 @@
   "w": 284,
   "h": 128,
   "lift": false,
-  "bytes": 29328
+  "bytes": 27267
  },
  "Sadia": {
   "file": "sadia.png",
@@ -105,7 +105,7 @@
   "w": 284,
   "h": 128,
   "lift": false,
-  "bytes": 13879
+  "bytes": 13233
  },
  "Aseer Time": {
   "file": "aseer-time.png",
@@ -114,7 +114,7 @@
   "w": 284,
   "h": 128,
   "lift": false,
-  "bytes": 18752
+  "bytes": 21436
  },
  "Burger Mish": {
   "file": "burger-mish.png",
@@ -123,7 +123,7 @@
   "w": 284,
   "h": 128,
   "lift": false,
-  "bytes": 19181
+  "bytes": 20535
  },
  "Just Samboosa": {
   "file": "just-samboosa.png",
@@ -132,7 +132,7 @@
   "w": 284,
   "h": 128,
   "lift": false,
-  "bytes": 18681
+  "bytes": 18255
  },
  "Kayal": {
   "file": "kayal.png",
@@ -141,7 +141,7 @@
   "w": 284,
   "h": 128,
   "lift": false,
-  "bytes": 15450
+  "bytes": 16136
  },
  "Ful Al-Wazir": {
   "file": "ful-wazir.png",
@@ -150,7 +150,7 @@
   "w": 284,
   "h": 128,
   "lift": false,
-  "bytes": 18112
+  "bytes": 19316
  },
  "Sultan Al-Samak": {
   "file": "sultan-fish.png",
@@ -159,7 +159,7 @@
   "w": 284,
   "h": 128,
   "lift": false,
-  "bytes": 16426
+  "bytes": 18133
  },
  "The Cake House": {
   "file": "cake-house.png",
@@ -168,7 +168,7 @@
   "w": 284,
   "h": 128,
   "lift": false,
-  "bytes": 18772
+  "bytes": 18445
  },
  "Al Adnan": {
   "file": "al-adnan.png",
@@ -177,7 +177,7 @@
   "w": 284,
   "h": 128,
   "lift": false,
-  "bytes": 21900
+  "bytes": 10684
  },
  "Al Musafir": {
   "file": "al-musafir.png",
@@ -186,7 +186,7 @@
   "w": 284,
   "h": 128,
   "lift": false,
-  "bytes": 14235
+  "bytes": 9219
  },
  "Al Romansia": {
   "file": "al-romansia.png",
@@ -195,7 +195,7 @@
   "w": 284,
   "h": 128,
   "lift": false,
-  "bytes": 20898
+  "bytes": 14399
  },
  "Al Yawm": {
   "file": "al-yawm.png",
@@ -204,7 +204,7 @@
   "w": 284,
   "h": 128,
   "lift": false,
-  "bytes": 32772
+  "bytes": 27906
  },
  "Bajah": {
   "file": "bajah.png",
@@ -213,7 +213,7 @@
   "w": 284,
   "h": 128,
   "lift": false,
-  "bytes": 22095
+  "bytes": 11140
  },
  "Berain": {
   "file": "berain.png",
@@ -222,7 +222,7 @@
   "w": 284,
   "h": 128,
   "lift": false,
-  "bytes": 31805
+  "bytes": 19004
  },
  "Centrepoint": {
   "file": "centrepoint.png",
@@ -231,7 +231,7 @@
   "w": 284,
   "h": 128,
   "lift": false,
-  "bytes": 14718
+  "bytes": 15437
  },
  "Country Corn Flakes": {
   "file": "country.png",
@@ -240,7 +240,7 @@
   "w": 284,
   "h": 128,
   "lift": false,
-  "bytes": 36315
+  "bytes": 27007
  },
  "Falafel Burak": {
   "file": "falafel-burak.png",
@@ -249,7 +249,7 @@
   "w": 284,
   "h": 128,
   "lift": false,
-  "bytes": 20000
+  "bytes": 15125
  },
  "Jahez": {
   "file": "jahez.png",
@@ -258,7 +258,7 @@
   "w": 284,
   "h": 128,
   "lift": false,
-  "bytes": 20855
+  "bytes": 12052
  },
  "Kinza": {
   "file": "kinza.png",
@@ -267,7 +267,7 @@
   "w": 284,
   "h": 128,
   "lift": false,
-  "bytes": 23925
+  "bytes": 14452
  },
  "Mazaaq": {
   "file": "mazaaq.png",
@@ -276,7 +276,7 @@
   "w": 284,
   "h": 128,
   "lift": false,
-  "bytes": 23902
+  "bytes": 13517
  },
  "National Poultry": {
   "file": "national-poultry.png",
@@ -285,7 +285,7 @@
   "w": 284,
   "h": 128,
   "lift": false,
-  "bytes": 27685
+  "bytes": 24421
  },
  "Pizza Offers": {
   "file": "pizza-offers.png",
@@ -294,7 +294,7 @@
   "w": 284,
   "h": 128,
   "lift": false,
-  "bytes": 35571
+  "bytes": 22587
  },
  "Saudia Cheese": {
   "file": "saudia.png",
@@ -303,7 +303,7 @@
   "w": 284,
   "h": 128,
   "lift": false,
-  "bytes": 36502
+  "bytes": 21737
  },
  "Takohat": {
   "file": "takohat.png",
@@ -312,7 +312,7 @@
   "w": 284,
   "h": 128,
   "lift": false,
-  "bytes": 36843
+  "bytes": 24154
  },
  "Vimto": {
   "file": "vimto.png",
@@ -321,6 +321,6 @@
   "w": 284,
   "h": 128,
   "lift": false,
-  "bytes": 18975
+  "bytes": 11974
  }
 }

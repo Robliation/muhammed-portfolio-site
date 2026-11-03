@@ -1,6 +1,6 @@
 # Muhammad Al-Masri — Portfolio Site
 
-Bilingual (Arabic-first) portfolio site for **Muhammad Al-Masri / محمد المصري**, a graphic designer in Mecca, Saudi Arabia, presenting **63 advertising designs** created for **36 brands** across restaurants, food, dairy, beverages, retail and tourism.
+Bilingual (Arabic-first) portfolio site for **Muhammad Al-Masri / محمد المصري**, a graphic designer in Mecca, Saudi Arabia, presenting **64 advertising designs** created for **36 brands** across restaurants, food, dairy, beverages, retail and tourism.
 
 **Live site:** https://robliation.github.io/muhammed-portfolio-site/
 **Behance:** https://www.behance.net/M_Designer_Original
@@ -12,7 +12,7 @@ Bilingual (Arabic-first) portfolio site for **Muhammad Al-Masri / محمد ال�
 |---|---|
 | Hero board | Four latest proofs on a dark review stage, animated in on load, with the headline, lede and key figures |
 | Client strip | "Designed for 35+ brands" over a logo marquee of the actual client marks |
-| The work | All 63 designs in a column masonry that preserves each artwork's real aspect ratio, filterable by 8 sectors and searchable by brand or headline |
+| The work | All 64 designs in a column masonry that preserves each artwork's real aspect ratio, filterable by 8 sectors and searchable by brand or headline |
 | Craft | Three curated showcases — product and food compositing, Arabic typography, seasonal campaigns — each with its own selected work |
 | Tools | Adobe Photoshop, Adobe Illustrator, CapCut and Google's Nano Banana 2 / Nano Banana Pro with years of practice and app marks |
 | About | Profile, capabilities, creative fields and a spec sheet including email and availability |
@@ -43,7 +43,7 @@ sitemap.xml  robots.txt  .nojekyll
 assets/css/site.css   design tokens + all components
 assets/js/data.js     the work catalogue and the brand logo map, generated
 assets/js/site.js     i18n, filtering, search, proof lightbox, scroll motion
-assets/img/           63 works, each as thumb + full in WebP and JPEG
+assets/img/           64 works, each as thumb + full in WebP and JPEG
 assets/brand/         logo lockup and mark in blue/white/ink, plus favicon
 assets/brands/        official client logos + manifest.json
 assets/tools/         CapCut and Gemini marks used in the tools section
