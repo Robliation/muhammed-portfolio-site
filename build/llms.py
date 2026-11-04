@@ -61,7 +61,7 @@ Restaurants and food · FMCG and grocery · Drinks and juices · Retail and life
 ## Pages
 
 - [Portfolio home]({BASE}): all {n_works} designs in one filterable grid, each opening as a full-size proof with its original pixel dimensions and every campaign format.
-- [Résumé / CV]({BASE}cv.html): full CV in Arabic and English; prints as a single-column, ATS-readable PDF.
+- [Résumé / CV]({BASE}cv.html): full CV in Arabic and English with a complete work ledger — every design listed by sector and client with its logo, topic, formats and original pixel dimensions; prints as a single-column, ATS-readable PDF.
 - [Full brand and work list]({BASE}llms-full.txt): every brand with its design count and every work title.
 
 ## Brands designed for

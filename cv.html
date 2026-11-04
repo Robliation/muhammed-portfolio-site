@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>السيرة المختصرة — محمد المصري، مصمم جرافيك وإعلانات السوشيال ميديا | مكة المكرمة</title>
-<meta name="description" content="سيرة محمد المصري، مصمم جرافيك في مكة المكرمة متخصص في تصميم إعلانات السوشيال ميديا بالعربي — 65 تصميمًا لأكثر من 35 علامة تجارية. قابلة للتصدير PDF بصيغة ATS مع نسخة إنجليزية.">
+<meta name="description" content="سيرة محمد المصري، مصمم جرافيك في مكة المكرمة متخصص في تصميم إعلانات السوشيال ميديا بالعربي — 65 تصميمًا و77 نسخة مُسلَّمة لـ37 علامة تجارية، مع سجل أعمال كامل بشعارات العملاء ومقاساتهم. قابلة للتصدير PDF بنسختين عربية وإنجليزية.">
 <meta name="author" content="Muhammad Al-Masri">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://robliation.github.io/muhammed-portfolio-site/cv.html">
@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800;900&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Zain:wght@400;700;800;900&display=swap">
 <link rel="stylesheet" href="assets/css/site.css">
 <style>
-  .cv-wrap { max-width: 980px; margin-inline: auto; padding: clamp(20px,4vw,44px) var(--gut) 0; }
+  .cv-wrap { max-width: 1060px; margin-inline: auto; padding: clamp(20px,4vw,44px) var(--gut) 0; }
   .cv-top { display: flex; justify-content: space-between; align-items: flex-start; gap: var(--s5);
             padding-block: var(--s6) var(--s5); border-block-end: 2px solid var(--ink); flex-wrap: wrap; }
   .cv-top img { height: 58px; width: auto; }
@@ -22,22 +22,45 @@
   [dir="ltr"] .cv-name { font-family: var(--f-display-lat); letter-spacing: -0.025em; }
   .cv-role { color: var(--blue); font-weight: 700; font-size: var(--t-small); margin-block-start: 2px; }
   .cv-meta { font-size: var(--t-small); color: var(--ink-3); margin-block-start: var(--s3); display: flex; gap: var(--s3); flex-wrap: wrap; }
-  .cv-meta a { color: var(--ink-2); border-bottom: 1px solid var(--rule); word-break: break-all; }
+  .cv-meta a { color: var(--ink-2); border-bottom: 1px solid var(--rule); }
   .cv-meta a:hover { color: var(--blue); border-color: var(--blue); }
-  .cv-sec { padding-block: var(--s6) 0; }
-  .cv-sec > h2 { font-family: var(--f-display-ar); font-size: var(--t-h2); font-weight: 800; margin-block-end: var(--s4); }
+  .toc { display: flex; flex-wrap: wrap; gap: var(--s2); padding-block: var(--s5) 0; }
+  .toc a { font-size: var(--t-micro); font-weight: 600; color: var(--ink-3); background: var(--paper-2);
+           border: 1px solid var(--rule-2); border-radius: var(--r-pill); padding: 5px 12px; }
+  .toc a:hover { color: var(--blue-strong); background: var(--blue-wash); border-color: var(--blue-wash); }
+  .cv-sec { padding-block: var(--s7) 0; }
+  .cv-sec > h2 { display: flex; align-items: baseline; gap: var(--s3); font-family: var(--f-display-ar);
+                 font-size: var(--t-h2); font-weight: 800; margin-block-end: var(--s3); }
+  .cv-sec > h2::before { content: attr(data-n); flex: 0 0 auto; font-family: var(--f-display-lat); font-size: var(--t-micro);
+                 font-weight: 800; letter-spacing: .12em; color: var(--blue-strong); background: var(--blue-wash);
+                 border-radius: var(--r-pill); padding: 3px 9px; transform: translateY(-3px); }
   [dir="ltr"] .cv-sec > h2 { font-family: var(--f-display-lat); letter-spacing: -0.02em; }
   .cv-sec > p { color: var(--ink-2); }
+  .cv-lede { font-size: var(--t-body); line-height: 1.95; max-width: 74ch; }
+  .cv-sub { color: var(--ink-3); font-size: var(--t-small); line-height: 1.8;
+            margin-block: calc(-1 * var(--s2)) var(--s5); }
   .cv-num { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--rule);
             border: 1px solid var(--rule); border-radius: var(--r2); overflow: hidden; margin-block-start: var(--s5); }
   .cv-num div { background: var(--paper-2); padding: var(--s4); text-align: center; }
   .cv-num b { display: block; font-family: var(--f-display-ar); font-size: 1.7rem; font-weight: 900; line-height: 1; }
   [dir="ltr"] .cv-num b { font-family: var(--f-display-lat); }
   .cv-num span { font-size: var(--t-micro); color: var(--ink-3); }
-  .cv-list li { padding-block: var(--s3); border-block-end: 1px solid var(--rule-2); font-size: var(--t-small); color: var(--ink-2); }
+  .prin { display: grid; grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); gap: 1px;
+          background: var(--rule); border: 1px solid var(--rule); border-radius: var(--r2); overflow: hidden; }
+  .prin div { background: var(--paper-2); padding: var(--s5) var(--s4); }
+  .prin .k { display: flex; align-items: center; gap: 9px; font-weight: 800; margin-block-end: 6px; }
+  .prin .k i { flex: 0 0 auto; width: 6px; height: 6px; border-radius: 50%; background: var(--blue); font-style: normal; }
+  .prin p { color: var(--ink-3); font-size: var(--t-small); line-height: 1.8; }
+  .cv-list li { padding-block: var(--s3); border-block-end: 1px solid var(--rule-2);
+                font-size: var(--t-small); color: var(--ink-2); line-height: 1.8; }
+  .cv-list li:last-child { border-block-end: 0; }
   .cv-list li b { color: var(--ink); font-weight: 700; }
-  .cv-cols { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s6); }
   .cv-brands { display: flex; flex-wrap: wrap; gap: var(--s2); }
+  .grp { display: grid; grid-template-columns: minmax(112px,.26fr) minmax(0,1fr); gap: var(--s4);
+         padding-block: var(--s4); border-block-end: 1px solid var(--rule-2); align-items: start; }
+  .grp:last-child { border-block-end: 0; }
+  .grp .k { font-weight: 800; font-size: var(--t-small); }
+  .grp .v { display: flex; flex-wrap: wrap; gap: var(--s2); }
   .print-btns { position: fixed; inset-block-end: var(--s5); inset-inline-end: var(--s5); z-index: 120;
                 display: flex; flex-direction: column; gap: var(--s2); }
   .jump { display: flex; gap: var(--s3); justify-content: center; padding-block: var(--s6); }
@@ -47,7 +70,39 @@
   .cv-block + .cv-block { margin-block-start: var(--s5); padding-block-start: var(--s5); border-block-start: 1px solid var(--rule-2); }
   .cv-block h3 { font-size: var(--t-body); font-weight: 700; }
   .cv-para { font-size: var(--t-small); color: var(--ink-2); line-height: 1.8; }
-  @media (max-width: 720px) { .cv-cols { grid-template-columns: 1fr; } .cv-num { grid-template-columns: repeat(2,1fr); } }
+
+  /* ---------- work ledger ----------
+     Built from the same data.js the gallery reads, grouped by sector then by client, so
+     the résumé can never drift from what is actually published on the site. */
+  .led { border-block-start: 1px solid var(--rule); margin-block-start: var(--s4); }
+  .led-group { padding-block: var(--s5); border-block-end: 1px solid var(--rule); }
+  .led-head { display: flex; align-items: baseline; gap: var(--s3); margin-block-end: var(--s3); }
+  .led-head .nm { font-family: var(--f-display-ar); font-weight: 800; font-size: var(--t-h3); }
+  [dir="ltr"] .led-head .nm { font-family: var(--f-display-lat); letter-spacing: -.015em; }
+  .led-head .ct { font-size: var(--t-micro); font-weight: 700; color: var(--blue); }
+  .led-head .rule2 { flex: 1 1 auto; height: 1px; background: var(--rule-2); }
+  .led-row { display: grid; grid-template-columns: 76px minmax(96px,.95fr) minmax(0,1.7fr) 58px 128px 34px;
+             gap: var(--s4); align-items: center; padding-block: 8px; border-block-end: 1px solid var(--rule-2); }
+  .led-row.brk { border-block-start: 1px solid var(--rule); margin-block-start: 4px; padding-block-start: 10px; }
+  .led-row:last-child { border-block-end: 0; }
+  .led-logo { width: 76px; height: 34px; padding: 4px 6px; background: var(--stage); border-radius: var(--r1); display: flex; }
+  .led-br { font-weight: 700; font-size: var(--t-small); overflow-wrap: anywhere; }
+  .led-tg { color: var(--ink-2); font-size: var(--t-small); overflow-wrap: anywhere; }
+  .led-fm { font-family: var(--f-display-lat); font-weight: 800; font-size: var(--t-micro); color: var(--blue); letter-spacing: .1em; white-space: nowrap; }
+  .led-sz { font-family: var(--f-display-lat); font-size: var(--t-micro); color: var(--ink-3); letter-spacing: -.01em; white-space: nowrap; }
+  .led-yr { font-family: var(--f-display-lat); font-size: var(--t-micro); color: var(--ink-3); text-align: center; white-space: nowrap; }
+  .led-legend { display: flex; gap: var(--s4); flex-wrap: wrap; font-size: var(--t-micro); color: var(--ink-3); margin-block-start: var(--s4); }
+  @media (max-width: 900px) {
+    .led-row { grid-template-columns: 64px minmax(0,1fr) auto auto; column-gap: var(--s3); }
+    .led-logo { width: 64px; height: 30px; grid-area: 1 / 1 / 3 / 2; align-self: center; }
+    .led-br { grid-area: 1 / 2 / 2 / 3; align-self: center; }
+    .led-fm { grid-area: 1 / 3 / 2 / 4; align-self: center; }
+    .led-yr { grid-area: 1 / 4 / 2 / 5; align-self: center; }
+    .led-tg { grid-area: 2 / 2 / 3 / 4; }
+    .led-sz { grid-area: 2 / 4 / 3 / 5; text-align: end; }
+  }
+
+  @media (max-width: 720px) { .cv-num { grid-template-columns: repeat(2,1fr); } .grp { grid-template-columns: 1fr; gap: var(--s2); } }
 
   /* ---------- printing ----------
      Plain print gives the English single-column résumé because ATS parsers read Latin
@@ -56,11 +111,14 @@
   @media print {
     html { scroll-behavior: auto; }
     body { background: #fff; font-size: 10.5pt; line-height: 1.5; }
-    .nav, .foot, .no-print, .print-btns, .jump, .page-break, .board, .ticker { display: none !important; }
+    .nav, .foot, .no-print, .print-btns, .jump, .page-break, .board, .ticker, .toc { display: none !important; }
     .cv-wrap { max-width: none; padding: 0; }
-    .cv-sec { padding-block: 12pt 0; break-inside: avoid; }
+    .cv-sec { padding-block: 12pt 0; }
+    .cv-lede, .cv-sub, .cv-block, .cv-list li, .prin div, .grp, .led-row { break-inside: avoid; }
     .cv-top { padding-block: 0 10pt; }
     .cv-num { display: none !important; }
+    .prin { border: 0; gap: 0; }
+    .prin div { padding: 0 0 8pt; }
     .cv-brands { gap: 0; }
     .cv-brands .tag { border: 0; background: none; padding: 0; font-size: 10pt; color: #000; }
     .cv-brands .tag + .tag::before { content: " · "; color: #555; }
@@ -69,14 +127,23 @@
     #ar { display: none !important; }
     body.print-ar #ar { display: block !important; }
     body.print-ar #en, body.print-ar .cv-wrap > #en { display: none !important; }
+    /* the ledger prints as text rows only: client marks are screen ink, not paper ink.
+       A4 is under 900px wide, so the phone grid-areas must be released before the
+       print template can be honoured. */
+    .led-logo { display: none !important; }
+    .led-row > * { grid-area: auto !important; }
+    .led-row { grid-template-columns: minmax(0,1fr) minmax(0,2.2fr) 36px 126px 30px; gap: var(--s3);
+               padding-block: 2.5pt; border-block-end: 0; }
+    .led-row.brk { border-block-start: 0; margin-block-start: 0; padding-block-start: 4pt; }
+    .led-group { padding-block: 6pt; border-block-end: 1px solid #ccc; }
+    .led-head .rule2 { display: none; }
     /* the ATS path must be one clean column of selectable text */
     #en, #en * { font-family: Arial, Helvetica, "Liberation Sans", sans-serif !important; letter-spacing: normal !important; }
     #en { color: #000; }
-    #en .cv-sec > h2 { font-size: 12pt; font-weight: bold; text-transform: uppercase; letter-spacing: 0.04em !important;
+    #en .cv-sec > h2 { font-size: 12pt; font-weight: bold; text-transform: uppercase; letter-spacing: .04em !important;
                       border-block-end: 1px solid #000; padding-block-end: 3pt; margin-block-end: 8pt; }
     #en .cv-name { font-size: 20pt; }
     #en .cv-role, #en .cv-meta, #en .cv-list li, #en .cv-para, #en .cv-block h3 { font-size: 10.5pt; }
-    #en .cv-cols { grid-template-columns: 1fr; gap: 10pt; }
     #en img { display: none !important; }
     #en .cv-top { border-block-end: 2px solid #000; }
   }
@@ -108,131 +175,141 @@
       <div>
         <img src="assets/brand/m-lockup-ink.png" width="1400" height="1279" alt="M Designer" decoding="async">
         <p class="cv-name">محمد المصري</p>
-        <p class="cv-role">مصمم جرافيك &amp; إعلانات السوشيال ميديا</p>
+        <p class="cv-role">مصمم جرافيك — إعلانات السوشيال ميديا</p>
         <p class="cv-meta">
           <span>مكة المكرمة، السعودية</span>
-          <a href="mailto:muhammedwork7623@gmail.com">muhammedwork7623@gmail.com</a>
-          <a href="index.html">robliation.github.io/muhammed-portfolio-site</a>
-          <a href="https://www.behance.net/M_Designer_Original" target="_blank" rel="noopener">behance.net/M_Designer_Original</a>
+          <a href="mailto:muhammedwork7623@gmail.com">البريد الإلكتروني</a>
+          <a href="index.html">موقع الأعمال</a>
+          <a href="https://www.behance.net/M_Designer_Original" target="_blank" rel="noopener">حسابي على Behance</a>
         </p>
       </div>
       <div style="text-align:end">
         <p class="mono-label">الحالة</p>
-        <p style="font-weight:700;font-size:var(--t-small)">متاح لوظيفة بدوام كامل<br>أو مشاريع مستقلة أو عمل عن بعد</p>
+        <p style="font-weight:700;font-size:var(--t-small)">متاح لوظيفة بدوام كامل<br>ولمشاريع حرة ولعمل عن بُعد</p>
       </div>
     </div>
 
-    <section class="cv-sec">
-      <h2>نبذة</h2>
-      <p>مصمم جرافيك في مكة المكرمة، تخصصي تصميم إعلانات السوشيال ميديا بالعربي للعلامات التجارية. أبني البوست الذي يوقف الشخص أثناء التمرير: جملة عربية تُقرأ في ثانية، منتج يبدو شهياً، وتكوين يحمل الفكرة كاملة. أعمل على Adobe Photoshop بأكثر من 3 سنوات ممارسة احترافية، وAdobe Illustrator بأكثر من سنتين، وأسلّم مونتاج الفيديو الإعلاني بـCapCut، وأنتج الصور الخام بالذكاء الاصطناعي عبر نماذج Google (Nano Banana 2 وNano Banana Pro) ثم أعالجها يدويًا حتى تكون قابلة للنشر. أنتجت 65 تصميمًا إعلانيًا لأكثر من 35 علامة تجارية في المطاعم والأغذية والمشروبات والتجزئة والسياحة، وكل حملة تُسلَّم بالمقاسات المربعة والطولية والعرضية.</p>
+    <nav class="toc no-print" aria-label="أقسام السيرة">
+      <a href="#a-sum">نبذة</a><a href="#a-method">المنهج</a><a href="#a-skills">المهارات</a>
+      <a href="#a-exp">الخبرة</a><a href="#a-ledger">سجل الأعمال</a><a href="#a-tools">الأدوات</a>
+      <a href="#a-path">المسار</a><a href="#a-contact">التواصل</a>
+    </nav>
+
+    <section class="cv-sec" id="a-sum">
+      <h2 data-n="01">نبذة</h2>
+      <p class="cv-lede">مصمم جرافيك في مكة المكرمة، واشتغلي الأساسي هو الإعلان بالعربي: بوست يوقف الإصبع في منتصف التمرير. أبني الإعلان من الجملة أولًا — صياغة عربية تُقرأ في ثانية واحدة — ثم منتج يبدو شهيًا داخل الكادر، ثم تكوين يحمل الفكرة كاملة دون زحمة. ثلاث سنوات عملية على أدوبي فوتوشوب، وسنتان على أدوبي إليستريتور، ومونتاج الفيديو الإعلاني على كاب كات، وسنتان على إنتاج الصور بالذكاء الاصطناعي عبر نماذج جوجل (Google) ثم معالجتها يدويًا قبل النشر. سلّمت 65 تصميمًا إعلانيًا و77 نسخة جاهزة للنشر لـ37 علامة في المطاعم والأغذية والسلع الاستهلاكية والمشروبات والتجزئة والسياحة، وكل حملة تُسلَّم بمقاساتها المربعة والطولية والعرضية.</p>
       <div class="cv-num">
-        <div><b>65</b><span>تصميمًا</span></div>
+        <div><b>65</b><span>تصميمًا إعلانيًا</span></div>
+        <div><b>77</b><span>نسخة مُسلَّمة</span></div>
         <div><b>37</b><span>علامة تجارية</span></div>
         <div><b>8</b><span>مجالات</span></div>
-        <div><b>5</b><span>سنوات مسار</span></div>
+        <div><b>38</b><span>مقاس مربّع</span></div>
+        <div><b>27</b><span>مقاس عرضي</span></div>
+        <div><b>12</b><span>مقاس طولي</span></div>
+        <div><b>10</b><span>مقاسات مصدرية</span></div>
       </div>
     </section>
 
-    <section class="cv-sec">
-      <h2>المهارات الأساسية</h2>
+    <section class="cv-sec" id="a-method">
+      <h2 data-n="02">المنهج في العمل</h2>
+      <p class="cv-sub">ستة مبادئ أطبّقها على كل تصميم قبل التسليم — وهي سبب ثبات المستوى من حملة إلى أخرى.</p>
+      <div class="prin">
+        <div><p class="k"><i></i>تُقرأ قبل أن تُشرح</p><p>أختبر الجملة على بُعد ذراع: إن احتاجت إلى شرح فهي لم تُكتب بعد. الوزن والحجم والمسافة تُضبط حتى يسبق المعنى تفصيلَ الصورة.</p></div>
+        <div><p class="k"><i></i>الواقعية قبل الزخرفة</p><p>قصٌّ نظيف، وظلّ مقنع، وإضاءة واحدة للوحة كلها، ولون منتج مطابق للخلفية. منتج لا يستقر على سطحه يبدو ملصقًا لا إعلانًا.</p></div>
+        <div><p class="k"><i></i>النظام قبل التصميم</p><p>كل حملة تُبنى على إطار موحّد: شبكة، وهامش، ومقياس حروف، وموضع ثابت للشعار. بوست الحملة الثاني يُعرّف صاحبه من أولها.</p></div>
+        <div><p class="k"><i></i>لكل موسم لغته</p><p>رمضان له ضوء مختلف عن عيد الفطر وعن موسم العروض. أُغيّر الخلفية والرموز والألوان وأُبقي النظام كما هو حتى تبقى العلامة معروفة.</p></div>
+        <div><p class="k"><i></i>الذكاء الاصطناعي خام، والمعالجة يدوية</p><p>النموذج يعطيني الفكرة بسرعة؛ وتنقية الحواف، وتصحيح الإضاءة، ورفع الدقة، وضبط التفاصيل كلها تمرّ بيدي قبل النشر.</p></div>
+        <div><p class="k"><i></i>التسليم على المقاس لا القصّ إليه</p><p>المربع للمنشور، والطولي للستوري والريلز، والعرضي للبنر والغلاف. ثلاثة مقاسات من فكرة واحدة، لا ثلاثة تصاميم متنافرة.</p></div>
+      </div>
+    </section>
+
+    <section class="cv-sec" id="a-skills">
+      <h2 data-n="03">المهارات الأساسية</h2>
       <ul class="cv-list">
-        <li><b>تصميم إعلانات السوشيال ميديا</b> — صياغة البوست من الفكرة إلى التسليم النهائي بكل المقاسات: منشورات ثابتة، بنرات حملات، وغلافات.</li>
+        <li><b>تصميم إعلانات السوشيال ميديا</b> — صياغة البوست من الفكرة إلى التسليم النهائي بكل المقاسات: منشورات ثابتة، وبنرات حملات، وغلافات.</li>
         <li><b>التايبوغرافي العربي</b> — توزيع الجملة العربية على الكادر، وموازنة الوزن والحجم والمسافة مع الصورة، والخط الذي يُقرأ قبل أن يُشرح.</li>
-        <li><b>تكوين ودمج المنتجات والأطعمة</b> — قصّ دقيق، ظلال وإضاءة مقنعة، وتوحيد لون المنتج مع الخلفية حتى يبدو طبيعيًا داخل الإعلان.</li>
-        <li><b>الهوية البصرية وأنظمة السوشيال</b> — إطار موحّد لسلسلة بوستات ومقالات، وأيقونات، وتخطيط شبكي متكرر.</li>
-        <li><b>مونتاج وتعديل الفيديو الإعلاني</b> — عمل احترافي عبر CapCut: قصّ عمودي للسوشيال، توقيت على الموسيقى، نصوص متحركة، وتجهيز الريلز والستوري.</li>
-        <li><b>إنتاج الصور بالذكاء الاصطناعي</b> — صور خام سريعة عبر نماذج Google ثم معالجة يدوية: تنقية الحواف، تصحيح الإضاءة، ورفع الدقة قبل النشر.</li>
+        <li><b>تكوين ودمج المنتجات والأطعمة</b> — قصّ دقيق، وظلال وإضاءة مقنعة، وتوحيد لون المنتج مع الخلفية حتى يبدو طبيعيًا داخل الإعلان.</li>
+        <li><b>الهوية البصرية وأنظمة السوشيال</b> — إطار موحّد لسلسلة بوستات ومقالات، وأيقونات، وتخطيط شبكي متكرر يُسهّل الإنتاج المستمر.</li>
+        <li><b>مونتاج وتعديل الفيديو الإعلاني</b> — عمل احترافي عبر كاب كات: قصّ عمودي للسوشيال، وتوقيت على الموسيقى، ونصوص متحركة، وتجهيز الريلز والستوري.</li>
+        <li><b>إنتاج الصور بالذكاء الاصطناعي</b> — صور خام سريعة عبر نماذج جوجل، ثم معالجة يدوية: تنقية الحواف، وتصحيح الإضاءة، ورفع الدقة قبل النشر.</li>
         <li><b>تصميم مواسم الحملات</b> — رمضان والأعياد ومواسم العروض بلغتها البصرية الخاصة، مع تسليم الحملة كاملة بكل المقاسات.</li>
+        <li><b>تجهيز مرجع المنتج والقصّ الدقيق</b> — البحث عن صورة المنتج الصحيحة، وفصلها عن خلفيتها بنظافة، وترميم حوافها قبل أي تركيب.</li>
+        <li><b>معاينة الألوان وتوحيد الطبعة</b> — مطابقة لون المنتج والعبوة بين صور الحملة نفسها حتى لا تتغيّر العلامة بين بوست وآخر.</li>
+        <li><b>ضبط الجودة قبل النشر</b> — قراءة النص على شاشة حقيقية، وتباين يكفي للمساحات الصغيرة، ووزن ملف لا يُبطئ المنشور.</li>
       </ul>
     </section>
 
-    <section class="cv-sec">
-      <h2>الخبرة</h2>
+    <section class="cv-sec" id="a-exp">
+      <h2 data-n="04">الخبرة</h2>
       <div class="cv-block">
         <div class="cv-role-line"><h3>مصمم جرافيك مستقل — إعلانات السوشيال ميديا</h3><span class="per">2022 — حتى الآن</span></div>
-        <p class="cv-para">إنتاج تصاميم إعلانية بالعربي لعلامات في المطاعم والأغذية والمشروبات والتجزئة والسياحة. بناء أسلوب إعلاني موحّد لكل حملة، وتسليم كل تصميم بالمقاسات المربعة والطولية والعرضية. العمل يشمل البحث عن مرجع المنتج، والقصّ والتركيب، والتايبوغرافي العربي، والمراجعة النهائية الجاهزة للنشر.</p>
+        <p class="cv-para">إنتاج تصاميم إعلانية بالعربي لعلامات في المطاعم والأغذية والمشروبات والسلع الاستهلاكية والتجزئة والسياحة. بناء أسلوب إعلاني موحّد لكل حملة، من أول بوست حتى آخر مقاس، وتسليم كل تصميم بالمقاسات المربعة والطولية والعرضية. العمل اليومي يشمل البحث عن مرجع المنتج، والقصّ والتركيب، وضبط الإضاءة والظل، والتايبوغرافي العربي، والمراجعة النهائية الجاهزة للنشر.</p>
       </div>
       <div class="cv-block">
         <div class="cv-role-line"><h3>أنظمة هوية ومحتوى — مشروع شخصي</h3><span class="per">2021 — 2024</span></div>
-        <p class="cv-para">بناء هوية بصرية كاملة ونظام محتوى: إطار زخرفي موحّد، نسخ مربعة وطولية وعرضية لكل منشور ومقال، وتجارب مطوّلة على الخط العربي والتايبوغرافي. هذه المرحلة أسّست الدقة في التسليم المتكرر والالتزام بالنظام البصري.</p>
+        <p class="cv-para">بناء هوية بصرية كاملة ونظام محتوى: إطار زخرفي موحّد، ونسخ مربعة وطولية وعرضية لكل منشور ومقال، وتجارب مطوّلة على الخط العربي والتايبوغرافي. هذه المرحلة أسّست الدقة في التسليم المتكرر والالتزام بالنظام البصري بدل الاجتهاد في كل تصميم على حدة.</p>
       </div>
       <div class="cv-block">
         <div class="cv-role-line"><h3>النشر المهني على بيهاينس</h3><span class="per">فبراير 2025 — حتى الآن</span></div>
-        <p class="cv-para">نشر الأعمال بانتظام على Behance وبناء معرض أعمال منسّق بمشاريع ومقاسات متعددة لكل حملة، مع أكثر من 60 إعلانًا منشورًا لعلامات سعودية.</p>
+        <p class="cv-para">نشر الأعمال بانتظام على بيهاينس وبناء معرض أعمال منسّق: مشروع مستقل لكل حملة، وعرض كل تصميم بكل مقاساته داخل المشروع نفسه. أكثر من 60 إعلانًا منشورًا لعلامات سعودية، و12 مشروعًا موثّقًا في هذه السيرة بروابط مباشرة إلى بيهاينس.</p>
       </div>
     </section>
 
-    <section class="cv-sec cv-cols">
-      <div>
-        <h2>الأدوات</h2>
-        <div class="cv-brands">
-          <span class="tag">Adobe Photoshop — 3+ سنوات</span>
-          <span class="tag">Adobe Illustrator — 2+ سنتان</span>
-          <span class="tag">CapCut — 2+ سنتان</span>
-          <span class="tag">Nano Banana 2 (Google)</span>
-          <span class="tag">Nano Banana Pro (Google)</span>
-          <span class="tag">ImageFX</span>
-          <span class="tag">Whisk AI</span>
-          <span class="tag">UpScayl</span>
-        </div>
-      </div>
-      <div>
-        <h2>المجالات واللغات</h2>
-        <div class="cv-brands">
-          <span class="tag">التصميم الجرافيكي</span><span class="tag">الإعلان الرقمي</span>
-          <span class="tag">إعلانات المطاعم والأغذية</span><span class="tag">هوية بصرية</span>
-          <span class="tag">مونتاج فيديو</span><span class="tag">التصوير</span>
-          <span class="tag hot">العربية — لغة أم</span><span class="tag">الإنجليزية</span>
-        </div>
-      </div>
+    <section class="cv-sec" id="a-ledger">
+      <h2 data-n="05">سجل الأعمال</h2>
+      <p class="cv-sub">كل تصميم بشركته وموضوعه ومقاساته، مرتّبًا حسب المجال ثم حسب العلامة. الشعار بجانب اسم العميل هو الشعار المستخدم فعليًا في تلك الحملة.</p>
+      <div class="led" id="ledger-ar"></div>
+      <p class="led-legend">م = مربّع · ط = طولي · ع = عرضي — والأرقام هي الأبعاد المصدرية بالبكسل لكل نسخة مُسلَّمة.</p>
+    </section>
+
+    <section class="cv-sec" id="a-tools">
+      <h2 data-n="06">الأدوات</h2>
+      <div class="grp"><p class="k">التصميم</p><div class="v">
+        <span class="tag">فوتوشوب — Adobe Photoshop · أكثر من 3 سنوات</span>
+        <span class="tag">إليستريتور — Adobe Illustrator · أكثر من سنتين</span></div></div>
+      <div class="grp"><p class="k">الحركة والمونتاج</p><div class="v">
+        <span class="tag">كاب كات — CapCut · أكثر من سنتين</span></div></div>
+      <div class="grp"><p class="k">إنتاج الصور بالذكاء الاصطناعي</p><div class="v">
+        <span class="tag">نانو بانانا 2 — Nano Banana 2 من جوجل</span>
+        <span class="tag">نانو بانانا برو — Nano Banana Pro من جوجل</span>
+        <span class="tag">إيمدج إف إكس — ImageFX</span>
+        <span class="tag">ويسك — Whisk AI</span></div></div>
+      <div class="grp"><p class="k">الجودة والدقة</p><div class="v">
+        <span class="tag">أب سكايْل — UpScayl</span>
+        <span class="tag">معالجة يدوية للحواف والإضاءة والدقة</span></div></div>
     </section>
 
     <section class="cv-sec">
-      <h2>مسار التعلّم 2021 — 2026</h2>
+      <h2 data-n="07">المجالات واللغات</h2>
+      <div class="cv-brands" id="cats-ar"></div>
+      <div class="cv-brands" style="margin-block-start:var(--s4)">
+        <span class="tag hot">العربية — لغة أم، كتابةً وتصميمًا</span>
+        <span class="tag">الإنجليزية — مستوى مهني في العمل اليومي</span>
+      </div>
+    </section>
+
+    <section class="cv-sec" id="a-path">
+      <h2 data-n="08">مسار التعلّم 2021 — 2026</h2>
       <div class="tl">
-        <div class="tl-row"><span class="yr">2021</span><div class="bd"><p class="t">البداية — أساسيات Photoshop</p><p class="d">تعلّم من الصفر: الطبقات، التحديد والقصّ، تصحيح الألوان، ودمج الصور. تدريب طويل على تجهيز الصور وتنظيف حوافها.</p></div></div>
-        <div class="tl-row"><span class="yr">2022</span><div class="bd"><p class="t">Photoshop بعمق — وأول هوية بصرية</p><p class="d">تركيب منتجات الطعام، ظلال وإضاءة مقنعة، وأول هوية كاملة. بداية تعلّم Adobe Illustrator: المتجهات والشعارات والتخطيط الشبكي.</p></div></div>
-        <div class="tl-row"><span class="yr">2023</span><div class="bd"><p class="t">أنظمة محتوى وسوشيال بالعربي</p><p class="d">إطار زخرفي موحّد، نسخ مربعة وطولية وعرضية لكل محتوى، وتجارب جدية على التايبوغرافي العربي والخط.</p></div></div>
-        <div class="tl-row"><span class="yr">2024</span><div class="bd"><p class="t">احتراف Illustrator + مونتاج CapCut</p><p class="d">تثبيت Illustrator على الشعارات والأنظمة، وإضافة مهارة مونتاج الفيديو الإعلاني: قصّ عمودي، توقيت على الموسيقى، ونصوص متحركة.</p></div></div>
-        <div class="tl-row"><span class="yr">2025</span><div class="bd"><p class="t">إعلانات العلامات السعودية</p><p class="d">النشر المنتظم على بيهاينس وأكثر من 60 إعلانًا للمراعي والبيك والطازج وجاهز وجرير وكينزا والقدية ودبي وغيرها.</p></div></div>
-        <div class="tl-row"><span class="yr">2026</span><div class="bd"><p class="t">الذكاء الاصطناعي التوليدي — واليوم</p><p class="d">سنتان على نماذج Google للصور (Nano Banana 2 وNano Banana Pro) مع معالجة يدوية، وتوسيع الأعمال على علامات جديدة وتسليم كل حملة بكل المقاسات.</p></div></div>
+        <div class="tl-row"><span class="yr">2021</span><div class="bd"><p class="t">البداية — أساسيات فوتوشوب</p><p class="d">تعلّم من الصفر: الطبقات، والتحديد والقصّ، وتصحيح الألوان، ودمج الصور. تدريب طويل على تجهيز الصور وتنظيف حوافها.</p></div></div>
+        <div class="tl-row"><span class="yr">2022</span><div class="bd"><p class="t">فوتوشوب بعمق — وأول هوية بصرية</p><p class="d">تركيب منتجات الطعام، وظلال وإضاءة مقنعة، وأول هوية كاملة. بداية تعلّم إليستريتور: المتجهات والشعارات والتخطيط الشبكي.</p></div></div>
+        <div class="tl-row"><span class="yr">2023</span><div class="bd"><p class="t">أنظمة محتوى وسوشيال بالعربي</p><p class="d">إطار زخرفي موحّد، ونسخ مربعة وطولية وعرضية لكل محتوى، وتجارب جدية على التايبوغرافي العربي والخط.</p></div></div>
+        <div class="tl-row"><span class="yr">2024</span><div class="bd"><p class="t">احتراف إليستريتور + مونتاج كاب كات</p><p class="d">تثبيت إليستريتور على الشعارات والأنظمة، وإضافة مهارة مونتاج الفيديو الإعلاني: قصّ عمودي، وتوقيت على الموسيقى، ونصوص متحركة.</p></div></div>
+        <div class="tl-row"><span class="yr">2025</span><div class="bd"><p class="t">إعلانات العلامات السعودية</p><p class="d">النشر المنتظم على بيهاينس، وأكثر من 60 إعلانًا للمراعي والبيك والطازج وجاهز وجرير وكينزا والقدية ودبي وغيرها.</p></div></div>
+        <div class="tl-row"><span class="yr">2026</span><div class="bd"><p class="t">الذكاء الاصطناعي التوليدي — واليوم</p><p class="d">سنتان على نماذج جوجل للصور مع معالجة يدوية لكل ناتج، وتوسيع الأعمال على علامات جديدة، وتسليم كل حملة بكل مقاساتها.</p></div></div>
       </div>
-    </section>
-
-    <section class="cv-sec">
-      <h2>العلامات التجارية في الأعمال</h2>
-      <p class="cv-para" style="margin-block-end:var(--s4)">أكثر من 35 علامة تجارية في السعودية والخليج. الرقم بجانب كل اسم يمثّل عدد التصاميم المنفّذة له.</p>
-      <div class="index-grid">
-        <div class="index-cell"><span class="nm">المراعي</span><span class="ct">12</span></div>
-        <div class="index-cell"><span class="nm">مكتبة جرير</span><span class="ct">4</span></div>
-        <div class="index-cell"><span class="nm">البيك</span><span class="ct">3</span></div>
-        <div class="index-cell"><span class="nm">الطازج</span><span class="ct">3</span></div>
-        <div class="index-cell"><span class="nm">جاهز</span><span class="ct">2</span></div>
-        <div class="index-cell"><span class="nm">شاورمر</span><span class="ct">2</span></div>
-        <div class="index-cell"><span class="nm">جست سمبوسة</span><span class="ct">2</span></div>
-        <div class="index-cell"><span class="nm">ساديا</span><span class="ct">2</span></div>
-        <div class="index-cell"><span class="nm">كينزا</span><span class="ct">2</span></div>
-        <div class="index-cell"><span class="nm">عصير تايم</span><span class="ct">2</span></div>
-        <div class="index-cell"><span class="nm">دبي</span><span class="ct">2</span></div>
-        <div class="index-cell"><span class="nm">فيمتو</span><span class="ct">1</span></div>
-        <div class="index-cell"><span class="nm">القدية</span><span class="ct">1</span></div>
-        <div class="index-cell"><span class="nm">دواجن الوطنية</span><span class="ct">1</span></div>
-        <div class="index-cell"><span class="nm">هنقرستيشن</span><span class="ct">1</span></div>
-        <div class="index-cell"><span class="nm">سنتربوينت</span><span class="ct">1</span></div>
-      </div>
-      <p class="cv-para" style="margin-block-start:var(--s4)">و21 علامة أخرى: بيت الكيك، تاكوهت، سلطان السمك، السعودية للأجبان، مذاق، مرامي، خيال، إندومي، فلافل بوراك، فول الوزير، كونتري، بيرين، باجة، برجر مش، اليوم، العلالي، الرومانسية، المسافر، عروض بيتزا، العدنان، ونوتشن.</p>
     </section>
 
     <section class="cv-sec" style="padding-block-end:var(--s8)">
-      <h2>التواصل</h2>
-      <p class="cv-para">البريد: <a href="mailto:muhammedwork7623@gmail.com" style="color:var(--blue);font-weight:700">muhammedwork7623@gmail.com</a> — الرد خلال يوم عمل.
-      البورتفوليو الكامل بكل التصاميم ومقاساتها على <a href="index.html" style="color:var(--blue);font-weight:700">robliation.github.io/muhammed-portfolio-site</a>، والأعمال المنشورة على <a href="https://www.behance.net/M_Designer_Original" target="_blank" rel="noopener" style="color:var(--blue);font-weight:700">Behance</a>.</p>
+      <h2 data-n="09">التواصل</h2>
+      <p class="cv-para" id="a-contact">البريد: <a href="mailto:muhammedwork7623@gmail.com" style="color:var(--blue);font-weight:700">muhammedwork7623@gmail.com</a> — الرد خلال يوم عمل.
+      المعرض الكامل بكل التصاميم ومقاساتها على <a href="index.html" style="color:var(--blue);font-weight:700">موقع الأعمال</a>، والأعمال المنشورة على <a href="https://www.behance.net/M_Designer_Original" target="_blank" rel="noopener" style="color:var(--blue);font-weight:700">حسابي على Behance</a>.</p>
     </section>
   </div>
 
   <hr class="page-break">
   <div class="jump no-print">
-    <a class="btn btn-ghost" href="#en">English version ↓</a>
+    <a class="btn btn-ghost" href="#en">النسخة الإنجليزية ↓</a>
   </div>
 
   <div id="en" dir="ltr" lang="en">
@@ -242,9 +319,9 @@
         <p class="cv-role">Graphic Designer &amp; Social Advertising Designer</p>
         <p class="cv-meta">
           <span>Mecca, Saudi Arabia</span>
-          <a href="mailto:muhammedwork7623@gmail.com">muhammedwork7623@gmail.com</a>
-          <a href="index.html">robliation.github.io/muhammed-portfolio-site</a>
-          <a href="https://www.behance.net/M_Designer_Original" target="_blank" rel="noopener">behance.net/M_Designer_Original</a>
+          <a href="mailto:muhammedwork7623@gmail.com">Email</a>
+          <a href="index.html">Portfolio website</a>
+          <a href="https://www.behance.net/M_Designer_Original" target="_blank" rel="noopener">Behance profile</a>
         </p>
       </div>
       <div style="text-align:end">
@@ -253,82 +330,121 @@
       </div>
     </div>
 
-    <section class="cv-sec">
-      <h2>Summary</h2>
-      <p>Graphic designer in Mecca, Saudi Arabia, specialising in Arabic social media advertising for brands. I build the post that stops someone mid-scroll: an Arabic line that reads in one second, a product that looks appetising, and a composition that carries the whole idea. 3+ years of professional Adobe Photoshop practice, 2+ years in Adobe Illustrator, advertising video edited in CapCut, and two years producing raw imagery with Google's generative models (Nano Banana 2, Nano Banana Pro) before hand-retouching it for publication. Delivered 65 advertising designs for more than 35 brands across restaurants, food, dairy, beverages, retail and tourism, with every campaign shipped square, portrait and landscape.</p>
+    <nav class="toc no-print" aria-label="Resume sections">
+      <a href="#e-sum">Summary</a><a href="#e-method">Method</a><a href="#e-skills">Skills</a>
+      <a href="#e-exp">Experience</a><a href="#e-ledger">Work ledger</a><a href="#e-tools">Tools</a>
+      <a href="#e-path">Development</a><a href="#e-contact">Contact</a>
+    </nav>
+
+    <section class="cv-sec" id="e-sum">
+      <h2 data-n="01">Summary</h2>
+      <p class="cv-lede">Graphic designer in Mecca, Saudi Arabia, working almost entirely on Arabic social advertising: the post that stops a thumb mid-scroll. I build an ad from the line first — Arabic that reads in one second — then a product that looks appetising inside the frame, then a composition that carries the idea without noise. 3+ years of professional Adobe Photoshop practice, 2+ years in Adobe Illustrator, advertising video edited in CapCut, and two years producing raw imagery with Google's generative models (Nano Banana 2, Nano Banana Pro) before hand-retouching it for publication. Delivered 65 advertising designs and 77 export-ready versions for 37 brands across restaurants, food, FMCG, drinks, retail and tourism, with every campaign shipped square, portrait and landscape.</p>
+      <div class="cv-num">
+        <div><b>65</b><span>ad designs</span></div>
+        <div><b>77</b><span>delivered versions</span></div>
+        <div><b>37</b><span>client brands</span></div>
+        <div><b>8</b><span>sectors</span></div>
+        <div><b>38</b><span>square</span></div>
+        <div><b>27</b><span>landscape</span></div>
+        <div><b>12</b><span>portrait</span></div>
+        <div><b>10</b><span>source sizes</span></div>
+      </div>
     </section>
 
-    <section class="cv-sec">
-      <h2>Core Skills</h2>
+    <section class="cv-sec" id="e-method">
+      <h2 data-n="02">Method</h2>
+      <p class="cv-sub">Six rules applied to every design before it ships — they are why the level holds steady from one campaign to the next.</p>
+      <div class="prin">
+        <div><p class="k"><i></i>Reads before it explains</p><p>I test the headline at arm's length: if it needs explaining it is not written yet. Weight, size and space are tuned until the line lands before the image is decoded.</p></div>
+        <div><p class="k"><i></i>Believability before decoration</p><p>Clean cut-out, convincing shadow, one light direction across the whole frame, and product colour matched to its background. A product that does not sit on its surface reads as a sticker, not an ad.</p></div>
+        <div><p class="k"><i></i>System before design</p><p>Each campaign is built on one framework: grid, margin, type scale, fixed logo position. The second post of a series is recognisable from the first.</p></div>
+        <div><p class="k"><i></i>Every season has its own language</p><p>Ramadan is lit differently from Eid and from an offer season. Backgrounds, symbols and palettes change; the system stays, so the brand stays knowable.</p></div>
+        <div><p class="k"><i></i>AI gives the raw, the hand gives the finish</p><p>Generative models produce the fast idea. Edge cleanup, lighting correction, upscaling and detail restraint all pass through me before publishing.</p></div>
+        <div><p class="k"><i></i>Delivered to the format, not cropped into it</p><p>Square for the feed, portrait for stories and reels, landscape for banners and covers. Three formats from one idea, not three unrelated designs.</p></div>
+      </div>
+    </section>
+
+    <section class="cv-sec" id="e-skills">
+      <h2 data-n="03">Core Skills</h2>
       <ul class="cv-list">
-        <li>Social media advertising design — brief to final delivery in every format: static posts, campaign banners and covers.</li>
-        <li>Arabic typography — setting the Arabic line in the frame, balancing weight, size and negative space against the image.</li>
-        <li>Product and food compositing — precise cut-outs, believable shadow and light, and colour matching so the product sits naturally in the ad.</li>
-        <li>Visual identity and social systems — one consistent framework across a post series, iconography and repeatable grid layouts.</li>
-        <li>Advertising video editing and montage in CapCut — vertical cuts for social, timing to music, animated type, reels and stories delivery.</li>
-        <li>AI-assisted image production — fast raw generation with Google models, then hand retouching, edge cleanup and upscaling before publishing.</li>
-        <li>Seasonal campaign design — Ramadan, Eid and offer seasons built in each season's own visual language.</li>
-        <li>Multi-format delivery — square, portrait and landscape versions of every campaign, export-ready for each platform.</li>
+        <li><b>Social media advertising design</b> — the post from concept to final delivery in every format: static posts, campaign banners and covers.</li>
+        <li><b>Arabic typography</b> — setting the Arabic line in the frame, balancing weight, size and negative space against the image, with type that reads before it is explained.</li>
+        <li><b>Product and food compositing</b> — precise cut-outs, believable shadow and light, and colour matching so the product sits naturally inside the ad.</li>
+        <li><b>Visual identity and social systems</b> — one consistent framework across a post and article series, iconography, and repeatable grid layouts for ongoing production.</li>
+        <li><b>Advertising video editing and montage in CapCut</b> — vertical cuts for social, timing to music, animated type, reels and stories delivery.</li>
+        <li><b>AI-assisted image production</b> — fast raw generation with Google models, then hand retouching, edge cleanup and upscaling before publishing.</li>
+        <li><b>Seasonal campaign design</b> — Ramadan, Eid and offer seasons built in each season's own visual language, shipped as a complete campaign set.</li>
+        <li><b>Product reference and clean extraction</b> — finding the right product shot, separating it from its background, and rebuilding its edges before any compositing.</li>
+        <li><b>Colour consistency across a campaign</b> — matching product and packaging colour between images so the brand does not shift from post to post.</li>
+        <li><b>Pre-publication quality control</b> — legibility on a real screen, contrast that survives small sizes, and file weight that does not slow the post down.</li>
       </ul>
     </section>
 
-    <section class="cv-sec">
-      <h2>Professional Experience</h2>
+    <section class="cv-sec" id="e-exp">
+      <h2 data-n="04">Professional Experience</h2>
       <div class="cv-block">
         <div class="cv-role-line"><h3>Freelance Graphic Designer — Social Advertising</h3><span class="per">2022 — Present</span></div>
-        <p class="cv-para">Produce Arabic advertising design for Saudi brands in restaurants, food, dairy, beverages, retail and tourism. Build one visual system per campaign and deliver every design square, portrait and landscape. Day-to-day work covers product reference and cut-out, compositing and lighting, Arabic headline setting, colour matching, and final quality control before publication.</p>
+        <p class="cv-para">Produce Arabic advertising design for Saudi and Gulf brands in restaurants, food, drinks, FMCG, retail and tourism. Build one visual system per campaign, from the first post to the last format, and deliver every design square, portrait and landscape. Day-to-day work covers product reference and cut-out, compositing and lighting, Arabic headline setting, colour matching, and final quality control before publication.</p>
       </div>
       <div class="cv-block">
         <div class="cv-role-line"><h3>Visual Identity and Content Systems — Personal Brand Project</h3><span class="per">2021 — 2024</span></div>
-        <p class="cv-para">Built a complete identity and content system: one decorative frame across the series, square, portrait and landscape variants for every post and article, and extended experiments in Arabic type. This stage established the discipline of repeatable, on-system delivery.</p>
+        <p class="cv-para">Built a complete identity and content system: one decorative frame across the series, square, portrait and landscape variants for every post and article, and extended experiments in Arabic type. This stage established the discipline of repeatable, on-system delivery instead of reinventing each design.</p>
       </div>
       <div class="cv-block">
         <div class="cv-role-line"><h3>Published Portfolio — Behance</h3><span class="per">February 2025 — Present</span></div>
-        <p class="cv-para">Consistent professional publishing on Behance with organised projects and multiple formats per campaign; more than 60 advertising designs released for Saudi brands.</p>
+        <p class="cv-para">Consistent professional publishing on Behance, with a curated project per campaign and every format of that campaign shown inside the project itself. More than 60 advertising designs released for Saudi brands, and 12 projects linked directly from the work ledger below.</p>
       </div>
     </section>
 
-    <section class="cv-sec">
-      <h2>Tools and Software</h2>
-      <ul class="cv-list">
-        <li>Adobe Photoshop — 3+ years (compositing, colour correction, retouching, print and web output)</li>
-        <li>Adobe Illustrator — 2+ years (vector marks, identity systems, layout grids)</li>
-        <li>CapCut — 2+ years (professional advertising video editing and montage)</li>
-        <li>Nano Banana 2 and Nano Banana Pro by Google — 2 years (generative raw imagery)</li>
-        <li>ImageFX, Whisk AI and UpScayl — raw generation and quality upscaling</li>
-      </ul>
+    <section class="cv-sec" id="e-ledger">
+      <h2 data-n="05">Work Ledger</h2>
+      <p class="cv-sub">Every design with its client, topic and formats, ordered by sector and then by brand. The mark beside a client is the logo actually used in that campaign.</p>
+      <div class="led" id="ledger-en"></div>
+      <p class="led-legend">S square · P portrait · L landscape — the figures are the original pixel dimensions of each delivered version.</p>
+    </section>
+
+    <section class="cv-sec" id="e-tools">
+      <h2 data-n="06">Tools and Software</h2>
+      <div class="grp"><p class="k">Design</p><div class="v">
+        <span class="tag">Adobe Photoshop · 3+ years</span>
+        <span class="tag">Adobe Illustrator · 2+ years</span></div></div>
+      <div class="grp"><p class="k">Motion and edit</p><div class="v">
+        <span class="tag">CapCut · 2+ years</span></div></div>
+      <div class="grp"><p class="k">Generative image production</p><div class="v">
+        <span class="tag">Nano Banana 2 by Google</span>
+        <span class="tag">Nano Banana Pro by Google</span>
+        <span class="tag">ImageFX</span>
+        <span class="tag">Whisk AI</span></div></div>
+      <div class="grp"><p class="k">Quality and resolution</p><div class="v">
+        <span class="tag">UpScayl</span>
+        <span class="tag">Manual edge, lighting and detail retouching</span></div></div>
     </section>
 
     <section class="cv-sec">
-      <h2>Learning and Development</h2>
-      <ul class="cv-list">
-        <li>2021 — Adobe Photoshop fundamentals: layers, selection and cut-outs, colour correction, compositing.</li>
-        <li>2022 — Advanced Photoshop for food and product work; first complete visual identity; Adobe Illustrator started.</li>
-        <li>2023 — Arabic typography and content systems; multi-format post and article frameworks.</li>
-        <li>2024 — Illustrator to a professional level; added CapCut video editing and motion type for social.</li>
-        <li>2025 — Saudi brand advertising at scale; systematic publishing on Behance.</li>
-        <li>2026 — Generative AI image production with Google models, integrated into a hand-retouched workflow.</li>
-      </ul>
+      <h2 data-n="07">Sectors and Languages</h2>
+      <div class="cv-brands" id="cats-en"></div>
+      <div class="cv-brands" style="margin-block-start:var(--s4)">
+        <span class="tag hot">Arabic — native, written and designed</span>
+        <span class="tag">English — professional working proficiency</span>
+      </div>
     </section>
 
-    <section class="cv-sec">
-      <h2>Selected Brands</h2>
-      <p class="cv-para">Almarai (12), Jarir Bookstore (4), Al Baik (3), Tazaj (3), Jahez (2), Shawarmer (2), Just Samboosa (2), Sadia (2), Kinza (2), Aseer Time (2), Dubai (2), Hungerstation, Qiddiya, National Poultry, Centrepoint, Vimto, Indomie, Saudia Cheese, The Cake House, Takohat, Sultan Al-Samak, Mazaaq, Marami, Kayal, Falafel Burak, Ful Al-Wazir, Country Corn Flakes, Berain, Bajah, Burger Mish, Al Yawm, Al Ulali, Al Romansia, Al Musafir, Al Adnan, Pizza Offers and Notion — 37 brands in total.</p>
-    </section>
-
-    <section class="cv-sec">
-      <h2>Sectors</h2>
-      <p class="cv-para">Restaurants and food · FMCG and grocery · Drinks and juices · Retail and lifestyle · Tourism and places · Ramadan and Eid · Brand and social systems · Concept and experimental.</p>
-    </section>
-
-    <section class="cv-sec">
-      <h2>Languages</h2>
-      <p class="cv-para">Arabic — native · English — professional working proficiency.</p>
+    <section class="cv-sec" id="e-path">
+      <h2 data-n="08">Learning and Development</h2>
+      <div class="tl">
+        <div class="tl-row"><span class="yr">2021</span><div class="bd"><p class="t">Adobe Photoshop fundamentals</p><p class="d">Layers, selection and cut-outs, colour correction, compositing. Long training on preparing images and cleaning their edges.</p></div></div>
+        <div class="tl-row"><span class="yr">2022</span><div class="bd"><p class="t">Photoshop in depth — first complete identity</p><p class="d">Food and product compositing with believable shadow and light, and a first full visual identity. Adobe Illustrator started: vectors, marks and layout grids.</p></div></div>
+        <div class="tl-row"><span class="yr">2023</span><div class="bd"><p class="t">Arabic content and social systems</p><p class="d">One decorative frame across a series, square, portrait and landscape versions of every post and article, and serious work on Arabic typography.</p></div></div>
+        <div class="tl-row"><span class="yr">2024</span><div class="bd"><p class="t">Illustrator to a professional level + CapCut</p><p class="d">Illustrator settled on marks and systems; added advertising video editing — vertical cuts, timing to music, and animated type.</p></div></div>
+        <div class="tl-row"><span class="yr">2025</span><div class="bd"><p class="t">Saudi brand advertising at scale</p><p class="d">Regular publishing on Behance and more than 60 ads for Almarai, Al Baik, Tazaj, Jahez, Jarir, Kinza, Qiddiya, Dubai and others.</p></div></div>
+        <div class="tl-row"><span class="yr">2026</span><div class="bd"><p class="t">Generative AI and today</p><p class="d">Two years on Google's image models with hand finishing on every output, new clients added, and every campaign delivered in all three formats.</p></div></div>
+      </div>
     </section>
 
     <section class="cv-sec" style="padding-block-end:var(--s8)">
-      <h2>Portfolio and Contact</h2>
-      <p class="cv-para">Email: muhammedwork7623@gmail.com — reply within one working day. The full portfolio, with every design shown at full size and its original pixel dimensions, is at robliation.github.io/muhammed-portfolio-site, and published projects are on Behance at behance.net/M_Designer_Original.</p>
+      <h2 data-n="09">Contact</h2>
+      <p class="cv-para" id="e-contact">Email: <a href="mailto:muhammedwork7623@gmail.com" style="color:var(--blue);font-weight:700">muhammedwork7623@gmail.com</a> — reply within one working day.
+      The full portfolio, with every design at full size and its original pixel dimensions, is on the <a href="index.html" style="color:var(--blue);font-weight:700">portfolio website</a>, and published projects are on the <a href="https://www.behance.net/M_Designer_Original" target="_blank" rel="noopener" style="color:var(--blue);font-weight:700">Behance profile</a>.</p>
     </section>
   </div>
 </main>
@@ -338,8 +454,73 @@
   <button class="btn btn-ghost print-btn" type="button" data-print="ar">طباعة / حفظ السيرة بالعربية</button>
 </div>
 
+<script src="assets/js/data.js"></script>
 <script>
 (function () {
+  var D = window.MD_DATA, LOGOS = window.MD_BRANDS || {};
+  var GL = { ar: { square: "م", portrait: "ط", landscape: "ع" }, en: { square: "S", portrait: "P", landscape: "L" } };
+
+  function esc(s) {
+    return String(s).replace(/[&<>"]/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
+    });
+  }
+  function chip(name, alt) {
+    var m = LOGOS[name];
+    if (!m || !m.file) return '<span class="led-logo"></span>';
+    return '<span class="led-logo"><img class="logo-img' + (m.lift ? " lift" : "") + '" src="assets/brands/' +
+      esc(m.file) + '" width="' + m.w + '" height="' + m.h + '" alt="' + esc(alt) +
+      '" loading="lazy" decoding="async"></span>';
+  }
+  function ofSector(cat, works) {
+    return works.filter(function (w) { return w.cat === cat; });
+  }
+  function ledger(lang) {
+    var host = document.getElementById("ledger-" + lang);
+    if (!D || !host) return;
+    var out = "";
+    Object.keys(D.cats).forEach(function (c) {
+      var ws = ofSector(c, D.works);
+      if (!ws.length) return;
+      ws.sort(function (a, b) {
+        return a.brand.en.localeCompare(b.brand.en, "en") || a.year - b.year || a.id.localeCompare(b.id);
+      });
+      out += '<div class="led-group"><div class="led-head"><span class="nm">' + esc(D.cats[c][lang]) +
+        '</span><span class="rule2"></span><span class="ct">' + ws.length + "</span></div>";
+      var prev = null;
+      ws.forEach(function (w) {
+        var fm = [], sz = [];
+        w.imgs.forEach(function (im) {
+          if (fm.indexOf(im.orient) < 0) fm.push(im.orient);
+          if (sz.indexOf(im.orig) < 0) sz.push(im.orig);
+        });
+        var first = w.brand.en !== prev;
+        prev = w.brand.en;
+        out += '<div class="led-row' + (first ? " brk" : "") + '">' +
+          (first ? chip(w.brand.en, w.brand[lang]) : '<span class="led-logo"></span>') +
+          '<span class="led-br">' + (first ? esc(w.brand[lang]) : "") + "</span>" +
+          '<span class="led-tg">' + esc(w.tag[lang]) + "</span>" +
+          '<span class="led-fm">' + fm.map(function (k) { return GL[lang][k]; }).join(" ") + "</span>" +
+          '<span class="led-sz">' + esc(sz.join(" ")) + "</span>" +
+          '<span class="led-yr">' + w.year + "</span></div>";
+      });
+      out += "</div>";
+    });
+    host.innerHTML = out;
+
+    var cats = document.getElementById("cats-" + lang);
+    if (cats) {
+      var t = "";
+      Object.keys(D.cats).forEach(function (c) {
+        var n = ofSector(c, D.works).length;
+        if (n) t += '<span class="tag">' + esc(D.cats[c][lang]) + " — " + n + "</span>";
+      });
+      cats.innerHTML = t;
+    }
+  }
+  ledger("ar");
+  ledger("en");
+
   function go(which) {
     document.body.classList.toggle("print-ar", which === "ar");
     document.body.classList.toggle("print-en", which === "en");

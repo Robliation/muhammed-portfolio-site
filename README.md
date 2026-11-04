@@ -20,7 +20,7 @@ Bilingual (Arabic-first) portfolio site for **Muhammad Al-Masri / محمد ال�
 | Path | 2021 → 2026 year-by-year learning and application timeline |
 | FAQ | Six questions employers and agencies ask, mirrored as `FAQPage` structured data |
 | Contact | Email as the primary action, Behance as the portfolio reference |
-| [`cv.html`](cv.html) | Full résumé in Arabic and English, with two print buttons — the default export is a single-column ATS-readable PDF |
+| [`cv.html`](cv.html) | Full résumé in Arabic and English — method, skills, experience, learning path and a work ledger that lists every design by sector and client with its logo, topic, formats and original pixel size, generated from `data.js`. Two print buttons: the default export is a single-column ATS-readable PDF, the second prints the Arabic block |
 
 ## Stack
 
@@ -35,7 +35,7 @@ Plain HTML, CSS and ES5 JavaScript — no framework, no build step at deploy tim
 
 ```
 index.html            landing page — hero, client strip, work, craft, tools, about, brands, path, faq, contact
-cv.html               printable résumé (AR + EN, ATS print path)
+cv.html               printable résumé (AR + EN) + work ledger rendered from data.js (ATS print path)
 404.html              not-found page
 llms.txt              AI-readable summary of the designer, tools, brands and pages
 llms-full.txt         every work with its brand, year, formats and deep link
