@@ -2116,5 +2116,29 @@
     "webp": 38.8
    }
   }
+ ],
+ "notion-arrab-afkarak": [
+  {
+   "src": "sources/notion-arrab-afkarak.png",
+   "full": "assets/img/notion-arrab-afkarak-0",
+   "thumb": "assets/img/notion-arrab-afkarak-0-thumb",
+   "full_w": 1720,
+   "full_h": 1720,
+   "thumb_w": 720,
+   "thumb_h": 720,
+   "orig_w": 2048,
+   "orig_h": 2048,
+   "orient": "square",
+   "year": 2026,
+   "date": "2026-11-04",
+   "kb": {
+    "jpg": 139.0,
+    "webp": 42.4
+   },
+   "kb_thumb": {
+    "jpg": 39.0,
+    "webp": 14.2
+   }
+  }
  ]
 }

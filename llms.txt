@@ -1,6 +1,6 @@
 # Muhammad Al-Masri — محمد المصري
 
-> Graphic designer in Mecca, Saudi Arabia, specialising in Arabic social media advertising design. 64 advertising designs delivered for 36 brands across restaurants, food, dairy, beverages, retail and tourism. Available for a full-time role, freelance projects and remote work.
+> Graphic designer in Mecca, Saudi Arabia, specialising in Arabic social media advertising design. 65 advertising designs delivered for 37 brands across restaurants, food, dairy, beverages, retail and tourism. Available for a full-time role, freelance projects and remote work.
 
 Language coverage: Arabic (native, primary) and English. The site is Arabic-first with `dir="rtl"` and an instant English toggle at `https://robliation.github.io/muhammed-portfolio-site/?lang=en`.
 
@@ -37,7 +37,7 @@ Restaurants and food · FMCG and grocery · Drinks and juices · Retail and life
 
 ## Pages
 
-- [Portfolio home](https://robliation.github.io/muhammed-portfolio-site/): all 64 designs in one filterable grid, each opening as a full-size proof with its original pixel dimensions and every campaign format.
+- [Portfolio home](https://robliation.github.io/muhammed-portfolio-site/): all 65 designs in one filterable grid, each opening as a full-size proof with its original pixel dimensions and every campaign format.
 - [Résumé / CV](https://robliation.github.io/muhammed-portfolio-site/cv.html): full CV in Arabic and English; prints as a single-column, ATS-readable PDF.
 - [Full brand and work list](https://robliation.github.io/muhammed-portfolio-site/llms-full.txt): every brand with its design count and every work title.
 
@@ -72,6 +72,7 @@ Restaurants and food · FMCG and grocery · Drinks and juices · Retail and life
 - Marami (مرامي) — 1
 - Mazaaq (مذاق) — 1
 - National Poultry (دواجن الوطنية) — 1
+- Notion (نوتشن) — 1
 - Pizza Offers (عروض بيتزا) — 1
 - Qiddiya (القدية) — 1
 - Saudia Cheese (السعودية) — 1

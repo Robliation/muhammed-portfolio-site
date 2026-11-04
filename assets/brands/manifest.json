@@ -92,11 +92,11 @@
  "Al Ulali": {
   "file": "al-ulali.png",
   "kind": "official",
-  "src": "asset",
+  "src": "upload",
   "w": 284,
   "h": 128,
   "lift": false,
-  "bytes": 27267
+  "bytes": 17112
  },
  "Sadia": {
   "file": "sadia.png",
@@ -170,6 +170,15 @@
   "lift": false,
   "bytes": 18445
  },
+ "Notion": {
+  "file": "notion.png",
+  "kind": "official",
+  "src": "upload",
+  "w": 284,
+  "h": 128,
+  "lift": false,
+  "bytes": 5618
+ },
  "Al Adnan": {
   "file": "al-adnan.png",
   "kind": "official",
@@ -186,7 +195,7 @@
   "w": 284,
   "h": 128,
   "lift": false,
-  "bytes": 9219
+  "bytes": 10133
  },
  "Al Romansia": {
   "file": "al-romansia.png",
@@ -276,7 +285,7 @@
   "w": 284,
   "h": 128,
   "lift": false,
-  "bytes": 13517
+  "bytes": 14544
  },
  "National Poultry": {
   "file": "national-poultry.png",

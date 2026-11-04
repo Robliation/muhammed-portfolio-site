@@ -41,6 +41,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "..", "assets", "brands")
 LIB = r"C:\Users\M Deisgner\Pictures\Pictures Photoshop\Logos"
 ART = r"C:\Users\M Deisgner\Pictures\Pictures Photoshop\Designs"
+ROOT = os.path.normpath(os.path.join(HERE, "..", ".."))
 
 TILE_RGB = (11, 16, 32)           # the ink the marks are finally seen on
 CR_FLOOR = 3.6                    # WCAG 1.4.11 asks 3:1 for graphics; we clear it with margin
@@ -58,6 +59,7 @@ PLATE_TARGET = int(PLATE_W * PLATE_H * 0.50)
 # slug -> (display name, source kind, source ref, extra)
 #   asset   -> filename in the designer's Logos folder
 #   artwork -> (design filename, fractional corner box)
+#   upload  -> workspace-relative file the owner handed over ready-made
 #   web     -> existing file already in assets/brands
 BRANDS = [
     ("albaik",           "Al Baik",             "web",     "albaik.png"),
@@ -70,7 +72,7 @@ BRANDS = [
     ("qiddiya",          "Qiddiya",             "asset",   "Qiddiya_Logo.svg"),
     ("tazaj",            "Tazaj",               "asset",   "Al_Tazaj_logo.png"),
     ("marami",           "Marami",              "asset",   "Marami Logo.jpeg"),
-    ("al-ulali",         "Al Ulali",            "asset",   "شعار العلالي_upscayl_4x_upscayl-standard-4x.png"),
+    ("al-ulali",         "Al Ulali",            "upload",  "sources/al-ulali-official.png"),
     ("sadia",            "Sadia",               "asset",   "شعار ساديا.png"),
     ("aseer-time",       "Aseer Time",          "asset",   "شعار عصير تايم_upscayl_4x_upscayl-standard-4x.png"),
     ("burger-mish",      "Burger Mish",         "asset",   "شعار برجر مش_upscayl_2x_upscayl-standard-4x.png"),
@@ -79,8 +81,9 @@ BRANDS = [
     ("ful-wazir",        "Ful Al-Wazir",        "asset",   "شعار مطعم فول الوزير.png"),
     ("sultan-fish",      "Sultan Al-Samak",     "asset",   "شعار سلطان السمك_upscayl_4x_upscayl-standard-4x.png"),
     ("cake-house",       "The Cake House",      "asset",   "شعار مطعم بيت الكيك_upscayl_4x_upscayl-standard-4x.png"),
+    ("notion",           "Notion",              "upload",  "sources/notion-logo.png"),
     ("al-adnan",         "Al Adnan",            "artwork", ("تصميم لمطعم العدنان (دوالي).jpg", (0.895, 0.000, 0.999, 0.130))),
-    ("al-musafir",       "Al Musafir",          "artwork", ("تصميم لشركة المسافر (أستمتع بأكلك في أي مكان).jpg", (0.845, 0.905, 0.978, 0.958))),
+    ("al-musafir",       "Al Musafir",          "artwork", ("تصميم لشركة المسافر (أستمتع بأكلك في أي مكان).jpg", (0.83523, 0.90495, 0.98011, 0.96094))),
     ("al-romansia",      "Al Romansia",         "artwork", ("تصميم لمطعم الرومانسية (مطعم المـــــــثـــــــالـــــــــــي).jpg", (0.890, 0.000, 0.999, 0.115))),
     ("al-yawm",          "Al Yawm",             "artwork", ("تصميم لشركة اليوم (تمشي مع اليوم).jpg", (0.4185, 0.2570, 0.5881, 0.3540))),
     ("bajah",            "Bajah",               "artwork", ("تصميم لشركة باجة (قهوة تمتع يومك).jpg", (0.860, 0.000, 0.994, 0.095))),
@@ -90,7 +93,7 @@ BRANDS = [
     ("falafel-burak",    "Falafel Burak",       "artwork", ("تصميم لشركة فلافل بوراك (عندنا فلافل صح) بالعرض.jpg", (0.868, 0.000, 0.998, 0.135))),
     ("jahez",            "Jahez",               "artwork", ("تصميم لشركة جاهز.jpg", (0.398, 0.000, 0.572, 0.095))),
     ("kinza",            "Kinza",               "artwork", ("تصميم لشركة كينزا (مشروب ينسيك العطش).jpg", (0.848, 0.000, 0.992, 0.095))),
-    ("mazaaq",           "Mazaaq",              "artwork", ("تصميم لشركة مذاق بالعرض.png", (0.898, 0.008, 0.992, 0.100))),
+    ("mazaaq",           "Mazaaq",              "artwork", ("تصميم لشركة مذاق بالعرض.png", (0.91797, 0.02539, 0.98225, 0.11133))),
     ("national-poultry", "National Poultry",    "artwork", ("تصميم لشركة دواجن الوطنية (مندي طيب مع دواجن الوطنية) بالعرض.jpg", (0.9512, 0.0115, 0.9943, 0.0585))),
     ("pizza-offers",     "Pizza Offers",        "artwork", ("تصميم لشركة عروض بيتزا بالعرض.png", (0.845, 0.000, 0.998, 0.128))),
     ("saudia",           "Saudia Cheese",       "artwork", ("تصميم لشركة السعودية (جبنة الملوك).jpg", (0.868, 0.000, 0.998, 0.135))),
@@ -101,11 +104,6 @@ BRANDS = [
 # Marks that read as a silhouette on the ink tile get a value lift in CSS instead
 # of a raster re-encode (they stay vector).
 SVG_LIFT = {"almarai", "hungerstation"}
-
-# Al Ulali's library file is a packaging lockup: the red oval plus a gold tartan
-# ribbon running up behind it. The ribbon is dressing, not the mark, and it touches
-# the oval, so no connected-component filter can separate them. Crop to the oval.
-PRE_CROP = {"al-ulali": (0.0, 0.345, 1.0, 0.875)}
 
 # National Poultry's mark is only 233px wide in the source artwork, so its gold
 # AL WATANIA POULTRY tagline is a few pixels tall and scores just under Otsu's
@@ -473,10 +471,6 @@ def _from_file(p, slug=None):
         return ("svg", open(p, "rb").read())
     im = Image.open(p)
     im.load()
-    frac = PRE_CROP.get(slug)
-    if frac:
-        W, H = im.size
-        im = im.crop((int(frac[0] * W), int(frac[1] * H), int(frac[2] * W), int(frac[3] * H)))
     if im.mode == "P":
         im = im.convert("RGBA")
     if has_alpha(im):                               # already a real cutout — trust its own alpha
@@ -492,6 +486,10 @@ def from_asset(fn, slug=None):
     return _from_file(os.path.join(LIB, fn), slug)
 
 
+def from_upload(rel, slug=None):
+    return _from_file(os.path.join(ROOT, *rel.split("/")), slug)
+
+
 def from_web(fn, slug=None):
     return _from_file(os.path.join(HERE, "_websrc", fn), slug)
 
@@ -505,6 +503,8 @@ def main():
         try:
             if kind == "artwork":
                 data = from_artwork(ref[0], ref[1], slug)
+            elif kind == "upload":
+                data = from_upload(ref, slug)
             elif kind == "asset":
                 data = from_asset(ref, slug)
             else:

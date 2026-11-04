@@ -97,6 +97,8 @@ W = [
     ("myroqia-series-three", "MyRoqia", "رقيتي", "سلسلة بوستات — ٣", "Social series, post three", "brand", [11, 13, 10, 12]),
     ("myroqia-story-format", "MyRoqia", "رقيتي", "تصميم ستوري", "Story-format graphic", "brand", [14, 15]),
     ("myroqia-editorial-cover", "MyRoqia", "رقيتي", "تصميم المقالات", "Editorial article cover", "brand", [16]),
+    ("notion-arrab-afkarak", "Notion", "نوتشن", "رتب أفكارك", "Get your ideas in order", "brand",
+     ["sources/notion-arrab-afkarak.png"]),
 
     ("concept-hummus", "Self-initiated", "ذاتي", "تصميم حمص", "Hummus concept ad", "concept", [17]),
     ("concept-perfume", "Self-initiated", "ذاتي", "تصميم عطر", "Perfume concept ad", "concept", [18]),
