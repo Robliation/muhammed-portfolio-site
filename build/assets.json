@@ -2140,5 +2140,29 @@
     "webp": 14.2
    }
   }
+ ],
+ "gofood-at-your-door": [
+  {
+   "src": "sources/gofood-at-your-door.png",
+   "full": "assets/img/gofood-at-your-door-0",
+   "thumb": "assets/img/gofood-at-your-door-0-thumb",
+   "full_w": 1720,
+   "full_h": 1720,
+   "thumb_w": 720,
+   "thumb_h": 720,
+   "orig_w": 2048,
+   "orig_h": 2048,
+   "orient": "square",
+   "year": 2026,
+   "date": "2026-11-08",
+   "kb": {
+    "jpg": 217.9,
+    "webp": 121.7
+   },
+   "kb_thumb": {
+    "jpg": 44.3,
+    "webp": 24.7
+   }
+  }
  ]
 }

@@ -34,6 +34,8 @@ W = [
     ("jahez-delivery-flies", "Jahez", "جاهز", "توصيلنا مثل الطيارة", "Our delivery flies like a plane", "food", [44, 45]),
     ("jahez-pizza-feast", "Jahez", "جاهز", "عروض بيتزا", "Floating pizza feast", "food", [46]),
     ("hungerstation-legendary-speed", "Hungerstation", "هنقرستيشن", "سرعة خرافية", "Legendary speed", "food", [76]),
+    ("gofood-at-your-door", "GoFood", "جوفود", "طلبك على الباب", "Your order at your door", "food",
+     ["sources/gofood-at-your-door.png"]),
     ("takohat-forget-your-troubles", "Takohat", "تاكوهت", "الأكلة تخليك توكل أصعابك", "The meal that makes you forget your troubles", "food", [42, 43]),
     ("just-samboosa-authentic", "Just Samboosa", "جست سمبوسة", "على أصولها متعة مالها حدود", "The authentic way, boundless enjoyment", "food", [47]),
     ("just-samboosa-mindblown", "Just Samboosa", "جست سمبوسة", "سمبوسة هتجنن عقلك", "Samosa that blows your mind", "food", [86]),

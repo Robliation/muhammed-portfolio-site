@@ -35,6 +35,15 @@
   "lift": true,
   "bytes": 5846
  },
+ "GoFood": {
+  "file": "gofood.png",
+  "kind": "official",
+  "src": "upload",
+  "w": 284,
+  "h": 128,
+  "lift": false,
+  "bytes": 9810
+ },
  "Dubai": {
   "file": "dubai.svg",
   "kind": "official",

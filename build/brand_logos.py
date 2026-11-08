@@ -66,6 +66,7 @@ BRANDS = [
     ("almarai",          "Almarai",             "web",     "almarai.svg"),
     ("jarir",            "Jarir Bookstore",     "web",     "jarir.svg"),
     ("hungerstation",    "Hungerstation",       "web",     "hungerstation.svg"),
+    ("gofood",           "GoFood",              "upload",  "sources/gofood-logo.png"),
     ("dubai",            "Dubai",               "web",     "dubai.svg"),
     ("indomie",          "Indomie",             "web",     "indomie.png"),
     ("shawarmer",        "Shawarmer",           "web",     "shawarmer.jpg"),
