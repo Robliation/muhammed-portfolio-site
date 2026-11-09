@@ -2164,5 +2164,29 @@
     "webp": 24.7
    }
   }
+ ],
+ "al-ulali-for-the-ones-who-matter": [
+  {
+   "src": "sources/al-ulali-for-the-ones-who-matter.png",
+   "full": "assets/img/al-ulali-for-the-ones-who-matter-0",
+   "thumb": "assets/img/al-ulali-for-the-ones-who-matter-0-thumb",
+   "full_w": 1720,
+   "full_h": 1720,
+   "thumb_w": 720,
+   "thumb_h": 720,
+   "orig_w": 2048,
+   "orig_h": 2048,
+   "orient": "square",
+   "year": 2026,
+   "date": "2026-11-10",
+   "kb": {
+    "jpg": 176.9,
+    "webp": 87.9
+   },
+   "kb_thumb": {
+    "jpg": 38.2,
+    "webp": 21.3
+   }
+  }
  ]
 }

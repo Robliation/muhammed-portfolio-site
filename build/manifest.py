@@ -63,6 +63,8 @@ W = [
     ("almarai-mood-car", "Almarai", "المراعي", "تمشي مزاجك", "Moves with your mood", "fmcg", [24]),
     ("almarai-chocolate-milk", "Almarai", "المراعي", "حليب شوكولاتة", "Chocolate milk", "fmcg", [34]),
     ("al-ulali-no-other-taste", "Al Ulali", "العلالي", "طعم ولا أحلى", "A taste like no other", "fmcg", [1]),
+    ("al-ulali-for-the-ones-who-matter", "Al Ulali", "العلالي", "لأنها للغالي", "For the ones who matter", "fmcg",
+     ["sources/al-ulali-for-the-ones-who-matter.png"]),
     ("saudia-cheese-of-kings", "Saudia Cheese", "السعودية", "جبنة الملوك", "Cheese of kings", "fmcg", [20]),
     ("indomie-other-world", "Indomie", "إندومي", "عالم غير", "A whole other world", "fmcg", [19]),
     ("marami-different-chips", "Marami", "مرامي", "شبس حقنا غير", "Our chips are different", "fmcg", [70]),

@@ -969,6 +969,30 @@
    "year": 2025
   },
   {
+   "id": "al-ulali-for-the-ones-who-matter",
+   "brand_en": "Al Ulali",
+   "brand_ar": "العلالي",
+   "tagline_ar": "لأنها للغالي",
+   "tagline_en": "For the ones who matter",
+   "cat": "fmcg",
+   "images": [
+    {
+     "file": "sources/al-ulali-for-the-ones-who-matter.png",
+     "w": 2048,
+     "h": 2048,
+     "ratio": 1.0,
+     "bytes": 4421189,
+     "year": 2026,
+     "date": "2026-11-10",
+     "orient": "square"
+    }
+   ],
+   "primary": "sources/al-ulali-for-the-ones-who-matter.png",
+   "behance": null,
+   "behance_id": null,
+   "year": 2026
+  },
+  {
    "id": "saudia-cheese-of-kings",
    "brand_en": "Saudia Cheese",
    "brand_ar": "السعودية",
@@ -1949,5 +1973,5 @@
    "مفاهيم تجريبية"
   ]
  },
- "source_count": 90
+ "source_count": 91
 }

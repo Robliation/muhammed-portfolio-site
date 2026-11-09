@@ -1,6 +1,6 @@
 # Muhammad Al-Masri — محمد المصري
 
-> Graphic designer in Mecca, Saudi Arabia, specialising in Arabic social media advertising design. 66 advertising designs delivered for 38 brands across restaurants, food, dairy, beverages, retail and tourism. Available for a full-time role, freelance projects and remote work.
+> Graphic designer in Mecca, Saudi Arabia, specialising in Arabic social media advertising design. 67 advertising designs delivered for 38 brands across restaurants, food, dairy, beverages, retail and tourism. Available for a full-time role, freelance projects and remote work.
 
 Language coverage: Arabic (native, primary) and English. The site is Arabic-first with `dir="rtl"` and an instant English toggle at `https://robliation.github.io/muhammed-portfolio-site/?lang=en`.
 
@@ -37,7 +37,7 @@ Restaurants and food · FMCG and grocery · Drinks and juices · Retail and life
 
 ## Pages
 
-- [Portfolio home](https://robliation.github.io/muhammed-portfolio-site/): all 66 designs in one filterable grid, each opening as a full-size proof with its original pixel dimensions and every campaign format.
+- [Portfolio home](https://robliation.github.io/muhammed-portfolio-site/): all 67 designs in one filterable grid, each opening as a full-size proof with its original pixel dimensions and every campaign format.
 - [Résumé / CV](https://robliation.github.io/muhammed-portfolio-site/cv.html): full CV in Arabic and English with a complete work ledger — every design listed by sector and client with its logo, topic, formats and original pixel dimensions; prints as a single-column, ATS-readable PDF.
 - [Full brand and work list](https://robliation.github.io/muhammed-portfolio-site/llms-full.txt): every brand with its design count and every work title.
 
@@ -47,6 +47,7 @@ Restaurants and food · FMCG and grocery · Drinks and juices · Retail and life
 - Jarir Bookstore (مكتبة جرير) — 4
 - Al Baik (البيك) — 3
 - Tazaj (الطازج) — 3
+- Al Ulali (العلالي) — 2
 - Aseer Time (عصير تايم) — 2
 - Dubai (دبي) — 2
 - Jahez (جاهز) — 2
@@ -58,7 +59,6 @@ Restaurants and food · FMCG and grocery · Drinks and juices · Retail and life
 - Al Adnan (العدنان) — 1
 - Al Musafir (المسافر) — 1
 - Al Romansia (الرومانسية) — 1
-- Al Ulali (العلالي) — 1
 - Al Yawm (اليوم) — 1
 - Bajah (باجة) — 1
 - Berain (بيرين) — 1
@@ -131,6 +131,7 @@ Restaurants and food · FMCG and grocery · Drinks and juices · Retail and life
 - Almarai — Moves with your mood / المراعي — تمشي مزاجك | 2025 | landscape | original 4224×2304 | https://robliation.github.io/muhammed-portfolio-site/#work/almarai-mood-car
 - Almarai — Chocolate milk / المراعي — حليب شوكولاتة | 2025 | square | original 4096×4096 | https://robliation.github.io/muhammed-portfolio-site/#work/almarai-chocolate-milk
 - Al Ulali — A taste like no other / العلالي — طعم ولا أحلى | 2025 | square | original 4096×4096 | https://robliation.github.io/muhammed-portfolio-site/#work/al-ulali-no-other-taste
+- Al Ulali — For the ones who matter / العلالي — لأنها للغالي | 2026 | square | original 2048×2048 | https://robliation.github.io/muhammed-portfolio-site/#work/al-ulali-for-the-ones-who-matter
 - Saudia Cheese — Cheese of kings / السعودية — جبنة الملوك | 2025 | square | original 4096×4096 | https://robliation.github.io/muhammed-portfolio-site/#work/saudia-cheese-of-kings
 - Indomie — A whole other world / إندومي — عالم غير | 2025 | square | original 4096×4096 | https://robliation.github.io/muhammed-portfolio-site/#work/indomie-other-world
 - Marami — Our chips are different / مرامي — شبس حقنا غير | 2025 | landscape | original 5632×3072 | https://robliation.github.io/muhammed-portfolio-site/#work/marami-different-chips
