@@ -72,34 +72,70 @@
   .cv-para { font-size: var(--t-small); color: var(--ink-2); line-height: 1.8; }
 
   /* ---------- work ledger ----------
-     Built from the same data.js the gallery reads, grouped by sector then by client, so
-     the résumé can never drift from what is actually published on the site. */
-  .led { border-block-start: 1px solid var(--rule); margin-block-start: var(--s4); }
-  .led-group { padding-block: var(--s5); border-block-end: 1px solid var(--rule); }
-  .led-head { display: flex; align-items: baseline; gap: var(--s3); margin-block-end: var(--s3); }
+     Built from the same data.js the gallery reads: one card per client, its logo on a
+     light plate (never on ink), and every design that client owns listed beneath it
+     with its line, formats and delivered sizes. */
+  .led { margin-block-start: var(--s5); }
+  .led-sect + .led-sect { margin-block-start: var(--s6); }
+  .led-head { display: flex; align-items: baseline; gap: var(--s3); margin-block-end: var(--s3);
+              padding-block-end: var(--s2); border-block-end: 1px solid var(--rule); }
   .led-head .nm { font-family: var(--f-display-ar); font-weight: 800; font-size: var(--t-h3); }
   [dir="ltr"] .led-head .nm { font-family: var(--f-display-lat); letter-spacing: -.015em; }
-  .led-head .ct { font-size: var(--t-micro); font-weight: 700; color: var(--blue); }
+  .led-head .ct { font-size: var(--t-micro); font-weight: 700; color: var(--blue-strong);
+                  background: var(--blue-wash); border-radius: var(--r-pill); padding: 3px 10px; }
   .led-head .rule2 { flex: 1 1 auto; height: 1px; background: var(--rule-2); }
-  .led-row { display: grid; grid-template-columns: 76px minmax(96px,.95fr) minmax(0,1.7fr) 58px 128px 34px;
-             gap: var(--s4); align-items: center; padding-block: 8px; border-block-end: 1px solid var(--rule-2); }
-  .led-row.brk { border-block-start: 1px solid var(--rule); margin-block-start: 4px; padding-block-start: 10px; }
-  .led-row:last-child { border-block-end: 0; }
-  .led-logo { width: 76px; height: 34px; padding: 4px 6px; background: var(--stage); border-radius: var(--r1); display: flex; }
-  .led-br { font-weight: 700; font-size: var(--t-small); overflow-wrap: anywhere; }
-  .led-tg { color: var(--ink-2); font-size: var(--t-small); overflow-wrap: anywhere; }
-  .led-fm { font-family: var(--f-display-lat); font-weight: 800; font-size: var(--t-micro); color: var(--blue); letter-spacing: .1em; white-space: nowrap; }
-  .led-sz { font-family: var(--f-display-lat); font-size: var(--t-micro); color: var(--ink-3); letter-spacing: -.01em; white-space: nowrap; }
-  .led-yr { font-family: var(--f-display-lat); font-size: var(--t-micro); color: var(--ink-3); text-align: center; white-space: nowrap; }
-  .led-legend { display: flex; gap: var(--s4); flex-wrap: wrap; font-size: var(--t-micro); color: var(--ink-3); margin-block-start: var(--s4); }
-  @media (max-width: 900px) {
-    .led-row { grid-template-columns: 64px minmax(0,1fr) auto auto; column-gap: var(--s3); }
-    .led-logo { width: 64px; height: 30px; grid-area: 1 / 1 / 3 / 2; align-self: center; }
-    .led-br { grid-area: 1 / 2 / 2 / 3; align-self: center; }
-    .led-fm { grid-area: 1 / 3 / 2 / 4; align-self: center; }
-    .led-yr { grid-area: 1 / 4 / 2 / 5; align-self: center; }
-    .led-tg { grid-area: 2 / 2 / 3 / 4; }
-    .led-sz { grid-area: 2 / 4 / 3 / 5; text-align: end; }
+
+  .led-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(296px, 1fr)); gap: var(--s4); }
+  .cl { background: var(--paper-2); border: 1px solid var(--rule); border-radius: var(--r2); overflow: hidden;
+        display: flex; flex-direction: column; break-inside: avoid; }
+  .cl-head { display: flex; align-items: center; gap: var(--s3); padding: var(--s3) var(--s4);
+             border-block-end: 1px solid var(--rule-2); background: var(--paper-2); }
+  /* the logo sits on a light plate with a hairline, so white-ink marks stay legible
+     without the heavy dark chip that used to sit behind every client */
+  .cl-logo { flex: 0 0 auto; width: 96px; height: 44px; padding: 6px 8px; display: flex;
+             align-items: center; justify-content: center; background: var(--paper);
+             border: 1px solid var(--rule-2); border-radius: var(--r1); }
+  .cl-logo img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; display: block; }
+  .cl-mono { font-family: var(--f-display-ar); font-weight: 900; font-size: 1.15rem; line-height: 1;
+             color: var(--blue-strong); border-block-end: 2px solid var(--blue-wash); padding-block-end: 3px; }
+  [dir="ltr"] .cl-mono { font-family: var(--f-display-lat); }
+  .cl-id { min-width: 0; flex: 1 1 auto; display: flex; flex-direction: column; gap: 1px; }
+  .cl-nm { font-weight: 800; font-size: var(--t-small); line-height: 1.35; overflow-wrap: anywhere; }
+  .cl-en { font-family: var(--f-display-lat); font-size: var(--t-micro); color: var(--ink-3);
+           letter-spacing: -.01em; overflow-wrap: anywhere; }
+  .cl-ct { flex: 0 0 auto; font-size: var(--t-micro); font-weight: 700; color: var(--ink-3);
+           border: 1px solid var(--rule); border-radius: var(--r-pill); padding: 3px 9px; }
+
+  .cl-works { display: flex; flex-direction: column; }
+  .cw { display: grid; grid-template-columns: 62px minmax(0,1fr); gap: var(--s3); align-items: center;
+        padding: 10px var(--s4); border-block-start: 1px solid var(--rule-2); color: inherit; }
+  .cl-works .cw:first-child { border-block-start: 0; }
+  .cw:hover { background: var(--paper); }
+  .cw:hover .cw-media { border-color: var(--blue); box-shadow: var(--sh-blue); }
+  .cw-media { position: relative; display: block; width: 62px; aspect-ratio: 1; border-radius: var(--r1);
+              background: var(--paper-3); border: 1px solid var(--rule-2); overflow: hidden;
+              transition: border-color .18s ease, box-shadow .18s ease; }
+  .cw-media img { width: 100%; height: 100%; object-fit: contain; display: block; padding: 3px; }
+  .cw-body { min-width: 0; display: flex; flex-direction: column; gap: 3px; }
+  .cw-tag { font-size: var(--t-small); font-weight: 600; color: var(--ink); line-height: 1.5;
+            display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .cw-cat { display: inline-block; margin-inline-start: 6px; font-size: var(--t-micro); font-weight: 600;
+            color: var(--ink-3); background: var(--paper-3); border-radius: var(--r-pill); padding: 0 7px;
+            vertical-align: 1px; }
+  .cw-meta { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 6px;
+             font-size: var(--t-micro); color: var(--ink-3); }
+  .cw-fm { display: inline-flex; gap: 4px; }
+  .cw-fm span { font-weight: 700; color: var(--blue-strong); background: var(--blue-wash);
+                border-radius: var(--r-pill); padding: 1px 7px; }
+  .cw-sz { font-family: var(--f-display-lat); letter-spacing: -.01em; }
+  .cw-yr { font-family: var(--f-display-lat); }
+  .cw-dot { color: var(--rule); }
+  .led-legend { display: flex; gap: var(--s4); flex-wrap: wrap; font-size: var(--t-micro);
+                color: var(--ink-3); margin-block-start: var(--s5); line-height: 1.8; }
+
+  @media (max-width: 720px) {
+    .led-grid { grid-template-columns: 1fr; }
+    .cl-logo { width: 84px; height: 40px; }
   }
 
   @media (max-width: 720px) { .cv-num { grid-template-columns: repeat(2,1fr); } .grp { grid-template-columns: 1fr; gap: var(--s2); } }
@@ -114,7 +150,7 @@
     .nav, .foot, .no-print, .print-btns, .jump, .page-break, .board, .ticker, .toc { display: none !important; }
     .cv-wrap { max-width: none; padding: 0; }
     .cv-sec { padding-block: 12pt 0; }
-    .cv-lede, .cv-sub, .cv-block, .cv-list li, .prin div, .grp, .led-row { break-inside: avoid; }
+    .cv-lede, .cv-sub, .cv-block, .cv-list li, .prin div, .grp, .cl { break-inside: avoid; }
     .cv-top { padding-block: 0 10pt; }
     .cv-num { display: none !important; }
     .prin { border: 0; gap: 0; }
@@ -127,16 +163,29 @@
     #ar { display: none !important; }
     body.print-ar #ar { display: block !important; }
     body.print-ar #en, body.print-ar .cv-wrap > #en { display: none !important; }
-    /* the ledger prints as text rows only: client marks are screen ink, not paper ink.
-       A4 is under 900px wide, so the phone grid-areas must be released before the
-       print template can be honoured. */
-    .led-logo { display: none !important; }
-    .led-row > * { grid-area: auto !important; }
-    .led-row { grid-template-columns: minmax(0,1fr) minmax(0,2.2fr) 36px 126px 30px; gap: var(--s3);
-               padding-block: 2.5pt; border-block-end: 0; }
-    .led-row.brk { border-block-start: 0; margin-block-start: 0; padding-block-start: 4pt; }
-    .led-group { padding-block: 6pt; border-block-end: 1px solid #ccc; }
-    .led-head .rule2 { display: none; }
+    /* the ledger prints as selectable text: client marks and thumbnails are screen
+       ink, and the ATS path must stay a clean single column. */
+    .led-grid { grid-template-columns: 1fr !important; gap: 0; }
+    .cl { border: 0; border-block-end: 1px solid #ccc; border-radius: 0; background: none; }
+    .cl-head { padding: 4pt 0 2pt; border-block-end: 0; background: none; gap: 6pt; }
+    .cl-logo, .cw-media { display: none !important; }
+    .cl-nm { font-size: 11pt; }
+    .cl-en, .cl-ct { font-size: 9pt; color: #333; border: 0; padding: 0; background: none; }
+    .cl-ct::before { content: "— "; }
+    .cw { display: block; padding: 1.5pt 0 1.5pt 10pt; border-block-start: 0; }
+    .cw-tag { font-size: 10pt; display: inline; }
+    .cw-cat { background: none; padding: 0; margin: 0 0 0 4pt; }
+    .cw-cat::before { content: "["; }
+    .cw-cat::after { content: "]"; }
+    .cw-tag::after { content: " — "; }
+    .cw-meta { display: inline; font-size: 9pt; color: #333; }
+    .cw-fm span { background: none; padding: 0; color: #000; font-weight: normal; }
+    .cw-fm span:not(:last-child)::after { content: ", "; }
+    .led-sect + .led-sect { margin-block-start: 8pt; }
+    .led-head { margin-block-end: 4pt; padding-block-end: 2pt; }
+    .led-head .nm { font-size: 12pt; }
+    .led-head .ct { background: none; padding: 0; color: #333; }
+    .led-head .rule2, .led-legend { display: none; }
     /* the ATS path must be one clean column of selectable text */
     #en, #en * { font-family: Arial, Helvetica, "Liberation Sans", sans-serif !important; letter-spacing: normal !important; }
     #en { color: #000; }
@@ -257,9 +306,9 @@
 
     <section class="cv-sec" id="a-ledger">
       <h2 data-n="05">سجل الأعمال</h2>
-      <p class="cv-sub">كل تصميم بشركته وموضوعه ومقاساته، مرتّبًا حسب المجال ثم حسب العلامة. الشعار بجانب اسم العميل هو الشعار المستخدم فعليًا في تلك الحملة.</p>
+      <p class="cv-sub">علامة واحدة في كل بطاقة، بشعارها الرسمي، وتحتها كل تصميم صمّمته لها: نص الإعلان، ومقاساته المُسلَّمة، وسنته، وأبعاده المصدرية. مرتّب حسب المجال، ثم حسب العميل الأكثر أعمالًا. اضغط أي تصميم لعرضه بالحجم الكامل في المعرض.</p>
       <div class="led" id="ledger-ar"></div>
-      <p class="led-legend">م = مربّع · ط = طولي · ع = عرضي — والأرقام هي الأبعاد المصدرية بالبكسل لكل نسخة مُسلَّمة.</p>
+      <p class="led-legend">المقاسات: مربع 1:1 · طولي 4:5 · عرضي 16:9 — والأرقام هي الأبعاد المصدرية بالبكسل لكل نسخة مُسلَّمة.</p>
     </section>
 
     <section class="cv-sec" id="a-tools">
@@ -398,9 +447,9 @@
 
     <section class="cv-sec" id="e-ledger">
       <h2 data-n="05">Work Ledger</h2>
-      <p class="cv-sub">Every design with its client, topic and formats, ordered by sector and then by brand. The mark beside a client is the logo actually used in that campaign.</p>
+      <p class="cv-sub">One brand per card, with its official mark, and every design made for it underneath: the advertising line, the formats delivered, the year and the source pixel dimensions. Ordered by sector, then by the client with the most work. Open any design to see it full size in the gallery.</p>
       <div class="led" id="ledger-en"></div>
-      <p class="led-legend">S square · P portrait · L landscape — the figures are the original pixel dimensions of each delivered version.</p>
+      <p class="led-legend">Formats: square 1:1 · portrait 4:5 · landscape 16:9 — the figures are the original pixel dimensions of each delivered version.</p>
     </section>
 
     <section class="cv-sec" id="e-tools">
@@ -454,57 +503,138 @@
   <button class="btn btn-ghost print-btn" type="button" data-print="ar">طباعة / حفظ السيرة بالعربية</button>
 </div>
 
-<script src="assets/js/data.js?v=bff05f43"></script>
+<script src="assets/js/data.js?v=12eb0231"></script>
 <script>
 (function () {
   var D = window.MD_DATA, LOGOS = window.MD_BRANDS || {};
-  var GL = { ar: { square: "م", portrait: "ط", landscape: "ع" }, en: { square: "S", portrait: "P", landscape: "L" } };
+  var FM = {
+    ar: { square: "مربع", portrait: "طولي", landscape: "عرضي" },
+    en: { square: "Square", portrait: "Portrait", landscape: "Landscape" }
+  };
+  /* Arabic counts take a different noun form at 1, 2, 3–10 and 11+, so the unit is
+     chosen by the number rather than appended blindly. */
+  function arNum(n, one, two, few, many) {
+    if (n === 1) return one;
+    if (n === 2) return two;
+    if (n >= 3 && n <= 10) return n + " " + few;
+    return n + " " + many;
+  }
+  var CNT = {
+    ar: {
+      works: function (n) { return arNum(n, "عمل واحد", "عملان", "أعمال", "عملًا"); },
+      brands: function (n) { return arNum(n, "علامة واحدة", "علامتان", "علامات", "علامة"); },
+      card: function (n) { return arNum(n, "عمل واحد", "عملان", "أعمال", "عملًا"); }
+    },
+    en: {
+      works: function (n) { return n + (n === 1 ? " work" : " works"); },
+      brands: function (n) { return n + (n === 1 ? " brand" : " brands"); },
+      card: function (n) { return n + (n === 1 ? " work" : " works"); }
+    }
+  };
+  var LBL = { ar: { logoAlt: "شعار" }, en: { logoAlt: "logo of" } };
 
   function esc(s) {
     return String(s).replace(/[&<>"]/g, function (c) {
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
     });
   }
-  function chip(name, alt) {
+  /* Client mark on a light plate. Artwork drawn in white ink uses the pre-built
+     light variant, so nothing ever sits on a dark chip again. */
+  function mark(name, alt, lang) {
     var m = LOGOS[name];
-    if (!m || !m.file) return '<span class="led-logo"></span>';
-    return '<span class="led-logo"><img class="logo-img' + (m.lift ? " lift" : "") + '" src="assets/brands/' +
-      esc(m.file) + '" width="' + m.w + '" height="' + m.h + '" alt="' + esc(alt) +
+    if (!m || !m.file) {
+      /* no official mark collected yet: a typeset monogram keeps the row aligned */
+      return '<span class="cl-logo"><span class="cl-mono" aria-hidden="true">' +
+        esc(String(alt).trim().charAt(0)) + "</span></span>";
+    }
+    var file = m.light ? m.light : m.file;
+    return '<span class="cl-logo"><img src="assets/brands/' + esc(file) + '" width="' + m.w +
+      '" height="' + m.h + '" alt="' + esc(LBL[lang].logoAlt + " " + alt) +
       '" loading="lazy" decoding="async"></span>';
   }
   function ofSector(cat, works) {
     return works.filter(function (w) { return w.cat === cat; });
   }
+
+  /* one row per design: thumbnail, its line, its formats, year and delivered sizes;
+     work filed under another sector than the card's carries that sector as a tag */
+  function row(w, lang, otherSector) {
+    var fm = [], sz = [];
+    w.imgs.forEach(function (im) {
+      if (fm.indexOf(im.orient) < 0) fm.push(im.orient);
+      if (sz.indexOf(im.orig) < 0) sz.push(im.orig);
+    });
+    var im = w.imgs[0];
+    var sizes = sz.length > 2 ? sz.slice(0, 2).join(" · ") + " +" + (sz.length - 2) : sz.join(" · ");
+    return '<a class="cw" href="index.html#work/' + esc(w.id) + '" title="' + esc(w.brand[lang] + " — " + w.tag[lang]) + '">' +
+      '<span class="cw-media"><img src="assets/img/' + esc(im.stem) + '-thumb.webp" width="' + im.tw +
+        '" height="' + im.th + '" alt="' + esc(w.brand[lang] + " — " + w.tag[lang]) +
+        '" loading="lazy" decoding="async"></span>' +
+      '<span class="cw-body">' +
+        '<span class="cw-tag">' + esc(w.tag[lang]) +
+          (otherSector ? '<span class="cw-cat">' + esc(otherSector) + "</span>" : "") + "</span>" +
+        '<span class="cw-meta">' +
+          '<span class="cw-fm">' + fm.map(function (k) { return "<span>" + esc(FM[lang][k]) + "</span>"; }).join("") + "</span>" +
+          '<span class="cw-dot">·</span><span class="cw-yr">' + w.year + "</span>" +
+          '<span class="cw-dot">·</span><span class="cw-sz">' + esc(sizes) + "</span>" +
+        "</span>" +
+      "</span></a>";
+  }
+
   function ledger(lang) {
     var host = document.getElementById("ledger-" + lang);
     if (!D || !host) return;
+
+    /* One card per client: every design that client owns sits under its mark, even
+       when the work spans several sectors. The card files under the sector it has
+       the most work in, and a row from another sector carries that sector's label. */
+    var byBrand = {}, order = [];
+    D.works.forEach(function (w) {
+      if (!byBrand[w.brand.en]) { byBrand[w.brand.en] = []; order.push(w.brand.en); }
+      byBrand[w.brand.en].push(w);
+    });
+    var home = {};
+    order.forEach(function (b) {
+      var tally = {}, best = null, bestN = -1;
+      byBrand[b].forEach(function (w) { tally[w.cat] = (tally[w.cat] || 0) + 1; });
+      Object.keys(D.cats).forEach(function (c) {
+        var n = tally[c] || 0;
+        if (n > bestN) { bestN = n; best = c; }
+      });
+      home[b] = best;
+    });
+
     var out = "";
     Object.keys(D.cats).forEach(function (c) {
-      var ws = ofSector(c, D.works);
-      if (!ws.length) return;
-      ws.sort(function (a, b) {
-        return a.brand.en.localeCompare(b.brand.en, "en") || a.year - b.year || a.id.localeCompare(b.id);
+      var brands = order.filter(function (b) { return home[b] === c; });
+      if (!brands.length) return;
+      brands.sort(function (a, b) {
+        return byBrand[b].length - byBrand[a].length ||
+          byBrand[a][0].brand[lang].localeCompare(byBrand[b][0].brand[lang], lang);
       });
-      out += '<div class="led-group"><div class="led-head"><span class="nm">' + esc(D.cats[c][lang]) +
-        '</span><span class="rule2"></span><span class="ct">' + ws.length + "</span></div>";
-      var prev = null;
-      ws.forEach(function (w) {
-        var fm = [], sz = [];
-        w.imgs.forEach(function (im) {
-          if (fm.indexOf(im.orient) < 0) fm.push(im.orient);
-          if (sz.indexOf(im.orig) < 0) sz.push(im.orig);
+      var total = brands.reduce(function (n, b) { return n + byBrand[b].length; }, 0);
+
+      out += '<div class="led-sect"><div class="led-head"><span class="nm">' + esc(D.cats[c][lang]) +
+        '</span><span class="rule2"></span><span class="ct">' + CNT[lang].works(total) +
+        " · " + CNT[lang].brands(brands.length) + "</span></div>";
+      out += '<div class="led-grid">';
+
+      brands.forEach(function (brand) {
+        var list = byBrand[brand].slice().sort(function (a, b) {
+          return b.year - a.year || a.id.localeCompare(b.id);
         });
-        var first = w.brand.en !== prev;
-        prev = w.brand.en;
-        out += '<div class="led-row' + (first ? " brk" : "") + '">' +
-          (first ? chip(w.brand.en, w.brand[lang]) : '<span class="led-logo"></span>') +
-          '<span class="led-br">' + (first ? esc(w.brand[lang]) : "") + "</span>" +
-          '<span class="led-tg">' + esc(w.tag[lang]) + "</span>" +
-          '<span class="led-fm">' + fm.map(function (k) { return GL[lang][k]; }).join(" ") + "</span>" +
-          '<span class="led-sz">' + esc(sz.join(" ")) + "</span>" +
-          '<span class="led-yr">' + w.year + "</span></div>";
+        var w0 = list[0];
+        out += '<article class="cl">' +
+          '<header class="cl-head">' + mark(brand, w0.brand[lang], lang) +
+            '<span class="cl-id"><span class="cl-nm">' + esc(w0.brand[lang]) + "</span>" +
+            '<span class="cl-en">' + esc(w0.brand[lang === "ar" ? "en" : "ar"]) + "</span></span>" +
+            '<span class="cl-ct">' + CNT[lang].card(list.length) + "</span>" +
+          "</header><div class='cl-works'>" +
+          list.map(function (w) { return row(w, lang, w.cat === c ? null : D.cats[w.cat][lang]); }).join("") +
+          "</div></article>";
       });
-      out += "</div>";
+
+      out += "</div></div>";
     });
     host.innerHTML = out;
 

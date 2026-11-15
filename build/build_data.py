@@ -58,6 +58,12 @@ logo_path = os.path.join(OUT, "assets", "brands", "manifest.json")
 brands = {}
 if os.path.exists(logo_path):
     brands = json.load(open(logo_path, encoding="utf-8"))
+    # build/light_logos.py writes light-plate variants for logos drawn in white ink;
+    # point them out so the CV ledger never has to place a mark on a dark chip.
+    for m in brands.values():
+        f = m.get("file")
+        if f and os.path.exists(os.path.join(OUT, "assets", "brands", "light", f)):
+            m["light"] = "light/" + f
 js += "window.MD_BRANDS = " + json.dumps(brands, ensure_ascii=False, separators=(",", ":")) + ";"
 
 p = os.path.join(OUT, "assets", "js")
