@@ -1,6 +1,6 @@
 # Muhammad Al-Masri — محمد المصري
 
-> Graphic designer in Mecca, Saudi Arabia, specialising in Arabic social media advertising design. 68 advertising designs delivered for 38 brands across restaurants, food, dairy, beverages, retail and tourism. Available for a full-time role, freelance projects and remote work.
+> Graphic designer in Mecca, Saudi Arabia, specialising in Arabic social media advertising design. 68 advertising designs delivered for 38 brands across restaurants and food, ordering apps, dairy, drinks, FMCG, retail, tourism, seasonal campaigns, concept work. Available for a full-time role, freelance projects and remote work.
 
 Language coverage: Arabic (native, primary) and English. The site is Arabic-first with `dir="rtl"` and an instant English toggle at `https://robliation.github.io/muhammed-portfolio-site/?lang=en`.
 
@@ -27,7 +27,7 @@ Social media advertising design · Arabic typography · product and food composi
 
 ## Sectors covered
 
-Restaurants and food · FMCG and grocery · Drinks and juices · Retail and lifestyle · Tourism and places · Ramadan and Eid · Brand and social systems · Concept and experimental
+Restaurants & food · Apps & ordering · Dairy & cheese · Drinks & juices · FMCG & grocery · Retail & tech · Tourism & places · Ramadan & Eid · Concept & experimental
 
 ## Experience
 
@@ -100,16 +100,10 @@ Restaurants and food · FMCG and grocery · Drinks and juices · Retail and life
 - Tazaj — Tazaj changes your mood / الطازج — الطازج يغير مزاجك | 2025 | landscape, portrait | original 5632×3072 | https://robliation.github.io/muhammed-portfolio-site/#work/tazaj-changes-your-mood
 - Shawarmer — A different shawarma / شاورمر — شاورما غير | 2025 | square | original 4096×4096 | https://robliation.github.io/muhammed-portfolio-site/#work/shawarmer-different
 - Shawarmer — Don't miss the golden shawarma / شاورمر — لا تفوت الشاورما الذهبية | 2025 | landscape | original 5632×3072 | https://robliation.github.io/muhammed-portfolio-site/#work/shawarmer-golden
-- Jahez — Our delivery flies like a plane / جاهز — توصيلنا مثل الطيارة | 2025 | portrait, landscape | original 3072×5632 | https://robliation.github.io/muhammed-portfolio-site/#work/jahez-delivery-flies
-- Jahez — Floating pizza feast / جاهز — عروض بيتزا | 2025 | square | original 4096×4096 | https://robliation.github.io/muhammed-portfolio-site/#work/jahez-pizza-feast
-- Hungerstation — Legendary speed / هنقرستيشن — سرعة خرافية | 2025 | landscape | original 5632×3072 | https://robliation.github.io/muhammed-portfolio-site/#work/hungerstation-legendary-speed
-- GoFood — Your order at your door / جوفود — طلبك على الباب | 2026 | square | original 2048×2048 | https://robliation.github.io/muhammed-portfolio-site/#work/gofood-at-your-door
 - Takohat — The meal that makes you forget your troubles / تاكوهت — الأكلة تخليك توكل أصعابك | 2025 | portrait, landscape | original 3072×5632 | https://robliation.github.io/muhammed-portfolio-site/#work/takohat-forget-your-troubles
 - Just Samboosa — The authentic way, boundless enjoyment / جست سمبوسة — على أصولها متعة مالها حدود | 2026 | square | original 2048×2048 | https://robliation.github.io/muhammed-portfolio-site/#work/just-samboosa-authentic
 - Just Samboosa — Samosa that blows your mind / جست سمبوسة — سمبوسة هتجنن عقلك | 2025 | square | original 4096×4096 | https://robliation.github.io/muhammed-portfolio-site/#work/just-samboosa-mindblown
 - Falafel Burak — We make falafel right / فلافل بوراك — عندنا فلافل صح | 2025 | portrait, landscape | original 2232×4096 | https://robliation.github.io/muhammed-portfolio-site/#work/falafel-burak-done-right
-- National Poultry — Tayyib mandi with National Poultry / دواجن الوطنية — مندي طيب مع دواجن الوطنية | 2025 | landscape, portrait | original 5632×3072 | https://robliation.github.io/muhammed-portfolio-site/#work/national-poultry-mandi
-- Al Musafir — Enjoy your meal anywhere / المسافر — أستمتع بأكلك في أي مكان | 2025 | landscape | original 4224×2304 | https://robliation.github.io/muhammed-portfolio-site/#work/al-musafir-eat-anywhere
 - Al Yawm — Goes with your day / اليوم — تمشي مع اليوم | 2025 | square | original 4096×4096 | https://robliation.github.io/muhammed-portfolio-site/#work/al-yawm-goes-with-your-day
 - Al Adnan — Dawali — stuffed vine leaves / العدنان — دوالي | 2025 | square | original 4096×4096 | https://robliation.github.io/muhammed-portfolio-site/#work/al-adnan-dawali
 - Burger Mish — The best burger in the world / برجر مش — أفضل برجر في العالم | 2025 | square | original 4096×4096 | https://robliation.github.io/muhammed-portfolio-site/#work/burger-mish-best-in-world
@@ -122,27 +116,25 @@ Restaurants and food · FMCG and grocery · Drinks and juices · Retail and life
 - Mazaaq — The perfect burger is irresistible / مذاق — البرجر المثالي لا يقاوم | 2025 | portrait, landscape | original 3072×5632 | https://robliation.github.io/muhammed-portfolio-site/#work/mazaaq-irresistible-burger
 - Pizza Offers — Pizza beyond imagination / عروض بيتزا — بيتزا فوق الخيال | 2025 | portrait, landscape | original 3072×5632 | https://robliation.github.io/muhammed-portfolio-site/#work/pizza-offers-beyond-imagination
 
-## FMCG & grocery (سلع استهلاكية)
+## Apps & ordering (تطبيقات وطلبات)
+- Jahez — Our delivery flies like a plane / جاهز — توصيلنا مثل الطيارة | 2025 | portrait, landscape | original 3072×5632 | https://robliation.github.io/muhammed-portfolio-site/#work/jahez-delivery-flies
+- Jahez — Floating pizza feast / جاهز — عروض بيتزا | 2025 | square | original 4096×4096 | https://robliation.github.io/muhammed-portfolio-site/#work/jahez-pizza-feast
+- Hungerstation — Legendary speed / هنقرستيشن — سرعة خرافية | 2025 | landscape | original 5632×3072 | https://robliation.github.io/muhammed-portfolio-site/#work/hungerstation-legendary-speed
+- GoFood — Your order at your door / جوفود — طلبك على الباب | 2026 | square | original 2048×2048 | https://robliation.github.io/muhammed-portfolio-site/#work/gofood-at-your-door
+- Notion — Get your ideas in order / نوتشن — رتب أفكارك | 2026 | square | original 2048×2048 | https://robliation.github.io/muhammed-portfolio-site/#work/notion-arrab-afkarak
+
+## Dairy & cheese (ألبان وأجبان)
 - Almarai — Milk, all vitamins / المراعي — حليب كلو فيتامينات | 2025 | landscape | original 5632×3072 | https://robliation.github.io/muhammed-portfolio-site/#work/almarai-all-vitamins
-- Almarai — Royal hummus / المراعي — حمص ملكي | 2025 | landscape | original 4224×2304 | https://robliation.github.io/muhammed-portfolio-site/#work/almarai-royal-hummus
 - Almarai — Labneh that makes you forget your worries / المراعي — لبنة المراعي تنسيك همك | 2025 | square | original 4096×4096 | https://robliation.github.io/muhammed-portfolio-site/#work/almarai-labneh-worries
 - Almarai — A labneh your heart loves / المراعي — لبنة يحبو قلبك | 2025 | square | original 4096×4096 | https://robliation.github.io/muhammed-portfolio-site/#work/almarai-labneh-heart
 - Almarai — An irresistible taste / المراعي — مذاق لا يقاوم | 2025 | square | original 4096×4096 | https://robliation.github.io/muhammed-portfolio-site/#work/almarai-irresistible-taste
-- Almarai — Moves with your mood / المراعي — تمشي مزاجك | 2025 | landscape | original 4224×2304 | https://robliation.github.io/muhammed-portfolio-site/#work/almarai-mood-car
 - Almarai — Chocolate milk / المراعي — حليب شوكولاتة | 2025 | square | original 4096×4096 | https://robliation.github.io/muhammed-portfolio-site/#work/almarai-chocolate-milk
-- Al Ulali — A taste like no other / العلالي — طعم ولا أحلى | 2025 | square | original 4096×4096 | https://robliation.github.io/muhammed-portfolio-site/#work/al-ulali-no-other-taste
-- Al Ulali — For the ones who matter / العلالي — لأنها للغالي | 2026 | square | original 2048×2048 | https://robliation.github.io/muhammed-portfolio-site/#work/al-ulali-for-the-ones-who-matter
 - Saudia Cheese — Cheese of kings / السعودية — جبنة الملوك | 2025 | square | original 4096×4096 | https://robliation.github.io/muhammed-portfolio-site/#work/saudia-cheese-of-kings
-- Indomie — A whole other world / إندومي — عالم غير | 2025 | square | original 4096×4096 | https://robliation.github.io/muhammed-portfolio-site/#work/indomie-other-world
-- Marami — Our chips are different / مرامي — شبس حقنا غير | 2025 | landscape | original 5632×3072 | https://robliation.github.io/muhammed-portfolio-site/#work/marami-different-chips
-- Sadia — A delightful outing with Sadia / ساديا — طلعة ممتعة مع ساديا | 2025 | square | original 4096×4096 | https://robliation.github.io/muhammed-portfolio-site/#work/sadia-field-fry
-- Country Corn Flakes — Protein that works with corn flakes / كونتري — بروتين ينفع مع كورن فليكس | 2025 | square | original 4096×4096 | https://robliation.github.io/muhammed-portfolio-site/#work/country-cornflakes-protein
-
-## Drinks & juices (مشروبات)
 - Almarai — Almarai milk is different / المراعي — حليب المراعي غير | 2025 | portrait, landscape | original 3072×5632 | https://robliation.github.io/muhammed-portfolio-site/#work/almarai-strawberry-milk
-- Almarai — Almarai juices are different / المراعي — عصائر المراعي غير | 2025 | portrait, landscape | original 3072×5632 | https://robliation.github.io/muhammed-portfolio-site/#work/almarai-different-juices
 - Almarai — Respectable laban / المراعي — لبن محترم | 2025 | square | original 4096×4096 | https://robliation.github.io/muhammed-portfolio-site/#work/almarai-respectable-laban
-- Almarai — Real watermelon / المراعي — بطيخ أصلي | 2025 | square | original 4096×4096 | https://robliation.github.io/muhammed-portfolio-site/#work/almarai-real-watermelon
+
+## Drinks & juices (مشروبات وعصائر)
+- Almarai — Almarai juices are different / المراعي — عصائر المراعي غير | 2025 | portrait, landscape | original 3072×5632 | https://robliation.github.io/muhammed-portfolio-site/#work/almarai-different-juices
 - Kinza — Kinza Cola / كينزا — كينزا كولا | 2025 | square | original 4096×4096 | https://robliation.github.io/muhammed-portfolio-site/#work/kinza-cola-splash
 - Kinza — A drink that makes you forget thirst / كينزا — مشروب ينسيك العطش | 2025 | square | original 4096×4096 | https://robliation.github.io/muhammed-portfolio-site/#work/kinza-forget-thirst
 - Berain — Ice water / بيرين — ماء ثلج | 2025 | square | original 4096×4096 | https://robliation.github.io/muhammed-portfolio-site/#work/berain-ice-water
@@ -151,25 +143,35 @@ Restaurants and food · FMCG and grocery · Drinks and juices · Retail and life
 - Aseer Time — Indulge / عصير تايم — تمتع | 2025 | square | original 4096×4096 | https://robliation.github.io/muhammed-portfolio-site/#work/aseer-time-indulge
 - Aseer Time — The real refreshment that swooshes your heart / عصير تايم — الانتعاش الحقيقي يسرسح على قلبك | 2026 | square | original 2048×2048 | https://robliation.github.io/muhammed-portfolio-site/#work/aseer-time-real-refresh
 
-## Retail & lifestyle (تجزئة وأسلوب حياة)
+## FMCG & grocery (سلع استهلاكية)
+- National Poultry — Tayyib mandi with National Poultry / دواجن الوطنية — مندي طيب مع دواجن الوطنية | 2025 | landscape, portrait | original 5632×3072 | https://robliation.github.io/muhammed-portfolio-site/#work/national-poultry-mandi
+- Almarai — Royal hummus / المراعي — حمص ملكي | 2025 | landscape | original 4224×2304 | https://robliation.github.io/muhammed-portfolio-site/#work/almarai-royal-hummus
+- Almarai — Moves with your mood / المراعي — تمشي مزاجك | 2025 | landscape | original 4224×2304 | https://robliation.github.io/muhammed-portfolio-site/#work/almarai-mood-car
+- Al Ulali — A taste like no other / العلالي — طعم ولا أحلى | 2025 | square | original 4096×4096 | https://robliation.github.io/muhammed-portfolio-site/#work/al-ulali-no-other-taste
+- Al Ulali — For the ones who matter / العلالي — لأنها للغالي | 2026 | square | original 2048×2048 | https://robliation.github.io/muhammed-portfolio-site/#work/al-ulali-for-the-ones-who-matter
+- Indomie — A whole other world / إندومي — عالم غير | 2025 | square | original 4096×4096 | https://robliation.github.io/muhammed-portfolio-site/#work/indomie-other-world
+- Marami — Our chips are different / مرامي — شبس حقنا غير | 2025 | landscape | original 5632×3072 | https://robliation.github.io/muhammed-portfolio-site/#work/marami-different-chips
+- Sadia — A delightful outing with Sadia / ساديا — طلعة ممتعة مع ساديا | 2025 | square | original 4096×4096 | https://robliation.github.io/muhammed-portfolio-site/#work/sadia-field-fry
+- Country Corn Flakes — Protein that works with corn flakes / كونتري — بروتين ينفع مع كورن فليكس | 2025 | square | original 4096×4096 | https://robliation.github.io/muhammed-portfolio-site/#work/country-cornflakes-protein
+- Almarai — Real watermelon / المراعي — بطيخ أصلي | 2025 | square | original 4096×4096 | https://robliation.github.io/muhammed-portfolio-site/#work/almarai-real-watermelon
+
+## Retail & tech (تجزئة وتقنية)
 - Jarir Bookstore — The best devices are with us / مكتبة جرير — أفضل أجهزة عندنا | 2025 | landscape, portrait | original 4096×2232 | https://robliation.github.io/muhammed-portfolio-site/#work/jarir-best-devices
 - Jarir Bookstore — Cook in comfort / مكتبة جرير — اطبخ وأنت مرتاح | 2025 | landscape | original 5632×3072 | https://robliation.github.io/muhammed-portfolio-site/#work/jarir-cook-in-comfort
 - Jarir Bookstore — A safety backpack you can't miss / مكتبة جرير — شنطة أمان لا تفوتك | 2025 | landscape | original 5632×3072 | https://robliation.github.io/muhammed-portfolio-site/#work/jarir-safety-backpack
 - Centrepoint — Your travel bag is safe / سنتربوينت — شنطة سفرك في أمان | 2025 | landscape | original 5632×3072 | https://robliation.github.io/muhammed-portfolio-site/#work/centrepoint-travel-bag
 
 ## Tourism & places (سياحة وأماكن)
+- Al Musafir — Enjoy your meal anywhere / المسافر — أستمتع بأكلك في أي مكان | 2025 | landscape | original 4224×2304 | https://robliation.github.io/muhammed-portfolio-site/#work/al-musafir-eat-anywhere
 - Qiddiya — The best city of tourism / القدية — الأفضل مدينة سياحة | 2025 | portrait, landscape | original 3072×5632 | https://robliation.github.io/muhammed-portfolio-site/#work/qiddiya-best-tourism-city
 - Dubai — Enjoy the vibe of Dubai / دبي — أستمتع بأجواء دبي | 2025 | square | original 4096×4096 | https://robliation.github.io/muhammed-portfolio-site/#work/dubai-enjoy-the-vibe
 - Dubai — Dubai, where the present meets the future / دبي — دبي حيث يلتقي الحاضر بالمستقبل | 2025 | landscape | original 4000×2240 | https://robliation.github.io/muhammed-portfolio-site/#work/dubai-present-meets-future
 
-## Ramadan & Eid (مواسم)
+## Ramadan & Eid (مواسم ورمضان)
 - Almarai — Ramadan Kareem / المراعي — رمضان كريم | 2025 | landscape | original 4224×2304 | https://robliation.github.io/muhammed-portfolio-site/#work/almarai-ramadan-kareem
 - Sadia — Ramadan offers / ساديا — عروض رمضان | 2025 | landscape | original 4224×2304 | https://robliation.github.io/muhammed-portfolio-site/#work/sadia-ramadan-offers
 - Vimto — Ramadan Kareem / فيمتو — رمضان كريم | 2025 | square | original 4096×4096 | https://robliation.github.io/muhammed-portfolio-site/#work/vimto-ramadan-kareem
 - Jarir Bookstore — Blessed Eid to us and you / مكتبة جرير — عيد مبارك علينا وعليكم | 2025 | square | original 4096×4096 | https://robliation.github.io/muhammed-portfolio-site/#work/jarir-eid-mubarak
-
-## Brand & social systems (هوية وسوشيال)
-- Notion — Get your ideas in order / نوتشن — رتب أفكارك | 2026 | square | original 2048×2048 | https://robliation.github.io/muhammed-portfolio-site/#work/notion-arrab-afkarak
 
 ## Concept & experimental (مفاهيم تجريبية)
 - Self-initiated — Hummus concept ad / ذاتي — تصميم حمص | 2024 | square | original 1080×1080 | https://robliation.github.io/muhammed-portfolio-site/#work/concept-hummus

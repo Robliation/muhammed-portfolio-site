@@ -19,11 +19,18 @@ for w in D["works"]:
     counts[k][1] += 1
 brands = sorted(((v[1], en, v[0]) for en, v in counts.items()), key=lambda x: (-x[0], x[1]))
 n_works = D["meta"]["totalWorks"]
+SECTORS = " · ".join(c["en"] for c in D["cats"].values())
+EN_SHORT = {
+    "restaurants": "restaurants and food", "apps": "ordering apps", "dairy": "dairy",
+    "drinks": "drinks", "fmcg": "FMCG", "retail": "retail", "travel": "tourism",
+    "seasonal": "seasonal campaigns", "concept": "concept work",
+}
+SECTORS_LOWER = ", ".join(EN_SHORT[k] for k in D["cats"])
 n_brands = len(brands)
 
 HEAD = f"""# Muhammad Al-Masri — محمد المصري
 
-> Graphic designer in Mecca, Saudi Arabia, specialising in Arabic social media advertising design. {n_works} advertising designs delivered for {n_brands} brands across restaurants, food, dairy, beverages, retail and tourism. Available for a full-time role, freelance projects and remote work.
+> Graphic designer in Mecca, Saudi Arabia, specialising in Arabic social media advertising design. {n_works} advertising designs delivered for {n_brands} brands across {SECTORS_LOWER}. Available for a full-time role, freelance projects and remote work.
 
 Language coverage: Arabic (native, primary) and English. The site is Arabic-first with `dir="rtl"` and an instant English toggle at `{BASE}?lang=en`.
 
@@ -50,7 +57,7 @@ Social media advertising design · Arabic typography · product and food composi
 
 ## Sectors covered
 
-Restaurants and food · FMCG and grocery · Drinks and juices · Retail and lifestyle · Tourism and places · Ramadan and Eid · Brand and social systems · Concept and experimental
+{SECTORS}
 
 ## Experience
 

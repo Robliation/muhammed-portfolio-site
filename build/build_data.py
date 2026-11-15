@@ -4,7 +4,7 @@
 Inputs and outputs are resolved from this file's own location, so it can be run
 from anywhere:  python site/build/build_data.py
 """
-import json, os
+import json, os, re, hashlib, datetime
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.normpath(os.path.join(HERE, ".."))
@@ -13,7 +13,7 @@ man = json.load(open(SRC("manifest.json"), encoding="utf-8"))
 assets = json.load(open(SRC("assets.json"), encoding="utf-8"))
 
 BASE = "https://robliation.github.io/muhammed-portfolio-site/"
-NOW = "2026-11-02"
+NOW = datetime.date.today().isoformat()
 
 # Brands the owner asked to take out of the site entirely.
 EXCLUDE_BRANDS = {"MyRoqia"}
@@ -38,11 +38,14 @@ for w in man["works"]:
     })
 
 cats = {k: {"ar": v[1], "en": v[0]} for k, v in man["cats"].items()}
+NOT_A_CLIENT = {"Self-initiated"}
 payload = {
     "meta": {
         "sourceFiles": man["source_count"] - dropped,
         "totalWorks": len(works),
+        "versions": sum(len(w["imgs"]) for w in works),
         "brands": len({w["brand"]["en"] for w in works}),
+        "clients": len({w["brand"]["en"] for w in works} - NOT_A_CLIENT),
         "published": NOW,
     },
     "cats": cats,
@@ -81,3 +84,32 @@ with open(os.path.join(OUT, "robots.txt"), "w", encoding="utf-8") as f:
 
 open(os.path.join(OUT, ".nojekyll"), "w").write("")
 print("sitemap/robots/.nojekyll written")
+
+
+# --- cache busting -----------------------------------------------------------
+# GitHub Pages serves these files with caching, so a returning visitor could keep
+# an old data.js after a publish (a new design would look "missing"). Stamp every
+# local script/style/stylesheet reference with a hash of its content: the URL
+# changes exactly when the file changes, so browsers always fetch the new build.
+def stamp():
+    names = ["assets/js/data.js", "assets/js/site.js", "assets/css/site.css"]
+    vers = {}
+    for n in names:
+        fp = os.path.join(OUT, *n.split("/"))
+        if os.path.exists(fp):
+            vers[n] = hashlib.md5(open(fp, "rb").read()).hexdigest()[:8]
+    for page in ["index.html", "cv.html", "404.html"]:
+        fp = os.path.join(OUT, page)
+        if not os.path.exists(fp):
+            continue
+        html = open(fp, encoding="utf-8").read()
+        before = html
+        for n, v in vers.items():
+            base = re.escape(n)
+            html = re.sub(base + r"(?:\?v=[0-9a-f]+)?", n + "?v=" + v, html)
+        if html != before:
+            open(fp, "w", encoding="utf-8").write(html)
+            print("stamped", page, vers)
+
+
+stamp()

@@ -235,124 +235,6 @@
    }
   }
  ],
- "jahez-delivery-flies": [
-  {
-   "src": "تصميم لشركة جاهز (توصيلنا مثل الطيارة) بالطول.jpg",
-   "full": "assets/img/jahez-delivery-flies-0",
-   "thumb": "assets/img/jahez-delivery-flies-0-thumb",
-   "full_w": 938,
-   "full_h": 1720,
-   "thumb_w": 393,
-   "thumb_h": 720,
-   "orig_w": 3072,
-   "orig_h": 5632,
-   "orient": "portrait",
-   "year": 2025,
-   "date": "2025-02-04",
-   "kb": {
-    "jpg": 287.9,
-    "webp": 186.5
-   },
-   "kb_thumb": {
-    "jpg": 55.3,
-    "webp": 37.5
-   }
-  },
-  {
-   "src": "تصميم لشركة جاهز (توصيلنا مثل الطيارة).jpg",
-   "full": "assets/img/jahez-delivery-flies-1",
-   "thumb": "assets/img/jahez-delivery-flies-1-thumb",
-   "full_w": 1720,
-   "full_h": 938,
-   "thumb_w": 720,
-   "thumb_h": 393,
-   "orig_w": 5632,
-   "orig_h": 3072,
-   "orient": "landscape",
-   "year": 2025,
-   "date": "2025-02-04",
-   "kb": {
-    "jpg": 273.5,
-    "webp": 171.4
-   },
-   "kb_thumb": {
-    "jpg": 52.0,
-    "webp": 34.9
-   }
-  }
- ],
- "jahez-pizza-feast": [
-  {
-   "src": "تصميم لشركة جاهز.jpg",
-   "full": "assets/img/jahez-pizza-feast-0",
-   "thumb": "assets/img/jahez-pizza-feast-0-thumb",
-   "full_w": 1720,
-   "full_h": 1720,
-   "thumb_w": 720,
-   "thumb_h": 720,
-   "orig_w": 4096,
-   "orig_h": 4096,
-   "orient": "square",
-   "year": 2025,
-   "date": "2025-03-04",
-   "kb": {
-    "jpg": 449.3,
-    "webp": 288.1
-   },
-   "kb_thumb": {
-    "jpg": 95.4,
-    "webp": 67.5
-   }
-  }
- ],
- "hungerstation-legendary-speed": [
-  {
-   "src": "تصميم لشركة هنقرستيشن (سرعة خرافية).jpg",
-   "full": "assets/img/hungerstation-legendary-speed-0",
-   "thumb": "assets/img/hungerstation-legendary-speed-0-thumb",
-   "full_w": 1720,
-   "full_h": 938,
-   "thumb_w": 720,
-   "thumb_h": 393,
-   "orig_w": 5632,
-   "orig_h": 3072,
-   "orient": "landscape",
-   "year": 2025,
-   "date": "2025-02-26",
-   "kb": {
-    "jpg": 120.4,
-    "webp": 60.9
-   },
-   "kb_thumb": {
-    "jpg": 27.1,
-    "webp": 14.5
-   }
-  }
- ],
- "gofood-at-your-door": [
-  {
-   "src": "sources/gofood-at-your-door.png",
-   "full": "assets/img/gofood-at-your-door-0",
-   "thumb": "assets/img/gofood-at-your-door-0-thumb",
-   "full_w": 1720,
-   "full_h": 1720,
-   "thumb_w": 720,
-   "thumb_h": 720,
-   "orig_w": 2048,
-   "orig_h": 2048,
-   "orient": "square",
-   "year": 2026,
-   "date": "2026-11-08",
-   "kb": {
-    "jpg": 217.9,
-    "webp": 121.7
-   },
-   "kb_thumb": {
-    "jpg": 44.3,
-    "webp": 24.7
-   }
-  }
- ],
  "takohat-forget-your-troubles": [
   {
    "src": "تصميم لشركة تاكوهت (الأكلة تخليك توكل أصعابك) بالطول.jpg",
@@ -490,76 +372,6 @@
    "kb_thumb": {
     "jpg": 31.1,
     "webp": 20.2
-   }
-  }
- ],
- "national-poultry-mandi": [
-  {
-   "src": "تصميم لشركة دواجن الوطنية (مندي طيب مع دواجن الوطنية) بالعرض.jpg",
-   "full": "assets/img/national-poultry-mandi-0",
-   "thumb": "assets/img/national-poultry-mandi-0-thumb",
-   "full_w": 1720,
-   "full_h": 938,
-   "thumb_w": 720,
-   "thumb_h": 393,
-   "orig_w": 5632,
-   "orig_h": 3072,
-   "orient": "landscape",
-   "year": 2025,
-   "date": "2025-02-20",
-   "kb": {
-    "jpg": 229.9,
-    "webp": 157.3
-   },
-   "kb_thumb": {
-    "jpg": 44.2,
-    "webp": 31.2
-   }
-  },
-  {
-   "src": "تصميم لشركة دواجن الوطنية (مندي طيب مع دواجن الوطنية) بالطول.jpg",
-   "full": "assets/img/national-poultry-mandi-1",
-   "thumb": "assets/img/national-poultry-mandi-1-thumb",
-   "full_w": 938,
-   "full_h": 1720,
-   "thumb_w": 393,
-   "thumb_h": 720,
-   "orig_w": 3072,
-   "orig_h": 5632,
-   "orient": "portrait",
-   "year": 2025,
-   "date": "2025-02-20",
-   "kb": {
-    "jpg": 215.8,
-    "webp": 147.7
-   },
-   "kb_thumb": {
-    "jpg": 45.2,
-    "webp": 31.8
-   }
-  }
- ],
- "al-musafir-eat-anywhere": [
-  {
-   "src": "تصميم لشركة المسافر (أستمتع بأكلك في أي مكان).jpg",
-   "full": "assets/img/al-musafir-eat-anywhere-0",
-   "thumb": "assets/img/al-musafir-eat-anywhere-0-thumb",
-   "full_w": 1720,
-   "full_h": 938,
-   "thumb_w": 720,
-   "thumb_h": 393,
-   "orig_w": 4224,
-   "orig_h": 2304,
-   "orient": "landscape",
-   "year": 2025,
-   "date": "2025-03-02",
-   "kb": {
-    "jpg": 328.2,
-    "webp": 253.5
-   },
-   "kb_thumb": {
-    "jpg": 58.6,
-    "webp": 44.4
    }
   }
  ],
@@ -871,6 +683,148 @@
    }
   }
  ],
+ "jahez-delivery-flies": [
+  {
+   "src": "تصميم لشركة جاهز (توصيلنا مثل الطيارة) بالطول.jpg",
+   "full": "assets/img/jahez-delivery-flies-0",
+   "thumb": "assets/img/jahez-delivery-flies-0-thumb",
+   "full_w": 938,
+   "full_h": 1720,
+   "thumb_w": 393,
+   "thumb_h": 720,
+   "orig_w": 3072,
+   "orig_h": 5632,
+   "orient": "portrait",
+   "year": 2025,
+   "date": "2025-02-04",
+   "kb": {
+    "jpg": 287.9,
+    "webp": 186.5
+   },
+   "kb_thumb": {
+    "jpg": 55.3,
+    "webp": 37.5
+   }
+  },
+  {
+   "src": "تصميم لشركة جاهز (توصيلنا مثل الطيارة).jpg",
+   "full": "assets/img/jahez-delivery-flies-1",
+   "thumb": "assets/img/jahez-delivery-flies-1-thumb",
+   "full_w": 1720,
+   "full_h": 938,
+   "thumb_w": 720,
+   "thumb_h": 393,
+   "orig_w": 5632,
+   "orig_h": 3072,
+   "orient": "landscape",
+   "year": 2025,
+   "date": "2025-02-04",
+   "kb": {
+    "jpg": 273.5,
+    "webp": 171.4
+   },
+   "kb_thumb": {
+    "jpg": 52.0,
+    "webp": 34.9
+   }
+  }
+ ],
+ "jahez-pizza-feast": [
+  {
+   "src": "تصميم لشركة جاهز.jpg",
+   "full": "assets/img/jahez-pizza-feast-0",
+   "thumb": "assets/img/jahez-pizza-feast-0-thumb",
+   "full_w": 1720,
+   "full_h": 1720,
+   "thumb_w": 720,
+   "thumb_h": 720,
+   "orig_w": 4096,
+   "orig_h": 4096,
+   "orient": "square",
+   "year": 2025,
+   "date": "2025-03-04",
+   "kb": {
+    "jpg": 449.3,
+    "webp": 288.1
+   },
+   "kb_thumb": {
+    "jpg": 95.4,
+    "webp": 67.5
+   }
+  }
+ ],
+ "hungerstation-legendary-speed": [
+  {
+   "src": "تصميم لشركة هنقرستيشن (سرعة خرافية).jpg",
+   "full": "assets/img/hungerstation-legendary-speed-0",
+   "thumb": "assets/img/hungerstation-legendary-speed-0-thumb",
+   "full_w": 1720,
+   "full_h": 938,
+   "thumb_w": 720,
+   "thumb_h": 393,
+   "orig_w": 5632,
+   "orig_h": 3072,
+   "orient": "landscape",
+   "year": 2025,
+   "date": "2025-02-26",
+   "kb": {
+    "jpg": 120.4,
+    "webp": 60.9
+   },
+   "kb_thumb": {
+    "jpg": 27.1,
+    "webp": 14.5
+   }
+  }
+ ],
+ "gofood-at-your-door": [
+  {
+   "src": "sources/gofood-at-your-door.png",
+   "full": "assets/img/gofood-at-your-door-0",
+   "thumb": "assets/img/gofood-at-your-door-0-thumb",
+   "full_w": 1720,
+   "full_h": 1720,
+   "thumb_w": 720,
+   "thumb_h": 720,
+   "orig_w": 2048,
+   "orig_h": 2048,
+   "orient": "square",
+   "year": 2026,
+   "date": "2026-11-08",
+   "kb": {
+    "jpg": 217.9,
+    "webp": 121.7
+   },
+   "kb_thumb": {
+    "jpg": 44.3,
+    "webp": 24.7
+   }
+  }
+ ],
+ "notion-arrab-afkarak": [
+  {
+   "src": "sources/notion-arrab-afkarak.png",
+   "full": "assets/img/notion-arrab-afkarak-0",
+   "thumb": "assets/img/notion-arrab-afkarak-0-thumb",
+   "full_w": 1720,
+   "full_h": 1720,
+   "thumb_w": 720,
+   "thumb_h": 720,
+   "orig_w": 2048,
+   "orig_h": 2048,
+   "orient": "square",
+   "year": 2026,
+   "date": "2026-11-04",
+   "kb": {
+    "jpg": 139.0,
+    "webp": 42.4
+   },
+   "kb_thumb": {
+    "jpg": 39.0,
+    "webp": 14.2
+   }
+  }
+ ],
  "almarai-all-vitamins": [
   {
    "src": "(تصميم لشركة المراعي (حليب كلو فيتامينات.jpg",
@@ -892,30 +846,6 @@
    "kb_thumb": {
     "jpg": 36.0,
     "webp": 22.7
-   }
-  }
- ],
- "almarai-royal-hummus": [
-  {
-   "src": "تصميم لشركة المراعي (حمص ملكي).jpg",
-   "full": "assets/img/almarai-royal-hummus-0",
-   "thumb": "assets/img/almarai-royal-hummus-0-thumb",
-   "full_w": 1720,
-   "full_h": 938,
-   "thumb_w": 720,
-   "thumb_h": 393,
-   "orig_w": 4224,
-   "orig_h": 2304,
-   "orient": "landscape",
-   "year": 2025,
-   "date": "2025-03-03",
-   "kb": {
-    "jpg": 210.6,
-    "webp": 125.1
-   },
-   "kb_thumb": {
-    "jpg": 44.3,
-    "webp": 29.2
    }
   }
  ],
@@ -991,30 +921,6 @@
    }
   }
  ],
- "almarai-mood-car": [
-  {
-   "src": "تصميم لشركة المراعي (تمشي مزاجك).jpg",
-   "full": "assets/img/almarai-mood-car-0",
-   "thumb": "assets/img/almarai-mood-car-0-thumb",
-   "full_w": 1720,
-   "full_h": 938,
-   "thumb_w": 720,
-   "thumb_h": 393,
-   "orig_w": 4224,
-   "orig_h": 2304,
-   "orient": "landscape",
-   "year": 2025,
-   "date": "2025-03-09",
-   "kb": {
-    "jpg": 215.5,
-    "webp": 137.8
-   },
-   "kb_thumb": {
-    "jpg": 48.8,
-    "webp": 33.8
-   }
-  }
- ],
  "almarai-chocolate-milk": [
   {
    "src": "تصميم لشركة المراعي لحليب شوكولاتة_upscayl_4x_upscayl-standard-4x.png",
@@ -1039,54 +945,6 @@
    }
   }
  ],
- "al-ulali-no-other-taste": [
-  {
-   "src": "(..تصميم لشركة العلالي (طعم ولا احلا.jpg",
-   "full": "assets/img/al-ulali-no-other-taste-0",
-   "thumb": "assets/img/al-ulali-no-other-taste-0-thumb",
-   "full_w": 1720,
-   "full_h": 1720,
-   "thumb_w": 720,
-   "thumb_h": 720,
-   "orig_w": 4096,
-   "orig_h": 4096,
-   "orient": "square",
-   "year": 2025,
-   "date": "2025-03-10",
-   "kb": {
-    "jpg": 365.7,
-    "webp": 224.8
-   },
-   "kb_thumb": {
-    "jpg": 78.1,
-    "webp": 51.1
-   }
-  }
- ],
- "al-ulali-for-the-ones-who-matter": [
-  {
-   "src": "sources/al-ulali-for-the-ones-who-matter.png",
-   "full": "assets/img/al-ulali-for-the-ones-who-matter-0",
-   "thumb": "assets/img/al-ulali-for-the-ones-who-matter-0-thumb",
-   "full_w": 1720,
-   "full_h": 1720,
-   "thumb_w": 720,
-   "thumb_h": 720,
-   "orig_w": 2048,
-   "orig_h": 2048,
-   "orient": "square",
-   "year": 2026,
-   "date": "2026-11-10",
-   "kb": {
-    "jpg": 176.9,
-    "webp": 87.9
-   },
-   "kb_thumb": {
-    "jpg": 38.2,
-    "webp": 21.3
-   }
-  }
- ],
  "saudia-cheese-of-kings": [
   {
    "src": "تصميم لشركة السعودية (جبنة الملوك).jpg",
@@ -1108,102 +966,6 @@
    "kb_thumb": {
     "jpg": 58.1,
     "webp": 31.7
-   }
-  }
- ],
- "indomie-other-world": [
-  {
-   "src": "تصميم لشركة إندومي (عالم غير).jpg",
-   "full": "assets/img/indomie-other-world-0",
-   "thumb": "assets/img/indomie-other-world-0-thumb",
-   "full_w": 1720,
-   "full_h": 1720,
-   "thumb_w": 720,
-   "thumb_h": 720,
-   "orig_w": 4096,
-   "orig_h": 4096,
-   "orient": "square",
-   "year": 2025,
-   "date": "2025-03-14",
-   "kb": {
-    "jpg": 370.1,
-    "webp": 225.8
-   },
-   "kb_thumb": {
-    "jpg": 80.9,
-    "webp": 54.6
-   }
-  }
- ],
- "marami-different-chips": [
-  {
-   "src": "تصميم لشركة مرامي (شبس حقنا غيــــــــــــر).jpg",
-   "full": "assets/img/marami-different-chips-0",
-   "thumb": "assets/img/marami-different-chips-0-thumb",
-   "full_w": 1720,
-   "full_h": 938,
-   "thumb_w": 720,
-   "thumb_h": 393,
-   "orig_w": 5632,
-   "orig_h": 3072,
-   "orient": "landscape",
-   "year": 2025,
-   "date": "2025-02-07",
-   "kb": {
-    "jpg": 104.8,
-    "webp": 56.1
-   },
-   "kb_thumb": {
-    "jpg": 27.2,
-    "webp": 15.0
-   }
-  }
- ],
- "sadia-field-fry": [
-  {
-   "src": "تصميم لشركة ساديا (طلعة ممتعة مع ساديا).jpg",
-   "full": "assets/img/sadia-field-fry-0",
-   "thumb": "assets/img/sadia-field-fry-0-thumb",
-   "full_w": 1720,
-   "full_h": 1720,
-   "thumb_w": 720,
-   "thumb_h": 720,
-   "orig_w": 4096,
-   "orig_h": 4096,
-   "orient": "square",
-   "year": 2025,
-   "date": "2025-03-19",
-   "kb": {
-    "jpg": 355.9,
-    "webp": 216.6
-   },
-   "kb_thumb": {
-    "jpg": 77.5,
-    "webp": 53.8
-   }
-  }
- ],
- "country-cornflakes-protein": [
-  {
-   "src": "تصميم لشركة كونتري كورن فليكس (بروتين ينفع مع كورن فليكس).jpg",
-   "full": "assets/img/country-cornflakes-protein-0",
-   "thumb": "assets/img/country-cornflakes-protein-0-thumb",
-   "full_w": 1720,
-   "full_h": 1720,
-   "thumb_w": 720,
-   "thumb_h": 720,
-   "orig_w": 4096,
-   "orig_h": 4096,
-   "orient": "square",
-   "year": 2025,
-   "date": "2025-02-27",
-   "kb": {
-    "jpg": 352.1,
-    "webp": 201.0
-   },
-   "kb_thumb": {
-    "jpg": 79.9,
-    "webp": 52.3
    }
   }
  ],
@@ -1253,6 +1015,30 @@
    }
   }
  ],
+ "almarai-respectable-laban": [
+  {
+   "src": "تصميم لشركة المراعي (لبن محترم).jpg",
+   "full": "assets/img/almarai-respectable-laban-0",
+   "thumb": "assets/img/almarai-respectable-laban-0-thumb",
+   "full_w": 1720,
+   "full_h": 1720,
+   "thumb_w": 720,
+   "thumb_h": 720,
+   "orig_w": 4096,
+   "orig_h": 4096,
+   "orient": "square",
+   "year": 2025,
+   "date": "2025-05-21",
+   "kb": {
+    "jpg": 111.0,
+    "webp": 53.5
+   },
+   "kb_thumb": {
+    "jpg": 30.7,
+    "webp": 15.9
+   }
+  }
+ ],
  "almarai-different-juices": [
   {
    "src": "تصميم لشركة المراعي (عصائر المراعي غيـــــــــــر) بالطول.jpg",
@@ -1296,54 +1082,6 @@
    "kb_thumb": {
     "jpg": 35.6,
     "webp": 22.6
-   }
-  }
- ],
- "almarai-respectable-laban": [
-  {
-   "src": "تصميم لشركة المراعي (لبن محترم).jpg",
-   "full": "assets/img/almarai-respectable-laban-0",
-   "thumb": "assets/img/almarai-respectable-laban-0-thumb",
-   "full_w": 1720,
-   "full_h": 1720,
-   "thumb_w": 720,
-   "thumb_h": 720,
-   "orig_w": 4096,
-   "orig_h": 4096,
-   "orient": "square",
-   "year": 2025,
-   "date": "2025-05-21",
-   "kb": {
-    "jpg": 111.0,
-    "webp": 53.5
-   },
-   "kb_thumb": {
-    "jpg": 30.7,
-    "webp": 15.9
-   }
-  }
- ],
- "almarai-real-watermelon": [
-  {
-   "src": "تصميم لشركة المراعي (بطيخ أصلي).jpg",
-   "full": "assets/img/almarai-real-watermelon-0",
-   "thumb": "assets/img/almarai-real-watermelon-0-thumb",
-   "full_w": 1720,
-   "full_h": 1720,
-   "thumb_w": 720,
-   "thumb_h": 720,
-   "orig_w": 4096,
-   "orig_h": 4096,
-   "orient": "square",
-   "year": 2025,
-   "date": "2025-02-26",
-   "kb": {
-    "jpg": 245.9,
-    "webp": 151.2
-   },
-   "kb_thumb": {
-    "jpg": 52.5,
-    "webp": 33.4
    }
   }
  ],
@@ -1515,6 +1253,268 @@
    }
   }
  ],
+ "national-poultry-mandi": [
+  {
+   "src": "تصميم لشركة دواجن الوطنية (مندي طيب مع دواجن الوطنية) بالعرض.jpg",
+   "full": "assets/img/national-poultry-mandi-0",
+   "thumb": "assets/img/national-poultry-mandi-0-thumb",
+   "full_w": 1720,
+   "full_h": 938,
+   "thumb_w": 720,
+   "thumb_h": 393,
+   "orig_w": 5632,
+   "orig_h": 3072,
+   "orient": "landscape",
+   "year": 2025,
+   "date": "2025-02-20",
+   "kb": {
+    "jpg": 229.9,
+    "webp": 157.3
+   },
+   "kb_thumb": {
+    "jpg": 44.2,
+    "webp": 31.2
+   }
+  },
+  {
+   "src": "تصميم لشركة دواجن الوطنية (مندي طيب مع دواجن الوطنية) بالطول.jpg",
+   "full": "assets/img/national-poultry-mandi-1",
+   "thumb": "assets/img/national-poultry-mandi-1-thumb",
+   "full_w": 938,
+   "full_h": 1720,
+   "thumb_w": 393,
+   "thumb_h": 720,
+   "orig_w": 3072,
+   "orig_h": 5632,
+   "orient": "portrait",
+   "year": 2025,
+   "date": "2025-02-20",
+   "kb": {
+    "jpg": 215.8,
+    "webp": 147.7
+   },
+   "kb_thumb": {
+    "jpg": 45.2,
+    "webp": 31.8
+   }
+  }
+ ],
+ "almarai-royal-hummus": [
+  {
+   "src": "تصميم لشركة المراعي (حمص ملكي).jpg",
+   "full": "assets/img/almarai-royal-hummus-0",
+   "thumb": "assets/img/almarai-royal-hummus-0-thumb",
+   "full_w": 1720,
+   "full_h": 938,
+   "thumb_w": 720,
+   "thumb_h": 393,
+   "orig_w": 4224,
+   "orig_h": 2304,
+   "orient": "landscape",
+   "year": 2025,
+   "date": "2025-03-03",
+   "kb": {
+    "jpg": 210.6,
+    "webp": 125.1
+   },
+   "kb_thumb": {
+    "jpg": 44.3,
+    "webp": 29.2
+   }
+  }
+ ],
+ "almarai-mood-car": [
+  {
+   "src": "تصميم لشركة المراعي (تمشي مزاجك).jpg",
+   "full": "assets/img/almarai-mood-car-0",
+   "thumb": "assets/img/almarai-mood-car-0-thumb",
+   "full_w": 1720,
+   "full_h": 938,
+   "thumb_w": 720,
+   "thumb_h": 393,
+   "orig_w": 4224,
+   "orig_h": 2304,
+   "orient": "landscape",
+   "year": 2025,
+   "date": "2025-03-09",
+   "kb": {
+    "jpg": 215.5,
+    "webp": 137.8
+   },
+   "kb_thumb": {
+    "jpg": 48.8,
+    "webp": 33.8
+   }
+  }
+ ],
+ "al-ulali-no-other-taste": [
+  {
+   "src": "(..تصميم لشركة العلالي (طعم ولا احلا.jpg",
+   "full": "assets/img/al-ulali-no-other-taste-0",
+   "thumb": "assets/img/al-ulali-no-other-taste-0-thumb",
+   "full_w": 1720,
+   "full_h": 1720,
+   "thumb_w": 720,
+   "thumb_h": 720,
+   "orig_w": 4096,
+   "orig_h": 4096,
+   "orient": "square",
+   "year": 2025,
+   "date": "2025-03-10",
+   "kb": {
+    "jpg": 365.7,
+    "webp": 224.8
+   },
+   "kb_thumb": {
+    "jpg": 78.1,
+    "webp": 51.1
+   }
+  }
+ ],
+ "al-ulali-for-the-ones-who-matter": [
+  {
+   "src": "sources/al-ulali-for-the-ones-who-matter.png",
+   "full": "assets/img/al-ulali-for-the-ones-who-matter-0",
+   "thumb": "assets/img/al-ulali-for-the-ones-who-matter-0-thumb",
+   "full_w": 1720,
+   "full_h": 1720,
+   "thumb_w": 720,
+   "thumb_h": 720,
+   "orig_w": 2048,
+   "orig_h": 2048,
+   "orient": "square",
+   "year": 2026,
+   "date": "2026-11-10",
+   "kb": {
+    "jpg": 176.9,
+    "webp": 87.9
+   },
+   "kb_thumb": {
+    "jpg": 38.2,
+    "webp": 21.3
+   }
+  }
+ ],
+ "indomie-other-world": [
+  {
+   "src": "تصميم لشركة إندومي (عالم غير).jpg",
+   "full": "assets/img/indomie-other-world-0",
+   "thumb": "assets/img/indomie-other-world-0-thumb",
+   "full_w": 1720,
+   "full_h": 1720,
+   "thumb_w": 720,
+   "thumb_h": 720,
+   "orig_w": 4096,
+   "orig_h": 4096,
+   "orient": "square",
+   "year": 2025,
+   "date": "2025-03-14",
+   "kb": {
+    "jpg": 370.1,
+    "webp": 225.8
+   },
+   "kb_thumb": {
+    "jpg": 80.9,
+    "webp": 54.6
+   }
+  }
+ ],
+ "marami-different-chips": [
+  {
+   "src": "تصميم لشركة مرامي (شبس حقنا غيــــــــــــر).jpg",
+   "full": "assets/img/marami-different-chips-0",
+   "thumb": "assets/img/marami-different-chips-0-thumb",
+   "full_w": 1720,
+   "full_h": 938,
+   "thumb_w": 720,
+   "thumb_h": 393,
+   "orig_w": 5632,
+   "orig_h": 3072,
+   "orient": "landscape",
+   "year": 2025,
+   "date": "2025-02-07",
+   "kb": {
+    "jpg": 104.8,
+    "webp": 56.1
+   },
+   "kb_thumb": {
+    "jpg": 27.2,
+    "webp": 15.0
+   }
+  }
+ ],
+ "sadia-field-fry": [
+  {
+   "src": "تصميم لشركة ساديا (طلعة ممتعة مع ساديا).jpg",
+   "full": "assets/img/sadia-field-fry-0",
+   "thumb": "assets/img/sadia-field-fry-0-thumb",
+   "full_w": 1720,
+   "full_h": 1720,
+   "thumb_w": 720,
+   "thumb_h": 720,
+   "orig_w": 4096,
+   "orig_h": 4096,
+   "orient": "square",
+   "year": 2025,
+   "date": "2025-03-19",
+   "kb": {
+    "jpg": 355.9,
+    "webp": 216.6
+   },
+   "kb_thumb": {
+    "jpg": 77.5,
+    "webp": 53.8
+   }
+  }
+ ],
+ "country-cornflakes-protein": [
+  {
+   "src": "تصميم لشركة كونتري كورن فليكس (بروتين ينفع مع كورن فليكس).jpg",
+   "full": "assets/img/country-cornflakes-protein-0",
+   "thumb": "assets/img/country-cornflakes-protein-0-thumb",
+   "full_w": 1720,
+   "full_h": 1720,
+   "thumb_w": 720,
+   "thumb_h": 720,
+   "orig_w": 4096,
+   "orig_h": 4096,
+   "orient": "square",
+   "year": 2025,
+   "date": "2025-02-27",
+   "kb": {
+    "jpg": 352.1,
+    "webp": 201.0
+   },
+   "kb_thumb": {
+    "jpg": 79.9,
+    "webp": 52.3
+   }
+  }
+ ],
+ "almarai-real-watermelon": [
+  {
+   "src": "تصميم لشركة المراعي (بطيخ أصلي).jpg",
+   "full": "assets/img/almarai-real-watermelon-0",
+   "thumb": "assets/img/almarai-real-watermelon-0-thumb",
+   "full_w": 1720,
+   "full_h": 1720,
+   "thumb_w": 720,
+   "thumb_h": 720,
+   "orig_w": 4096,
+   "orig_h": 4096,
+   "orient": "square",
+   "year": 2025,
+   "date": "2025-02-26",
+   "kb": {
+    "jpg": 245.9,
+    "webp": 151.2
+   },
+   "kb_thumb": {
+    "jpg": 52.5,
+    "webp": 33.4
+   }
+  }
+ ],
  "jarir-best-devices": [
   {
    "src": "تصميم لشركة مكتبة جرير (أفضل أجهزة عندنــــــــــــــــــــــا) بالعرض.jpg",
@@ -1630,6 +1630,30 @@
    "kb_thumb": {
     "jpg": 25.1,
     "webp": 12.1
+   }
+  }
+ ],
+ "al-musafir-eat-anywhere": [
+  {
+   "src": "تصميم لشركة المسافر (أستمتع بأكلك في أي مكان).jpg",
+   "full": "assets/img/al-musafir-eat-anywhere-0",
+   "thumb": "assets/img/al-musafir-eat-anywhere-0-thumb",
+   "full_w": 1720,
+   "full_h": 938,
+   "thumb_w": 720,
+   "thumb_h": 393,
+   "orig_w": 4224,
+   "orig_h": 2304,
+   "orient": "landscape",
+   "year": 2025,
+   "date": "2025-03-02",
+   "kb": {
+    "jpg": 328.2,
+    "webp": 253.5
+   },
+   "kb_thumb": {
+    "jpg": 58.6,
+    "webp": 44.4
    }
   }
  ],
@@ -1820,348 +1844,6 @@
    "kb_thumb": {
     "jpg": 34.1,
     "webp": 18.5
-   }
-  }
- ],
- "myroqia-series-one": [
-  {
-   "src": "1.jpg",
-   "full": "assets/img/myroqia-series-one-0",
-   "thumb": "assets/img/myroqia-series-one-0-thumb",
-   "full_w": 1280,
-   "full_h": 1280,
-   "thumb_w": 720,
-   "thumb_h": 720,
-   "orig_w": 1280,
-   "orig_h": 1280,
-   "orient": "square",
-   "year": 2024,
-   "date": "2024-07-26",
-   "kb": {
-    "jpg": 114.2,
-    "webp": 63.0
-   },
-   "kb_thumb": {
-    "jpg": 47.2,
-    "webp": 24.9
-   }
-  },
-  {
-   "src": "1 done.jpg",
-   "full": "assets/img/myroqia-series-one-1",
-   "thumb": "assets/img/myroqia-series-one-1-thumb",
-   "full_w": 968,
-   "full_h": 1720,
-   "thumb_w": 405,
-   "thumb_h": 720,
-   "orig_w": 1080,
-   "orig_h": 1920,
-   "orient": "portrait",
-   "year": 2024,
-   "date": "2024-07-26",
-   "kb": {
-    "jpg": 82.0,
-    "webp": 41.3
-   },
-   "kb_thumb": {
-    "jpg": 17.7,
-    "webp": 10.0
-   }
-  },
-  {
-   "src": "1 landscape done.jpg",
-   "full": "assets/img/myroqia-series-one-2",
-   "thumb": "assets/img/myroqia-series-one-2-thumb",
-   "full_w": 1720,
-   "full_h": 968,
-   "thumb_w": 720,
-   "thumb_h": 405,
-   "orig_w": 1920,
-   "orig_h": 1080,
-   "orient": "landscape",
-   "year": 2024,
-   "date": "2024-07-27",
-   "kb": {
-    "jpg": 87.6,
-    "webp": 37.3
-   },
-   "kb_thumb": {
-    "jpg": 18.0,
-    "webp": 8.9
-   }
-  }
- ],
- "myroqia-series-two": [
-  {
-   "src": "2 example.jpg",
-   "full": "assets/img/myroqia-series-two-0",
-   "thumb": "assets/img/myroqia-series-two-0-thumb",
-   "full_w": 1280,
-   "full_h": 1280,
-   "thumb_w": 720,
-   "thumb_h": 720,
-   "orig_w": 1280,
-   "orig_h": 1280,
-   "orient": "square",
-   "year": 2024,
-   "date": "2024-07-26",
-   "kb": {
-    "jpg": 169.2,
-    "webp": 110.3
-   },
-   "kb_thumb": {
-    "jpg": 68.2,
-    "webp": 44.7
-   }
-  },
-  {
-   "src": "2.jpg",
-   "full": "assets/img/myroqia-series-two-1",
-   "thumb": "assets/img/myroqia-series-two-1-thumb",
-   "full_w": 1280,
-   "full_h": 1280,
-   "thumb_w": 720,
-   "thumb_h": 720,
-   "orig_w": 1280,
-   "orig_h": 1280,
-   "orient": "square",
-   "year": 2024,
-   "date": "2024-07-26",
-   "kb": {
-    "jpg": 109.4,
-    "webp": 70.3
-   },
-   "kb_thumb": {
-    "jpg": 42.8,
-    "webp": 25.4
-   }
-  },
-  {
-   "src": "2 done.jpg",
-   "full": "assets/img/myroqia-series-two-2",
-   "thumb": "assets/img/myroqia-series-two-2-thumb",
-   "full_w": 968,
-   "full_h": 1720,
-   "thumb_w": 405,
-   "thumb_h": 720,
-   "orig_w": 1080,
-   "orig_h": 1920,
-   "orient": "portrait",
-   "year": 2024,
-   "date": "2024-07-26",
-   "kb": {
-    "jpg": 138.9,
-    "webp": 89.3
-   },
-   "kb_thumb": {
-    "jpg": 30.6,
-    "webp": 22.2
-   }
-  },
-  {
-   "src": "2 landscape done.jpg",
-   "full": "assets/img/myroqia-series-two-3",
-   "thumb": "assets/img/myroqia-series-two-3-thumb",
-   "full_w": 1720,
-   "full_h": 968,
-   "thumb_w": 720,
-   "thumb_h": 405,
-   "orig_w": 1920,
-   "orig_h": 1080,
-   "orient": "landscape",
-   "year": 2024,
-   "date": "2024-07-27",
-   "kb": {
-    "jpg": 67.2,
-    "webp": 40.9
-   },
-   "kb_thumb": {
-    "jpg": 14.3,
-    "webp": 10.2
-   }
-  }
- ],
- "myroqia-series-three": [
-  {
-   "src": "3 example.jpg",
-   "full": "assets/img/myroqia-series-three-0",
-   "thumb": "assets/img/myroqia-series-three-0-thumb",
-   "full_w": 1280,
-   "full_h": 1280,
-   "thumb_w": 720,
-   "thumb_h": 720,
-   "orig_w": 1280,
-   "orig_h": 1280,
-   "orient": "square",
-   "year": 2024,
-   "date": "2024-07-26",
-   "kb": {
-    "jpg": 153.1,
-    "webp": 97.5
-   },
-   "kb_thumb": {
-    "jpg": 65.2,
-    "webp": 41.0
-   }
-  },
-  {
-   "src": "3.jpg",
-   "full": "assets/img/myroqia-series-three-1",
-   "thumb": "assets/img/myroqia-series-three-1-thumb",
-   "full_w": 1280,
-   "full_h": 1280,
-   "thumb_w": 720,
-   "thumb_h": 720,
-   "orig_w": 1280,
-   "orig_h": 1280,
-   "orient": "square",
-   "year": 2024,
-   "date": "2024-07-26",
-   "kb": {
-    "jpg": 111.3,
-    "webp": 67.2
-   },
-   "kb_thumb": {
-    "jpg": 45.6,
-    "webp": 24.5
-   }
-  },
-  {
-   "src": "3 done.jpg",
-   "full": "assets/img/myroqia-series-three-2",
-   "thumb": "assets/img/myroqia-series-three-2-thumb",
-   "full_w": 968,
-   "full_h": 1720,
-   "thumb_w": 405,
-   "thumb_h": 720,
-   "orig_w": 1080,
-   "orig_h": 1920,
-   "orient": "portrait",
-   "year": 2024,
-   "date": "2024-07-26",
-   "kb": {
-    "jpg": 93.6,
-    "webp": 52.4
-   },
-   "kb_thumb": {
-    "jpg": 21.3,
-    "webp": 14.1
-   }
-  },
-  {
-   "src": "3 landscape done.jpg",
-   "full": "assets/img/myroqia-series-three-3",
-   "thumb": "assets/img/myroqia-series-three-3-thumb",
-   "full_w": 1720,
-   "full_h": 968,
-   "thumb_w": 720,
-   "thumb_h": 405,
-   "orig_w": 1920,
-   "orig_h": 1080,
-   "orient": "landscape",
-   "year": 2024,
-   "date": "2024-07-27",
-   "kb": {
-    "jpg": 73.8,
-    "webp": 40.9
-   },
-   "kb_thumb": {
-    "jpg": 16.9,
-    "webp": 11.2
-   }
-  }
- ],
- "myroqia-story-format": [
-  {
-   "src": "Short Design 1 - Font Changed.png",
-   "full": "assets/img/myroqia-story-format-0",
-   "thumb": "assets/img/myroqia-story-format-0-thumb",
-   "full_w": 968,
-   "full_h": 1720,
-   "thumb_w": 405,
-   "thumb_h": 720,
-   "orig_w": 1080,
-   "orig_h": 1920,
-   "orient": "portrait",
-   "year": 2024,
-   "date": "2024-08-23",
-   "kb": {
-    "jpg": 159.0,
-    "webp": 86.4
-   },
-   "kb_thumb": {
-    "jpg": 39.7,
-    "webp": 26.2
-   }
-  },
-  {
-   "src": "Short Design 1.png",
-   "full": "assets/img/myroqia-story-format-1",
-   "thumb": "assets/img/myroqia-story-format-1-thumb",
-   "full_w": 968,
-   "full_h": 1720,
-   "thumb_w": 405,
-   "thumb_h": 720,
-   "orig_w": 1080,
-   "orig_h": 1920,
-   "orient": "portrait",
-   "year": 2024,
-   "date": "2024-08-20",
-   "kb": {
-    "jpg": 109.4,
-    "webp": 55.6
-   },
-   "kb_thumb": {
-    "jpg": 25.4,
-    "webp": 15.1
-   }
-  }
- ],
- "myroqia-editorial-cover": [
-  {
-   "src": "تصميم المقالات.jpg",
-   "full": "assets/img/myroqia-editorial-cover-0",
-   "thumb": "assets/img/myroqia-editorial-cover-0-thumb",
-   "full_w": 720,
-   "full_h": 390,
-   "thumb_w": 720,
-   "thumb_h": 390,
-   "orig_w": 720,
-   "orig_h": 390,
-   "orient": "landscape",
-   "year": 2024,
-   "date": "2024-08-08",
-   "kb": {
-    "jpg": 38.4,
-    "webp": 18.5
-   },
-   "kb_thumb": {
-    "jpg": 33.8,
-    "webp": 15.1
-   }
-  }
- ],
- "notion-arrab-afkarak": [
-  {
-   "src": "sources/notion-arrab-afkarak.png",
-   "full": "assets/img/notion-arrab-afkarak-0",
-   "thumb": "assets/img/notion-arrab-afkarak-0-thumb",
-   "full_w": 1720,
-   "full_h": 1720,
-   "thumb_w": 720,
-   "thumb_h": 720,
-   "orig_w": 2048,
-   "orig_h": 2048,
-   "orient": "square",
-   "year": 2026,
-   "date": "2026-11-04",
-   "kb": {
-    "jpg": 139.0,
-    "webp": 42.4
-   },
-   "kb_thumb": {
-    "jpg": 39.0,
-    "webp": 14.2
    }
   }
  ],

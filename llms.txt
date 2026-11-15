@@ -1,6 +1,6 @@
 # Muhammad Al-Masri — محمد المصري
 
-> Graphic designer in Mecca, Saudi Arabia, specialising in Arabic social media advertising design. 68 advertising designs delivered for 38 brands across restaurants, food, dairy, beverages, retail and tourism. Available for a full-time role, freelance projects and remote work.
+> Graphic designer in Mecca, Saudi Arabia, specialising in Arabic social media advertising design. 68 advertising designs delivered for 38 brands across restaurants and food, ordering apps, dairy, drinks, FMCG, retail, tourism, seasonal campaigns, concept work. Available for a full-time role, freelance projects and remote work.
 
 Language coverage: Arabic (native, primary) and English. The site is Arabic-first with `dir="rtl"` and an instant English toggle at `https://robliation.github.io/muhammed-portfolio-site/?lang=en`.
 
@@ -27,7 +27,7 @@ Social media advertising design · Arabic typography · product and food composi
 
 ## Sectors covered
 
-Restaurants and food · FMCG and grocery · Drinks and juices · Retail and lifestyle · Tourism and places · Ramadan and Eid · Brand and social systems · Concept and experimental
+Restaurants & food · Apps & ordering · Dairy & cheese · Drinks & juices · FMCG & grocery · Retail & tech · Tourism & places · Ramadan & Eid · Concept & experimental
 
 ## Experience
 

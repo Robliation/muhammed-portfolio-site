@@ -1,1 +1,5 @@
 __pycache__/
+
+# MyRoqia work is excluded from the site by the owner and must never be published.
+assets/img/myroqia-*
+assets/brands/myroqia*
