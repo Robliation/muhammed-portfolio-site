@@ -12,17 +12,17 @@
   var T = {
     ar: {
       title: "محمد المصري — مصمم جرافيك وإعلانات السوشيال ميديا في مكة المكرمة | بورتفوليو 2026",
-      desc: "بورتفوليو محمد المصري، مصمم جرافيك في مكة المكرمة متخصص في تصميم إعلانات السوشيال ميديا بالعربي: 68 تصميمًا إعلانيًا لأكثر من 35 علامة تجارية في المطاعم والأغذية والألبان والمشروبات والسلع الاستهلاكية والتجزئة والسياحة وتطبيقات الطلبات. متاح للتوظيف.",
+      desc: "بورتفوليو محمد المصري، مصمم جرافيك في مكة المكرمة متخصص في تصميم إعلانات السوشيال ميديا بالعربي: 69 تصميمًا إعلانيًا لأكثر من 35 علامة تجارية في المطاعم والأغذية والألبان والمشروبات والسلع الاستهلاكية والتجزئة والسياحة وتطبيقات الطلبات. متاح للتوظيف.",
       "nav.work": "الأعمال", "nav.craft": "الحرفة", "nav.tools": "الأدوات", "nav.about": "نبذة",
-      "nav.brands": "العلامات", "nav.path": "المسار", "nav.cv": "السيرة", "nav.contact": "تواصل",
+      "nav.brands": "العلامات", "nav.path": "المسار", "nav.cv": "السيرة", "nav.contact": "تواصل", "nav.menu": "القائمة",
       "hero.eyebrow": "محمد المصري · مصمم جرافيك وإعلانات السوشيال ميديا · مكة المكرمة، السعودية",
       "hero.line1": "تصميم إعلانات",
       "hero.line2": "توقف <em>التمرير</em>",
-      "hero.lede": "أصمّم إعلانات سوشيال ميديا بالعربي للعلامات التجارية في السعودية: جملة عربية تُقرأ في ثانية، منتج يبدو شهياً، وتكوين يحمل الفكرة كاملة. 68 تصميمًا إعلانيًا لأكثر من 35 علامة في المطاعم والأغذية والألبان والمشروبات والسلع الاستهلاكية والتجزئة والسياحة وتطبيقات الطلبات، مُسلَّمة بالمقاسات المربعة والطولية والعرضية لكل حملة.",
+      "hero.lede": "أصمّم إعلانات سوشيال ميديا بالعربي للعلامات التجارية في السعودية: جملة عربية تُقرأ في ثانية، منتج يبدو شهياً، وتكوين يحمل الفكرة كاملة. 69 تصميمًا إعلانيًا لأكثر من 35 علامة في المطاعم والأغذية والألبان والمشروبات والسلع الاستهلاكية والتجزئة والسياحة وتطبيقات الطلبات، مُسلَّمة بالمقاسات المربعة والطولية والعرضية لكل حملة.",
       "hero.cta1": "شاهد الأعمال", "hero.cta2": "حمّل السيرة", "hero.cta3": "راسلني بالبريد",
       "fact.works": "تصميم", "fact.brands": "علامة تجارية", "fact.fields": "مجال", "fact.formats": "مقاسات",
       "board.tag": "أحدث الأعمال", "board.meta": "4 من أصل",
-      "strip.label": "أكثر من 35+ علامة تجارية صممت لها",
+      "strip.label": "أكثر من 35 علامة تجارية صممت لها",
       "strip.sub": "شعارات العلامات المعروضة هنا ملك أصحابها وتُعرض للتعريف بأعمال التصميم.",
       "work.n": "الأعمال", "work.h": "كل التصاميم في مكان واحد",
       "work.lede": "تصفّى حسب المجال أو ابحث باسم العلامة التجارية. كل تصميم يفتح كبروفة كاملة الحجم مع مقاسه الأصلي وكل نسخ الحملة.",
@@ -76,7 +76,7 @@
       "path.6.d": "من سنتين أعمل على أدوات الذكاء الاصطناعي من Google — Nano Banana 2 وNano Banana Pro — لإنتاج الصور الخام ثم معالجتها يدويًا. أوسّع الأعمال على علامات جديدة وأسلّم كل حملة بكل المقاسات. متاح لوظيفة بدوام كامل أو مشاريع مستقلة أو عمل عن بعد.",
       "faq.n": "أسئلة", "faq.h": "أسئلة يسألها الأرباب والوكالات",
       "faq.q1": "من هو محمد المصري؟",
-      "faq.a1": "مصمم جرافيك في مكة المكرمة، متخصص في تصميم إعلانات السوشيال ميديا بالعربي. قدّم 68 تصميمًا إعلانيًا لأكثر من 35 علامة تجارية سعودية في المطاعم والأغذية والألبان والمشروبات والسلع الاستهلاكية والتجزئة والسياحة وتطبيقات الطلبات.",
+      "faq.a1": "مصمم جرافيك في مكة المكرمة، متخصص في تصميم إعلانات السوشيال ميديا بالعربي. قدّم 69 تصميمًا إعلانيًا لأكثر من 35 علامة تجارية سعودية في المطاعم والأغذية والألبان والمشروبات والسلع الاستهلاكية والتجزئة والسياحة وتطبيقات الطلبات.",
       "faq.q2": "ما البرامج التي يعمل عليها؟",
       "faq.a2": "Adobe Photoshop لأكثر من 3 سنوات، وAdobe Illustrator لأكثر من سنتين، وCapCut لتعديل ومونتاج الفيديو لأكثر من سنتين، إضافة إلى أدوات الذكاء الاصطناعي التوليدية من Google مثل Nano Banana 2 وNano Banana Pro.",
       "faq.q3": "هل يقبل عملًا عن بعد أو مشاريع مستقلة؟",
@@ -88,25 +88,27 @@
       "faq.q6": "كيف يمكن للشركة توظيفه أو التعاقد معه؟",
       "faq.a6": "بريد واحد يكفي: muhammedwork7623@gmail.com مع وصف المشروع أو الوصف الوظيفي. الرد خلال يوم عمل، ومع البريد رابط هذا البورتفوليو وصفحة السيرة القابلة للتصدير PDF بصيغة ATS.",
       "contact.n": "تواصل", "contact.h": "تحتاج مصمم لحملتك الجاية؟",
-      "contact.p": "أرسل تفاصيل المشروع أو الوصف الوظيفي على بريدي، وأرد عليك خلال يوم عمل. تقدر تشوف الأعمال كاملة على بيهاينس أو تفتح صفحة السيرة القابلة للتصدير PDF.",
+      "contact.p": "أرسل تفاصيل المشروع أو الوصف الوظيفي على بريدي، وأرد عليك خلال يوم عمل. تقدر تشوف الأعمال كاملة على بيهاينس، أو تفتح صفحة السيرة وتصدّرها PDF.",
       "contact.mail": "راسلني بالبريد", "contact.be": "Behance", "contact.cv": "حمّل السيرة",
       "contact.avail": "متاح لاستلام عمل جديد",
       "foot.tag": "تصميم إعلانات بالعربي · مكة المكرمة", "foot.elsewhere": "في مكان آخر",
       "foot.rights": "جميع التصاميم ملك محمد المصري.",
+      "foot.cta.n": "حملة جديدة", "foot.cta": "عندك حملة جاية؟ أرسل تفاصيلها وأرد خلال يوم عمل.",
+      "foot.note": "العلامات وشعاراتها ملك أصحابها وتُعرض للتعريف بالأعمال.", "foot.top": "للأعلى",
       "lb.close": "إغلاق", "lb.prev": "السابق", "lb.next": "التالي", "lb.of": "عمل",
       "lb.cat": "المجال", "lb.year": "السنة", "lb.size": "المقاس الأصلي", "lb.fmt": "المقاسات",
       "lb.be": "مشاهده على بيهاينس", "lb.alt": "بقية مقاسات هذا التصميم",
-      "lang.btn": "EN",
+      "lang.btn": "EN", "lang.switch": "تبديل اللغة إلى الإنجليزية",
     },
     en: {
       title: "Muhammad Al-Masri — Graphic Designer & Social Advertising, Mecca, Saudi Arabia",
-      desc: "Portfolio of Muhammad Al-Masri, a graphic designer in Mecca, Saudi Arabia, specialising in Arabic social media advertising design: 68 ad designs for 35+ brands in food, dairy, drinks, FMCG, retail, tourism and ordering apps. Photoshop, Illustrator, CapCut and generative AI. Available for hire.",
+      desc: "Portfolio of Muhammad Al-Masri, a graphic designer in Mecca, Saudi Arabia, specialising in Arabic social media advertising design: 69 ad designs for 35+ brands in food, dairy, drinks, FMCG, retail, tourism and ordering apps. Photoshop, Illustrator, CapCut and generative AI. Available for hire.",
       "nav.work": "Work", "nav.craft": "Craft", "nav.tools": "Tools", "nav.about": "About",
-      "nav.brands": "Brands", "nav.path": "Path", "nav.cv": "Résumé", "nav.contact": "Contact",
+      "nav.brands": "Brands", "nav.path": "Path", "nav.cv": "Résumé", "nav.contact": "Contact", "nav.menu": "Menu",
       "hero.eyebrow": "Muhammad Al-Masri · Graphic Designer & Social Advertising · Mecca, Saudi Arabia",
       "hero.line1": "Ads that",
       "hero.line2": "<em>stops the scroll</em>",
-      "hero.lede": "I design Arabic social media advertising for brands across Saudi Arabia: a line that reads in one second, a product that looks appetising, and a composition that carries the whole idea. 68 advertising designs for 35+ brands in food, dairy, drinks, FMCG, retail, tourism and ordering apps — every campaign shipped square, portrait and landscape.",
+      "hero.lede": "I design Arabic social media advertising for brands across Saudi Arabia: a line that reads in one second, a product that looks appetising, and a composition that carries the whole idea. 69 advertising designs for 35+ brands in food, dairy, drinks, FMCG, retail, tourism and ordering apps — every campaign shipped square, portrait and landscape.",
       "hero.cta1": "See the work", "hero.cta2": "Download résumé", "hero.cta3": "Email me",
       "fact.works": "designs", "fact.brands": "brands", "fact.fields": "sectors", "fact.formats": "formats",
       "board.tag": "Latest work", "board.meta": "4 of",
@@ -164,7 +166,7 @@
       "path.6.d": "Two years working with Google's AI image models — Nano Banana 2 and Nano Banana Pro — for raw imagery, then hand-retouched. Expanding to new brands and shipping every campaign in all formats. Open to a full-time role, freelance projects or remote work.",
       "faq.n": "FAQ", "faq.h": "Questions employers and agencies ask",
       "faq.q1": "Who is Muhammad Al-Masri?",
-      "faq.a1": "A graphic designer in Mecca, Saudi Arabia, specialising in Arabic social media advertising design. 68 advertising designs delivered for more than 35 Saudi brands across restaurants, food, beverages, retail and tourism.",
+      "faq.a1": "A graphic designer in Mecca, Saudi Arabia, specialising in Arabic social media advertising design. 69 advertising designs delivered for more than 35 Saudi brands across restaurants, food, beverages, retail and tourism.",
       "faq.q2": "Which software does he work in?",
       "faq.a2": "Adobe Photoshop for 3+ years, Adobe Illustrator for 2+ years, and CapCut for professional video editing and montage for 2+ years — plus Google's generative image tools, Nano Banana 2 and Nano Banana Pro, for raw imagery that is then retouched by hand.",
       "faq.q3": "Does he take remote work or freelance projects?",
@@ -181,10 +183,12 @@
       "contact.avail": "Available for new work",
       "foot.tag": "Arabic advertising design · Mecca", "foot.elsewhere": "Elsewhere",
       "foot.rights": "All designs belong to Muhammad Al-Masri.",
+      "foot.cta.n": "New campaign", "foot.cta": "Starting a campaign? Send the brief — I reply within one working day.",
+      "foot.note": "All brands and logos belong to their owners and are shown to credit the work.", "foot.top": "Top",
       "lb.close": "Close", "lb.prev": "Previous", "lb.next": "Next", "lb.of": "work",
       "lb.cat": "Sector", "lb.year": "Year", "lb.size": "Original size", "lb.fmt": "Formats",
       "lb.be": "View on Behance", "lb.alt": "Other formats of this design",
-      "lang.btn": "ع",
+      "lang.btn": "AR", "lang.switch": "Switch to Arabic",
     },
   };
 
@@ -241,8 +245,10 @@
   /* Every client has its real mark. A tile only falls back to type if the asset is missing. */
   function logoImg(B, localName, cls) {
     var d = (B.w && B.h) ? ' width="' + num(B.w) + '" height="' + num(B.h) + '"' : "";
-    var c = (cls ? cls + " " : "") + (B.lift ? "lift" : "");
-    return '<img class="logo-img' + (c ? " " + c.trim() : "") + '" src="assets/brands/' + B.file + '"' + d +
+    /* Marks drawn in white ink ship a dark-ink twin from build/light_logos.py, so a
+       logo never has to sit on a black chip to stay legible. */
+    var file = B.light || B.file;
+    return '<img class="logo-img' + (cls ? " " + cls : "") + '" src="assets/brands/' + file + '"' + d +
       ' alt="' + esc(localName) + '" loading="lazy" decoding="async">';
   }
   function mark(name, localName, cls) {
@@ -401,7 +407,7 @@
           '<span class="craft-shot-cap">' + esc(w.brand[lang]) + "</span></a>";
       }).join("");
       return '<article class="craft-row rv' + (i % 2 ? " flip" : "") + '">' +
-        '<div class="craft-txt"><span class="craft-ix">' + num(i + 1) + " / " + num(CRAFT.length) + "</span>" +
+        '<div class="craft-txt"><span class="craft-ix" dir="ltr">' + num(i + 1) + " / " + num(CRAFT.length) + "</span>" +
         "<h3>" + esc(t("craft." + c.key + ".t")) + "</h3><p>" + esc(t("craft." + c.key + ".d")) + "</p>" +
         '<button class="link-btn" type="button" data-craft-cat="' + c.cat + '">' + esc(t("craft.view")) + " →</button></div>" +
         '<div class="craft-shots">' + imgs + "</div></article>";

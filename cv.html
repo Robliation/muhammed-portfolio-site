@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>السيرة المختصرة — محمد المصري، مصمم جرافيك وإعلانات السوشيال ميديا | مكة المكرمة</title>
-<meta name="description" content="سيرة محمد المصري، مصمم جرافيك في مكة المكرمة متخصص في تصميم إعلانات السوشيال ميديا بالعربي — 68 تصميمًا و80 نسخة مُسلَّمة لـ38 علامة تجارية، مع سجل أعمال كامل بشعارات العملاء ومقاساتهم. قابلة للتصدير PDF بنسختين عربية وإنجليزية.">
+<meta name="description" content="سيرة محمد المصري، مصمم جرافيك في مكة المكرمة متخصص في تصميم إعلانات السوشيال ميديا بالعربي — 69 تصميمًا و81 نسخة مُسلَّمة لـ39 علامة تجارية، مع سجل أعمال كامل بشعارات العملاء ومقاساتهم. قابلة للتصدير PDF بنسختين عربية وإنجليزية.">
 <meta name="author" content="Muhammad Al-Masri">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://robliation.github.io/muhammed-portfolio-site/cv.html">
@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800;900&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Zain:wght@400;700;800;900&display=swap">
-<link rel="stylesheet" href="assets/css/site.css?v=0f32e1cc">
+<link rel="stylesheet" href="assets/css/site.css?v=95439bc2">
 <style>
   .cv-wrap { max-width: 1060px; margin-inline: auto; padding: clamp(20px,4vw,44px) var(--gut) 0; }
   .cv-top { display: flex; justify-content: space-between; align-items: flex-start; gap: var(--s5);
@@ -191,6 +191,9 @@
     #en { color: #000; }
     #en .cv-sec > h2 { font-size: 12pt; font-weight: bold; text-transform: uppercase; letter-spacing: .04em !important;
                       border-block-end: 1px solid #000; padding-block-end: 3pt; margin-block-end: 8pt; }
+    /* ATS reads text, not decoration: no numbered chips, no centred status block. */
+    .cv-sec > h2::before { display: none !important; }
+    .cv-top > div { text-align: start !important; }
     #en .cv-name { font-size: 20pt; }
     #en .cv-role, #en .cv-meta, #en .cv-list li, #en .cv-para, #en .cv-block h3 { font-size: 10.5pt; }
     #en img { display: none !important; }
@@ -206,14 +209,17 @@
       <img src="assets/brand/m-mark-blue.png" width="900" height="640" alt="M Designer" decoding="async">
       <span class="brand-txt">السيرة المختصرة</span>
     </a>
-    <nav class="nav-links" aria-label="Main">
+    <nav class="nav-links" id="nav-links" aria-label="Main">
       <a href="index.html#work">الأعمال</a>
       <a href="index.html#craft">الحرفة</a>
       <a href="index.html#tools">الأدوات</a>
       <a href="index.html#brands">العلامات</a>
       <a href="index.html#contact">تواصل</a>
     </nav>
-    <div class="nav-acts"><a class="lang-btn" href="#en">English</a></div>
+    <div class="nav-acts">
+      <a class="lang-btn" href="#en">English</a>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="القائمة"><i></i><i></i><i></i></button>
+    </div>
   </div>
 </header>
 
@@ -246,13 +252,13 @@
 
     <section class="cv-sec" id="a-sum">
       <h2 data-n="01">نبذة</h2>
-      <p class="cv-lede">مصمم جرافيك في مكة المكرمة، واشتغلي الأساسي هو الإعلان بالعربي: بوست يوقف الإصبع في منتصف التمرير. أبني الإعلان من الجملة أولًا — صياغة عربية تُقرأ في ثانية واحدة — ثم منتج يبدو شهيًا داخل الكادر، ثم تكوين يحمل الفكرة كاملة دون زحمة. ثلاث سنوات عملية على أدوبي فوتوشوب، وسنتان على أدوبي إليستريتور، ومونتاج الفيديو الإعلاني على كاب كات، وسنتان على إنتاج الصور بالذكاء الاصطناعي عبر نماذج جوجل (Google) ثم معالجتها يدويًا قبل النشر. سلّمت 68 تصميمًا إعلانيًا و80 نسخة جاهزة للنشر لـ38 علامة في المطاعم والأغذية والألبان والمشروبات والسلع الاستهلاكية والتجزئة والسياحة وتطبيقات الطلبات، وكل حملة تُسلَّم بمقاساتها المربعة والطولية والعرضية.</p>
+      <p class="cv-lede">مصمم جرافيك في مكة المكرمة، واشتغلي الأساسي هو الإعلان بالعربي: بوست يوقف الإصبع في منتصف التمرير. أبني الإعلان من الجملة أولًا — صياغة عربية تُقرأ في ثانية واحدة — ثم منتج يبدو شهيًا داخل الكادر، ثم تكوين يحمل الفكرة كاملة دون زحمة. ثلاث سنوات عملية على أدوبي فوتوشوب، وسنتان على أدوبي إليستريتور، ومونتاج الفيديو الإعلاني على كاب كات، وسنتان على إنتاج الصور بالذكاء الاصطناعي عبر نماذج جوجل (Google) ثم معالجتها يدويًا قبل النشر. سلّمت 69 تصميمًا إعلانيًا و81 نسخة جاهزة للنشر لـ39 علامة في المطاعم والأغذية والألبان والمشروبات والسلع الاستهلاكية والتجزئة والسياحة وتطبيقات الطلبات، وكل حملة تُسلَّم بمقاساتها المربعة والطولية والعرضية.</p>
       <div class="cv-num">
-        <div><b>68</b><span>تصميمًا إعلانيًا</span></div>
-        <div><b>80</b><span>نسخة مُسلَّمة</span></div>
-        <div><b>38</b><span>علامة تجارية</span></div>
+        <div><b>69</b><span>تصميمًا إعلانيًا</span></div>
+        <div><b>81</b><span>نسخة مُسلَّمة</span></div>
+        <div><b>39</b><span>علامة تجارية</span></div>
         <div><b>9</b><span>مجالات</span></div>
-        <div><b>38</b><span>مقاس مربّع</span></div>
+        <div><b>42</b><span>مقاس مربّع</span></div>
         <div><b>27</b><span>مقاس عرضي</span></div>
         <div><b>12</b><span>مقاس طولي</span></div>
         <div><b>10</b><span>مقاسات مصدرية</span></div>
@@ -387,13 +393,13 @@
 
     <section class="cv-sec" id="e-sum">
       <h2 data-n="01">Summary</h2>
-      <p class="cv-lede">Graphic designer in Mecca, Saudi Arabia, working almost entirely on Arabic social advertising: the post that stops a thumb mid-scroll. I build an ad from the line first — Arabic that reads in one second — then a product that looks appetising inside the frame, then a composition that carries the idea without noise. 3+ years of professional Adobe Photoshop practice, 2+ years in Adobe Illustrator, advertising video edited in CapCut, and two years producing raw imagery with Google's generative models (Nano Banana 2, Nano Banana Pro) before hand-retouching it for publication. Delivered 68 advertising designs and 80 export-ready versions for 38 brands across restaurants, food, dairy, drinks, FMCG, retail, tourism and ordering apps, with every campaign shipped square, portrait and landscape.</p>
+      <p class="cv-lede">Graphic designer in Mecca, Saudi Arabia, working almost entirely on Arabic social advertising: the post that stops a thumb mid-scroll. I build an ad from the line first — Arabic that reads in one second — then a product that looks appetising inside the frame, then a composition that carries the idea without noise. 3+ years of professional Adobe Photoshop practice, 2+ years in Adobe Illustrator, advertising video edited in CapCut, and two years producing raw imagery with Google's generative models (Nano Banana 2, Nano Banana Pro) before hand-retouching it for publication. Delivered 69 advertising designs and 81 export-ready versions for 39 brands across restaurants, food, dairy, drinks, FMCG, retail, tourism and ordering apps, with every campaign shipped square, portrait and landscape.</p>
       <div class="cv-num">
-        <div><b>68</b><span>ad designs</span></div>
-        <div><b>80</b><span>delivered versions</span></div>
-        <div><b>38</b><span>client brands</span></div>
+        <div><b>69</b><span>ad designs</span></div>
+        <div><b>81</b><span>delivered versions</span></div>
+        <div><b>39</b><span>client brands</span></div>
         <div><b>9</b><span>sectors</span></div>
-        <div><b>38</b><span>square</span></div>
+        <div><b>42</b><span>square</span></div>
         <div><b>27</b><span>landscape</span></div>
         <div><b>12</b><span>portrait</span></div>
         <div><b>10</b><span>source sizes</span></div>
@@ -441,7 +447,7 @@
       </div>
       <div class="cv-block">
         <div class="cv-role-line"><h3>Published Portfolio — Behance</h3><span class="per">February 2025 — Present</span></div>
-        <p class="cv-para">Consistent professional publishing on Behance, with a curated project per campaign and every format of that campaign shown inside the project itself. More than 60 advertising designs released for Saudi brands, and 12 projects linked directly from the work ledger below.</p>
+        <p class="cv-para">Consistent professional publishing on Behance, with a curated project per campaign and every format of that campaign shown inside the project itself. More than 69 advertising designs released for Saudi brands, and 12 projects linked directly from the work ledger below.</p>
       </div>
     </section>
 
@@ -503,7 +509,7 @@
   <button class="btn btn-ghost print-btn" type="button" data-print="ar">طباعة / حفظ السيرة بالعربية</button>
 </div>
 
-<script src="assets/js/data.js?v=0e427a33"></script>
+<script src="assets/js/data.js?v=320abed0"></script>
 <script>
 (function () {
   var D = window.MD_DATA, LOGOS = window.MD_BRANDS || {};
@@ -664,5 +670,6 @@
   });
 })();
 </script>
+<script src="assets/js/nav.js?v=0ac27c94"></script>
 </body>
 </html>

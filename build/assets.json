@@ -187,6 +187,30 @@
    }
   }
  ],
+ "tazaj-nothing-but-tazaj": [
+  {
+   "src": "تصميم لشركة الطازج (لا طازج ألا الطازج فروج على الفـحــم).png",
+   "full": "assets/img/tazaj-nothing-but-tazaj-0",
+   "thumb": "assets/img/tazaj-nothing-but-tazaj-0-thumb",
+   "full_w": 1720,
+   "full_h": 1720,
+   "thumb_w": 720,
+   "thumb_h": 720,
+   "orig_w": 2048,
+   "orig_h": 2048,
+   "orient": "square",
+   "year": 2026,
+   "date": "2026-11-16",
+   "kb": {
+    "jpg": 233.6,
+    "webp": 127.2
+   },
+   "kb_thumb": {
+    "jpg": 48.4,
+    "webp": 28.1
+   }
+  }
+ ],
  "shawarmer-different": [
   {
    "src": "تصميم لشركة شاورمر (شاورما غير).jpg",

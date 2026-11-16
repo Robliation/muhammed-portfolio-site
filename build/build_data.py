@@ -92,13 +92,56 @@ open(os.path.join(OUT, ".nojekyll"), "w").write("")
 print("sitemap/robots/.nojekyll written")
 
 
+# --- count sync -------------------------------------------------------------
+# Every number the visitor reads ("69 designs", "81 versions", "39 brands", the
+# CV stat block) is derived here from the manifest, so adding a design can never
+# leave a stale claim behind in the copy, the meta description or the schema.
+AR_DESIGN = r"تصميم(?:ًا|اً|ا)?"
+def sync_counts():
+    nw, nv, nb = payload["meta"]["totalWorks"], payload["meta"]["versions"], payload["meta"]["brands"]
+    orients = {o: sum(1 for w in works for i in w["imgs"] if i["orient"] == o)
+               for o in ("square", "landscape", "portrait")}
+    rules = [
+        (r"\d+(?=\s*" + AR_DESIGN + r" إعلاني)", nw),
+        (r"\d+(?=\s*" + AR_DESIGN + r"\b)", nw),
+        (r"\d+(?=\s+(?:Arabic\s+)?(?:(?:advertising|ad)\s+)?designs)", nw),
+        (r"\d+(?=\s*(?:نسخة|export-ready versions|delivered versions))", nv),
+        (r"(?<!أكثر من )(?<!\d)\d+(?=\s*علامة)", nb),
+        (r"(?<!\d)\d+(?=\s+(?:client )?brands(?![+\w]))", nb),
+        (r"(?<=<b>)\d+(?=</b><span>" + AR_DESIGN + r" إعلانيًا)", nw),
+        (r"(?<=<b>)\d+(?=</b><span>ad designs)", nw),
+        (r"(?<=<b>)\d+(?=</b><span>(?:نسخة مُسلَّمة|delivered versions))", nv),
+        (r"(?<=<b>)\d+(?=</b><span>(?:علامة تجارية|client brands))", nb),
+        (r"(?<=<b>)\d+(?=</b><span>(?:مقاس مربّع|square))", orients["square"]),
+        (r"(?<=<b>)\d+(?=</b><span>(?:مقاس عرضي|landscape))", orients["landscape"]),
+        (r"(?<=<b>)\d+(?=</b><span>(?:مقاس طولي|portrait))", orients["portrait"]),
+    ]
+    changed = []
+    for page in ["index.html", "cv.html", os.path.join("assets", "js", "site.js")]:
+        fp = os.path.join(OUT, page)
+        if not os.path.exists(fp):
+            continue
+        txt = open(fp, encoding="utf-8").read()
+        before = txt
+        for pat, val in rules:
+            txt = re.sub(pat, str(val), txt)
+        if txt != before:
+            open(fp, "w", encoding="utf-8").write(txt)
+            changed.append(page)
+    print("counts synced: %d works / %d versions / %d brands%s" % (
+        nw, nv, nb, (" | " + ", ".join(changed)) if changed else " | no change"))
+
+
+sync_counts()
+
+
 # --- cache busting -----------------------------------------------------------
 # GitHub Pages serves these files with caching, so a returning visitor could keep
 # an old data.js after a publish (a new design would look "missing"). Stamp every
 # local script/style/stylesheet reference with a hash of its content: the URL
 # changes exactly when the file changes, so browsers always fetch the new build.
 def stamp():
-    names = ["assets/js/data.js", "assets/js/site.js", "assets/css/site.css"]
+    names = ["assets/js/data.js", "assets/js/site.js", "assets/js/nav.js", "assets/css/site.css"]
     vers = {}
     for n in names:
         fp = os.path.join(OUT, *n.split("/"))

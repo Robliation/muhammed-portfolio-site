@@ -179,6 +179,32 @@
    "year": 2025
   },
   {
+   "id": "tazaj-nothing-but-tazaj",
+   "brand_en": "Tazaj",
+   "brand_ar": "الطازج",
+   "tagline_ar": "لا طازج إلا الطازج — فروج على الفحم",
+   "tagline_en": "Nothing fresh but Tazaj — charcoal-grilled chicken",
+   "cat": "restaurants",
+   "images": [
+    {
+     "file": "تصميم لشركة الطازج (لا طازج ألا الطازج فروج على الفـحــم).png",
+     "w": 2048,
+     "h": 2048,
+     "ratio": 1.0,
+     "bytes": 4881541,
+     "year": 2026,
+     "date": "2026-11-16",
+     "orient": "square"
+    }
+   ],
+   "sources": [
+    "تصميم لشركة الطازج (لا طازج ألا الطازج فروج على الفـحــم).png"
+   ],
+   "behance": null,
+   "behance_id": null,
+   "year": 2026
+  },
+  {
    "id": "shawarmer-different",
    "brand_en": "Shawarmer",
    "brand_ar": "شاورمر",
@@ -1939,5 +1965,5 @@
    "مفاهيم تجريبية"
   ]
  },
- "source_count": 80
+ "source_count": 81
 }

@@ -64,6 +64,7 @@ W = [
     ("tazaj-crazy-taste", "Tazaj", "الطازج", "طعم بجنن", "A crazy-good taste", "restaurants", ["تصميم لمطعم الطازج ( طعم بجنن).jpg"]),
     ("tazaj-city-of-crispy", "Tazaj", "الطازج", "TAZAJ", "TAZAJ — city of crispy", "restaurants", ["تصميم لمطعم الطازج (TAZAJ).jpg"]),
     ("tazaj-changes-your-mood", "Tazaj", "الطازج", "الطازج يغير مزاجك", "Tazaj changes your mood", "restaurants", ["تصميم لمطعم الطازج (الطازج يغير مزاجك) بالعرض.jpg", "تصميم لمطعم الطازج (الطازج يغير مزاجك) بالطول.jpg"]),
+    ("tazaj-nothing-but-tazaj", "Tazaj", "الطازج", "لا طازج إلا الطازج — فروج على الفحم", "Nothing fresh but Tazaj — charcoal-grilled chicken", "restaurants", ["تصميم لشركة الطازج (لا طازج ألا الطازج فروج على الفـحــم).png"]),
     ("shawarmer-different", "Shawarmer", "شاورمر", "شاورما غير", "A different shawarma", "restaurants", ["تصميم لشركة شاورمر (شاورما غير).jpg"]),
     ("shawarmer-golden", "Shawarmer", "شاورمر", "لا تفوت الشاورما الذهبية", "Don't miss the golden shawarma", "restaurants", ["تصميم لشركة شاورمر (لا تفوت الشاورما الذهبية).jpg"]),
     ("takohat-forget-your-troubles", "Takohat", "تاكوهت", "الأكلة تخليك توكل أصعابك", "The meal that makes you forget your troubles", "restaurants", ["تصميم لشركة تاكوهت (الأكلة تخليك توكل أصعابك) بالطول.jpg", "تصميم لشركة تاكوهت (الأكلة تخليك توكل أصعابك).jpg"]),
