@@ -619,7 +619,10 @@
     /* brand card -> filter the grid to that brand and move to the work section */
     document.getElementById("brand-index").addEventListener("click", function (e) {
       var b = e.target.closest("[data-brand]"); if (!b) return;
-      cat = "all"; query = b.getAttribute("data-brand"); s.value = query;
+      /* filter with the name the visitor actually reads (Arabic on the Arabic page),
+         while matching still runs against both languages */
+      var nm = b.querySelector(".brand-nm");
+      cat = "all"; query = nm ? nm.textContent : b.getAttribute("data-brand"); s.value = query;
       renderChips(); grid();
       document.getElementById("work").scrollIntoView({ behavior: "smooth", block: "start" });
     });
