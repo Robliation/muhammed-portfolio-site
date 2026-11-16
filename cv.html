@@ -18,7 +18,7 @@
   .cv-top { display: flex; justify-content: space-between; align-items: flex-start; gap: var(--s5);
             padding-block: var(--s6) var(--s5); border-block-end: 2px solid var(--ink); flex-wrap: wrap; }
   .cv-top img { height: 58px; width: auto; }
-  .cv-name { font-family: var(--f-display-ar); font-weight: 900; font-size: clamp(1.7rem,4vw,2.5rem); line-height: 1.15; }
+  .cv-name { font-family: var(--f-display-ar); font-weight: 900; font-size: clamp(1.7rem,4vw,2.5rem); line-height: 1.15; margin-block-start: var(--s3); }
   [dir="ltr"] .cv-name { font-family: var(--f-display-lat); letter-spacing: -0.025em; }
   .cv-role { color: var(--blue); font-weight: 700; font-size: var(--t-small); margin-block-start: 2px; }
   .cv-meta { font-size: var(--t-small); color: var(--ink-3); margin-block-start: var(--s3); display: flex; gap: var(--s3); flex-wrap: wrap; }
@@ -61,8 +61,14 @@
   .grp:last-child { border-block-end: 0; }
   .grp .k { font-weight: 800; font-size: var(--t-small); }
   .grp .v { display: flex; flex-wrap: wrap; gap: var(--s2); }
-  .print-btns { position: fixed; inset-block-end: var(--s5); inset-inline-end: var(--s5); z-index: 120;
-                display: flex; flex-direction: column; gap: var(--s2); }
+  .print-btns { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+                gap: var(--s3) var(--s4); padding-block: var(--s5) 0; }
+  .pb-label { font-size: var(--t-micro); font-weight: 600; color: var(--ink-3); }
+  .pb-acts { display: flex; flex-wrap: wrap; gap: var(--s2); }
+  @media (max-width: 560px) {
+    .print-btns { padding-block: var(--s4) 0; }
+    .print-btn { font-size: var(--t-micro); padding: 9px 14px; }
+  }
   .jump { display: flex; gap: var(--s3); justify-content: center; padding-block: var(--s6); }
   .page-break { border: 0; border-block-start: 1px dashed var(--rule); margin-block: var(--s8); }
   .cv-role-line { display: flex; justify-content: space-between; gap: var(--s4); flex-wrap: wrap; align-items: baseline; }
@@ -85,9 +91,13 @@
                   background: var(--blue-wash); border-radius: var(--r-pill); padding: 3px 10px; }
   .led-head .rule2 { flex: 1 1 auto; height: 1px; background: var(--rule-2); }
 
-  .led-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(296px, 1fr)); gap: var(--s4); }
+  /* Column packing keeps a client with one work from leaving a hole beside a
+     client with four; each card stays intact and the wall reads evenly. */
+  .led-grid { columns: 3; column-gap: var(--s4); }
+  @media (max-width: 1120px) { .led-grid { columns: 2; } }
+  @media (max-width: 720px) { .led-grid { columns: 1; } }
   .cl { background: var(--paper-2); border: 1px solid var(--rule); border-radius: var(--r2); overflow: hidden;
-        display: flex; flex-direction: column; break-inside: avoid; }
+        display: flex; flex-direction: column; break-inside: avoid; margin-block-end: var(--s4); }
   .cl-head { display: flex; align-items: center; gap: var(--s3); padding: var(--s3) var(--s4);
              border-block-end: 1px solid var(--rule-2); background: var(--paper-2); }
   /* the logo sits on a light plate with a hairline, so white-ink marks stay legible
@@ -134,7 +144,6 @@
                 color: var(--ink-3); margin-block-start: var(--s5); line-height: 1.8; }
 
   @media (max-width: 720px) {
-    .led-grid { grid-template-columns: 1fr; }
     .cl-logo { width: 84px; height: 40px; }
   }
 
@@ -165,7 +174,8 @@
     body.print-ar #en, body.print-ar .cv-wrap > #en { display: none !important; }
     /* the ledger prints as selectable text: client marks and thumbnails are screen
        ink, and the ATS path must stay a clean single column. */
-    .led-grid { grid-template-columns: 1fr !important; gap: 0; }
+    .led-grid { columns: 1 !important; column-gap: 0; }
+    .cl { margin-block-end: 0; }
     .cl { border: 0; border-block-end: 1px solid #ccc; border-radius: 0; background: none; }
     .cl-head { padding: 4pt 0 2pt; border-block-end: 0; background: none; gap: 6pt; }
     .cl-logo, .cw-media { display: none !important; }
@@ -224,6 +234,14 @@
 </header>
 
 <main class="cv-wrap">
+
+  <div class="print-btns no-print">
+    <span class="pb-label">نسخة قابلة للطباعة · مقاس A4</span>
+    <div class="pb-acts">
+      <button class="btn print-btn" type="button" data-print="en">Print Résumé (ATS / English)</button>
+      <button class="btn btn-ghost print-btn" type="button" data-print="ar">طباعة / حفظ السيرة بالعربية</button>
+    </div>
+  </div>
 
   <div id="ar" lang="ar" dir="rtl">
     <div class="cv-top">
@@ -503,11 +521,6 @@
     </section>
   </div>
 </main>
-
-<div class="print-btns no-print">
-  <button class="btn print-btn" type="button" data-print="en">Print Résumé (ATS / English)</button>
-  <button class="btn btn-ghost print-btn" type="button" data-print="ar">طباعة / حفظ السيرة بالعربية</button>
-</div>
 
 <script src="assets/js/data.js?v=320abed0"></script>
 <script>
