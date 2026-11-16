@@ -576,6 +576,13 @@ ul, ol { padding: 0; list-style: none; }
   padding: 2px 9px; border-radius: var(--r-pill); white-space: nowrap;
 }
 .tool-body p { font-size: var(--t-small); color: var(--ink-2); line-height: 1.7; }
+@media (max-width: 560px) {
+  .tool-top { flex-wrap: nowrap; align-items: center; gap: var(--s3); }
+  .tool-top h3 { flex: 1 1 auto; min-width: 0; font-size: 1rem; line-height: 1.35; }
+  .app-badge { width: 42px; height: 42px; border-radius: 10px; font-size: 1rem; }
+  .app-badge img { width: 22px; height: 22px; }
+  .tool-yrs { font-size: 0.66rem; padding: 1px 7px; }
+}
 
 /* ---------- faq ---------- */
 .faq-list { display: grid; gap: var(--s2); max-width: 900px; margin-inline: auto; }

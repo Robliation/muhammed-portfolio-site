@@ -571,6 +571,23 @@
 
   /* ------------------------------------------------------------------ scroll motion
      Transform and opacity only, one rAF pass, and never on reduced-motion or touch. */
+  /* Nav reflects the section you are reading, so the header is not just a list. */
+  function scrollSpy() {
+    var links = Array.prototype.slice.call(document.querySelectorAll('.nav-links a[href^="#"]'));
+    if (!links.length || !("IntersectionObserver" in window)) return;
+    var secs = links.map(function (a) { return document.querySelector(a.getAttribute("href")); });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var i = secs.indexOf(e.target);
+        if (i < 0) return;
+        links.forEach(function (a) { a.removeAttribute("aria-current"); });
+        links[i].setAttribute("aria-current", "true");
+      });
+    }, { rootMargin: "-45% 0px -50% 0px" });
+    secs.forEach(function (s) { if (s) io.observe(s); });
+  }
+
   function scrollMotion() {
     var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     var hero = document.querySelector(".hero-grid");
@@ -670,6 +687,7 @@
     Array.prototype.forEach.call(document.querySelectorAll(".sec-head"), function (n) { n.classList.add("rv"); });
     observeReveals(document);
     scrollMotion();
+    scrollSpy();
     requestAnimationFrame(function () { document.body.classList.add("loaded"); });
     setTimeout(function () { document.body.classList.add("loaded"); }, 500);
 
